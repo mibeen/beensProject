@@ -1,0 +1,109 @@
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p class="copy">저작권 ⓒ <?php echo $_SERVER['HTTP_HOST']; ?> All right reserved</p>
+	</div>
+
+	<div style="position:absolute;top:-10000px;left:-10000px">
+		<img id="res_w" src="/adm/imgs/space.gif" width="1" height="1" alt="" class="res_w" />
+		<img id="res_wd" src="/adm/imgs/space.gif" width="1" height="1" alt="" class="res_wd" />
+		<img id="res_wdt" src="/adm/imgs/space.gif" width="1" height="1" alt="" class="res_wdt" />
+		<img id="res_d" src="/adm/imgs/space.gif" width="1" height="1" alt="" class="res_d" />
+		<img id="res_dt" src="/adm/imgs/space.gif" width="1" height="1" alt="" class="res_dt" />
+		<img id="res_tm" src="/adm/imgs/space.gif" width="1" height="1" alt="" class="res_tm" />
+		<img id="res_t" src="/adm/imgs/space.gif" width="1" height="1" alt="" class="res_t" />
+		<img id="res_m" src="/adm/imgs/space.gif" width="1" height="1" alt="" class="res_m" />
+		<img id="res_mh" src="/adm/imgs/space.gif" width="1" height="1" alt="" class="res_mh" />
+		<img id="res_mv" src="/adm/imgs/space.gif" width="1" height="1" alt="" class="res_mv" />
+
+		<iframe src="" id="actIframe" name="actIframe" width="1" height="1" style="border:none; margin:0px;"></iframe>
+	</div>
+
+	<style>
+	.snb{display: block;}
+	</style>
+
+	<script>
+	//<[!CDATA[
+	var sTop;
+	var orgw = $(window).width();
+	$(document).ready(function() {
+
+		$('a:not(.current_mna)').next('.snb').hide(0);
+
+		$('.mnb > li > a').click(function(e) {
+			e.preventDefault();
+
+			if ($(this).next('.snb').length > 0) {
+				//서브 메뉴가 있으면.
+
+				if($(this).hasClass('aon')){
+					$(this).next('.snb').slideUp(300, function(){
+						iscroll1.refresh();
+					}).siblings('.aon').removeClass('aon');
+				}else{
+					$(this).addClass('aon').next('.snb').slideDown(300, function(){
+						iscroll1.refresh();
+					})
+					.closest('li').siblings('li').find('.aon + .snb').slideUp()
+					.siblings('.aon').removeClass('aon');
+				}				
+			}
+			else {
+				window.location.href=$(this).attr('href');
+			}
+		});
+
+		$('#m_menu').on('click', function() {
+			if (!$('#mnb_wrap').is(':hidden')) {
+				hideMnb();
+			}
+			else {
+				$('#mnb_layer').fadeIn('fast');
+				$('#mnb_wrap').fadeIn(300);
+				$('#mnb_wrap').animate({"left":"0"}, 300);
+				scrollBlock();
+			}
+			iscroll1.refresh();
+		});
+
+		$('#mnb_layer').on('click', function() {
+			if (!$('#mnb_wrap').is(':hidden')) {
+				hideMnb();
+			}
+		});
+	});
+
+	$(window).on('resize', function() {
+		if ($(window).width() > 1024) {
+			$('#mnb_layer').hide();
+			$("#mnb_wrap").removeAttr("style");
+			unScrollBlock();
+		}
+	});
+
+	function hideMnb() {
+		$('#mnb_wrap').fadeOut(300);
+		$('#mnb_wrap').animate({"left":"-280px"}, 300);
+		$('#mnb_layer').fadeOut(300);
+		unScrollBlock();
+	}
+
+	function scrollBlock() {
+		sTop = document.body.scrollTop;
+
+		$('body').css({"position": "fixed", "top": "-"+sTop+"px", "left": "0", "right": "0", "bottom": "0"});
+	}
+
+	function unScrollBlock() {
+		$('body').css({"position": "static", "top": "0"});
+		$('body').scrollTop(sTop);
+	}
+	//]]>
+	</script>
+</body>
+</html>

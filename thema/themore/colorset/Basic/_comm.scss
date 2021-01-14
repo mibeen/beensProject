@@ -1,0 +1,368 @@
+@charset "UTF-8";
+
+.auto_wrap {
+  display: inline-block;
+  margin-bottom: 5px;
+  vertical-align: middle;
+}
+
+/* Tab Menu */
+.nx_tab1 {
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid #e5e5e5;
+  li {
+    float: left;
+    width: 100%;
+    border-right: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    &:first-child {
+      margin-left: 0;
+      border-left: none;
+      @for $i from 2 to 5 {
+        &:nth-last-child(#{$i}) {
+          width: calc((100% - 1px) / #{$i});
+          & ~ li {
+            width: calc((100% - 1px) / #{$i});
+          }
+        }
+      }
+    }
+    &:last-child {
+      border-right: none;
+    }
+    a {
+      display: block;
+      font-size: 16px;
+      line-height: 40px;
+      text-align: center;
+      background: #fff;
+      color: #222;
+      &:hover, &.aon {
+        background: $color2;
+        color: $color2_sub;
+      }
+    }
+  }
+}
+
+/* Box */
+.nx_box1 {
+  padding: 40px;
+  background: #f5f5f5;
+}
+
+.box2 {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  line-height: 1.5;
+  background: #fff;
+  border-radius: 4px;
+}
+
+/* Title */
+
+.nx_tit1 {
+  margin: 50px 0 20px;
+  font-size: 24px;
+  color: #000;
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.nx_tit2 {
+  margin: 50px 0 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  &:first-of-type {
+    margin-top: 0;
+  }  
+}
+
+.nx_tit3 {
+  margin: 30px 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.nx_tit4 {
+  margin: 50px 0 10px;
+  font-size: 20px;
+  color: #000;
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.nx_para1 {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.nx_para2 {
+  font-size: 18px;
+  color: #222;
+  line-height: 1.5;
+}
+
+.lst1 li {
+  position: relative;
+  padding-left: 10px;
+  margin-top: 5px;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:before {
+    content: '·';
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.lst_dl dl {
+  margin-top: 5px;
+  &:first-of-type {
+    margin-top: 0;
+  }
+  dt {
+    float: left;
+    width: 80px;
+    line-height: 1.3;
+  }
+  dd {
+    margin-left: 85px;
+    line-height: 1.3;
+  }
+}
+
+/* Search */
+
+.nx_sch_wrap {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.learn_nx_sch_wrap {
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #666;
+}
+
+.path_nx_sch_wrap {
+  float: right;
+}
+
+.sch_ipt {
+  position: relative;
+  display: block;
+  padding-right: 30px;
+  input {
+    width: 200px;
+    height: 30px;
+    padding: 3px;
+    color: #333;
+    font-size: 13px;
+    border: 1px solid #c5c5c5;
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+  .sch_btn {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    background: #c5c5c5;
+    font-size: 14px;
+    color: #fff;
+    box-sizing: border-box;
+    transition: background 0.25s ease-in-out;
+    span[class*=ico]:before {
+      font-size: 20px;
+    }
+  }
+}
+
+.sch_result {
+  margin: 30px 0 20px;
+  padding: 30px 10px;
+  line-height: 1.5;
+  text-align: center;
+  background: #f1f1f1;
+  font-size: 18px;
+  color: #222;
+  border-radius: 4px;
+  a {
+    color: $color1;
+  }
+}
+
+/* 페이징 */
+
+.pagenate_wrap {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  position: relative;
+  width: 100%;
+  .pagenate {
+    padding-top: 24px;
+    font-family: verdana;
+    font-size: 13px;
+    text-align: center;
+    a, strong {
+      display: inline-block;
+      min-width: 16px;
+      height: 25px;
+      margin: 0;
+      padding: 0 5px 3px;
+      background: #fff;
+      border: 1px solid $color1;
+      color: $color1;
+      text-align: center;
+      text-decoration: none !important;
+      vertical-align: middle;
+      line-height: 28px;
+    }
+    > a {
+      font-size: 8px;
+      color: $color1;
+      transition: font-size 0.15s ease-in-out;
+      &:hover {
+        font-size: 14px;
+      }
+    }
+    .num_wrap {
+      display: inline-block;
+      a:hover, .aon {
+        background: $color1;
+        color: #fff;
+      }
+    }
+    .pn_btn {
+      width: 11px;
+    }
+  }
+}
+
+/* 기타 */
+
+.nx_pimg {
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  img {
+    display: block;
+  }
+  .edit {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #858585;
+    font-size: 14px;
+    color: #fff;
+  }
+}
+
+/* 모바일가로 */
+@media screen and (max-width: 759px) {
+  .nx_tab1 {
+    max-width: none;
+    li a {
+      line-height: 24px;
+      font-size: 16px;
+      &.aon {
+        background: #edf0f7;
+      }
+    }
+  }
+  .sch_result {
+    padding: 15px 10px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 619px) {
+  .learn_nx_sch_wrap {
+    .nx_fL {
+      float: none;
+    }
+    .nx_fR {
+      float: none;
+      margin-top: 10px;
+      .sch_ipt input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* 모바일가로 */
+@media screen and (max-width: 519px) {
+  .nx_tab1.r_mv{
+    max-width: 376px;
+    margin: 0 auto 60px;
+    li {
+      display: block;
+      width: 100% !important;
+      max-width: none;
+      margin-bottom: -1px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        padding: 0 0 0 5px;
+        border: {
+          width: 1px 1px 1px 2px;
+          style: solid;
+          color: #e5e5e5;
+        }
+        line-height: 34px;
+        font-size: 18px;
+        &:hover, &.aon {
+          padding: 0 0 0 4px;
+          border-left: 3px solid $color2;
+          color: $color2;
+        }
+      }
+    }
+  }
+
+  .nx_box1 {
+    padding: 20px;
+  }
+
+  .path_nx_sch_wrap {
+    float: none;
+    clear: both;
+    padding-top: 10px;
+    .sch_ipt input {
+      width: 100%;
+    }
+  }
+}

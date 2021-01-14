@@ -1,0 +1,1252 @@
+@charset "UTF-8";
+
+.login_wrap {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.nx_memb_slog {
+  margin-bottom: 70px;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 24px;
+}
+
+.login_btm {
+  overflow: hidden;
+  margin-top: 40px;
+  > div {
+    float: left;
+    width: calc(50% - 10px);
+    &:nth-child(2) {
+      margin-left: 20px;
+    }
+  }
+}
+
+.join_progress {
+  margin-bottom: 60px;
+  padding: 0 30px 30px;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+  li {
+    display: inline-block;
+    margin-left: 40px;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: 700;
+    color: #a4a4a4;
+    &:first-child {
+      margin-left: 0;
+    }
+    &.on {
+      color: #222;
+    }
+    &.arrw span {
+      font-size: 36px;
+      color: $color3;
+    }
+  }
+}
+
+.mb_form { 
+  margin: 0 auto;
+  dl {
+    overflow: hidden;
+    margin-top: 15px;
+    text-align: center;
+    &:first-child {
+      margin-top: 0;
+    }
+    dt {
+      float: left;
+      width: 70px;
+      height: 50px;
+      line-height: 50px;
+      text-align: left;
+      font-size: 16px;
+      color: #222;
+      &.exp {
+        float: none;
+        width: auto !important;
+        height: auto;
+        line-height: 1.5;
+      }
+    }
+    dd {
+      margin-left: 80px;
+      text-align: left;
+      color: #888;
+      .note {
+        margin-top: 5px;
+        color: #888;
+      }
+      &.has_btn {
+        position: relative;
+        .nx_mb_btn1 {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 126px;
+        }
+      }
+    }
+  }
+  &.join dl {
+    padding-bottom: 15px;
+    &.nx_address {
+      padding-bottom: 5px;
+      & + .nx_address {
+        margin-top: 5px;
+      }
+    }
+    dt {
+      width: 140px;
+      height: 40px;
+      line-height: 40px;
+    }
+    dd {
+      margin-left: 150px;
+      &.tel .mb_nx_ips1:nth-last-of-type(n+2) {
+        margin-right: 0 !important;
+      }
+      input[type="text"].mb_nx_ips1, input[type="password"].mb_nx_ips1, input[type="email"].mb_nx_ips1 {
+        max-width: 244px;
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+      .mb_slt {
+        vertical-align: top;
+      }
+      .nx_mb_btn1 {
+        position: static;
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+      .note {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.chk_pw {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  padding-right: 130px;
+  box-sizing: border-box;
+  a[class*=btn] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+  }
+}
+
+.box_find {
+  padding: 40px;
+  background: #f1f1f1;
+  border-radius: 4px;
+  .nx_p1 {
+    line-height: 1.5;
+    text-align: center;
+    font-size: 16px;
+    color: #222;
+    &:nth-last-child(n+2) {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .mb_form.join {
+    max-width: 540px;
+    dl dd {
+      .nx_mb_btn1:not(:last-child) {
+        margin-right: 0;
+      }
+      .note {
+        display: block;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 759px) {
+  .nx_memb_slog {
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+  .login_btm > div {
+    width: calc(50% - 5px);
+    &:nth-child(2) {
+      margin-left: 10px;
+    }
+  }
+  .join_progress {
+    padding: 0 0 30px;
+    li {
+      margin-left: 10px;
+      font-size: 14px;
+      &.arrw span {
+        font-size: 16px;
+      }
+    }
+  }
+  .mb_form.r_mh {
+    dl {
+      dt {
+        float: none;
+        width: auto;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+      }
+      dd {
+        margin-left: 0 !important;
+        font-size: 14px;
+        &.has_btn {
+          .mb_nx_ips1:last-of-type {
+            margin-right: 10px;
+          }
+          a[class*="btn"] {
+            position: static;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 519px) {
+  .join_progress li {
+    margin-left: 0;
+  }
+  .mb_form.r_mv {
+    dl {
+      dt {
+        float: none;
+        width: auto;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+      }
+      dd {
+        margin-left: 0 !important;
+        font-size: 14px;
+        &.has_btn {
+          .mb_nx_ips1:last-of-type {
+            margin-right: 10px;
+          }
+          a[class*="btn"] {
+            position: static;
+            margin-top: 10px;
+          }
+          > *:nth-last-child(n+2) {
+            input:first-of-type {
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .mb_form dl dd {
+    .mb_nx_ips1:last-of-type {
+      max-width: none !important;
+      margin-right: 0;
+    }
+  }
+  .box_find {
+    padding: 30px 20px;
+    .nx_p1 {
+      font-size: 14px;
+      &:nth-last-child(n+2) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+
+
+/* gnu4 sub.scss 이관 */
+
+@charset "UTF-8";
+
+/* tab 공통 */
+
+.nx-tab1 {
+  overflow: hidden;
+  margin-bottom: 30px;
+  li {
+    float: left;
+    width: calc((100% - 1px) / 3);
+    border-top: 1px solid #d9d9d9;
+    border-left: 1px solid #d9d9d9;
+    border-bottom: 1px solid #0066b3;
+    box-sizing: border-box;
+    list-style: none;
+
+    //added
+    display: table;
+
+
+    &:last-child {
+      border-right: 1px solid #d9d9d9;
+    }
+    &:hover a {
+      color: #0066b3;
+    }
+    &.on {
+      border-color: #0066b3;
+      border-bottom-color: transparent;
+      a {
+        color: #0066b3;
+
+        //added
+        background: #FFF;
+      }
+      & + li {
+        border-left-color: #0066b3;
+      }
+    }
+    a {
+      //display: block;
+      height: 40px;
+      //line-height: 40px;
+      text-align: center;
+      //background: #fff;
+      font-size: 14px;
+      color: #999;
+      transition: all 0.25s ease-in-out;
+      //added
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      line-height: 1.1;
+      word-break: keep-all;
+      background: #F4F4F4;
+    }
+  }
+  &.ethics li {
+    width: calc((100% - 1px) / 6);
+  }
+
+  &.rental li{
+    width: calc((100% - 1px) / 5);
+  }
+}
+
+/* 공용 */
+
+.nx-page {
+
+  p.title{ font-size: 15px; color: #333; font-weight: bold; }
+  p {font-size: 14px; color: #555;}
+  .nx-slogan1 {
+    padding-top: 10px;
+    font-size: 24px;
+    color: #374c77;
+    font-weight: 400;
+    line-height: 1.5;
+    .s1 {
+      font-size: 30px;
+    }
+    .dot {
+      position: relative;
+      &:after {
+        content: '·';
+        position: absolute;
+        top: -15px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        line-height: 1;
+      }
+    }
+    .point {
+      color: #f36f20;
+    }
+  }
+  .nx-tit1 {
+    padding-top: 13px;
+    margin: 40px 0 10px;
+    position: relative;
+    font-size: 20px;
+    color: #003399;
+    font-weight: 700;
+    &:after {
+      content: '';
+      display: block;
+      width: 26px;
+      height: 3px;
+      background: #374C77;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &:first-child {
+      padding-top: 13px;
+      margin-top: 0;
+    }
+  }
+  .nx-tit2 {
+    margin: 30px 0 10px;
+    font-size: 20px;
+    color: #f36f20;
+    font-weight: 400;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  .nx-para1 {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+  }
+  .nx-para2 {
+    font-size: 14px;
+    color: #f36f20;
+    line-height: 1.5;
+  }
+  .nx-ts1 {
+    width: 100%;
+    border-top: 1px solid #0065b3;
+    > tbody > tr > th, > tbody > tr > td {
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      border-bottom: 1px solid #ddd;
+    }
+    > tbody > tr > th {
+      text-align: center;
+      background: #ecf4f9;
+    }
+    > tbody > tr > td {
+      padding-left: 20px;
+    }
+  }
+  .nx-lst1 li {
+    position: relative;
+    padding-left: 8px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.2;
+    &:before {
+      content: '·';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 20px;
+      line-height: 16px;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  .nx-lst2 li {
+    position: relative;
+    padding-left: 8px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #0066b3;
+    line-height: 1.2;
+    &:before {
+      content: '-';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 20px;
+      line-height: 16px;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  // 뉴스레터
+
+  p{word-break: keep-all;}
+
+  .sub-title{text-align: center; font-size: 17px; margin-bottom: 20px;}
+  .main-title{text-align: center; font-size: 33px; color: #222; margin-bottom: 80px;}
+
+  .img-box{text-align: center;}
+  .img-box img{vertical-align: top;}
+
+  .desc-wrap{
+    border: 10px solid #e4e4e4; color: #222;
+    display: table;
+    width: 100%;
+
+    .table-cell{
+      display: table-cell; vertical-align: middle; text-align: center; 
+      padding: 50px 10px; font-size: 18px;
+      line-height: 1.5; 
+    }
+  }
+
+  .form-title{color: #222; font-size: 18px; margin: 60px 0 20px;}
+  .form-wrap{
+    border: 1px solid #E4E4E4;
+
+    textarea{
+      width: 100%;
+      padding: 21px; color: #666;
+      box-sizing: border-box;
+      border: none;
+      outline: none;
+    }
+
+  }
+
+  .form-btn label{
+    margin-top: 10px;
+    display: inline-block; color: #FFF;
+    background: #EB6F6F;
+    padding: 15px 20px;
+    font-size: 14px;
+
+    input{vertical-align: middle; margin-top: 0;}
+  }
+
+  .nx-tb01{
+    width: 100%; max-width: 405px;
+    margin: 50px auto;
+
+    th, td{padding: 5px 0; color: #222; font-size: 15px;}
+    th{width: 105px;}
+
+    tr:nth-child(2) th{
+      vertical-align: top; padding-top: 23px;
+    }
+    fieldset{text-align: center;}
+    fieldset button{display: none;}
+    #captcha img#captcha_img{width: 100%;}
+
+    td input{width: 100%; background: #F5F5F5; border: 1px solid #DDD; padding: 10px;}
+
+    #captcha #captcha_key{
+      width: 100%; margin-left: 0; margin-top:  10px;
+      line-height: 1.5;
+      height: auto;
+      padding: 6px;
+      border: 1px solid #DDD;
+    }
+
+    #captcha{display: block; width: 100%;}
+    .captcha_info{text-align: left;}
+  }
+
+  //뉴스레터 종료
+
+
+}
+
+//뉴스레터의 모달 
+.btn-box{
+  padding: 30px 0;
+  .btn-nw-submit{background: #EB6F6F; color: #FFF; padding: 10px 32px;}
+}
+
+// 모달 팝업
+.nx-modal{
+  width: 500px; height: 300px; position: fixed; 
+  top: 50%; left: 50%; margin-left:  -250px; margin-top: -150px;
+  background: #FFF;
+  box-shadow: 0 0 20px 5px #999;
+  display: table;
+  z-index: 9999;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222;
+
+  .table-cell{
+    display: table-cell; width: 100%; height: 100%; vertical-align: middle; text-align: center;
+    padding-top: 15px;
+    box-sizing: border-box;
+  }
+
+  .close{position: absolute; top: 10px; right: 10px;}
+
+  .btn-box{text-align: center;}
+  button{border-radius: 0;}
+}
+
+
+//뉴스레터의 모달 종료
+
+/* 원장인사말 */
+
+.nx-greeting-wrap {
+  overflow: hidden;
+  .img {
+    float: left;
+  }
+  .txt {
+    margin-left: 330px;
+    .p1 {
+      // padding-top: 12px;
+      margin: 0 0 20px;
+      font-size: 24px;
+      color: #374c77;
+      font-weight: 400;
+      line-height: 1.5;
+      position: relative;
+      top: -7px;
+      span {
+        color: #f36f20;
+      }
+    }
+    .p2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #374c77;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+    .p3 {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
+    .p4 {
+      font-size: 16px;
+      color: #555;
+      font-weight: 400;
+      text-align: right;
+      span {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+/* 연혁 */
+
+.nx-history-box1 {
+  padding: 20px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  background: #f5f5f5;
+}
+
+.nx-history-wrap {
+  .year {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 20px;
+    color: #0066b3;
+    text-align: center;
+    background: #ecf4f9;
+    border: 2px solid #0066b3;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+  .history {
+    position: relative;
+    padding: 0 0 30px 0;
+    margin: 0;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 40px;
+      bottom: 0;
+      z-index: 1;
+      width: 1px;
+      background: #dedede;
+    }
+    li {
+      overflow: hidden;
+      position: relative;
+      padding: 10px 0 0 65px;
+      list-style: none;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 35px;
+        z-index: 2;
+        width: 10px;
+        height: 10px;
+        background: #0066b3;
+        border-radius: 5px;
+      }
+      .date {
+        float: left;
+        font-size: 14px;
+        color: #0066b3;
+        font-weight: 400;
+      }
+      .ct {
+        display: block;
+        margin-left: 50px;
+        font-size: 14px;
+        color: #555;
+      }
+    }
+  }
+}
+
+/* 비전 */
+
+.nx-vision-box1 {
+  position: relative;
+  padding: 25px 0;
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    background: #ecf4f9;
+    border: 2px solid #0066b3;
+    border-radius: 50%;
+    box-sizing: border-box;
+    .tb {
+      display: table;
+      width: 100%;
+      height: 100%;
+      .td {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        .p1 {
+          font-size: 20px;
+          color: #0066b3;
+          font-weight: 400;
+        }
+        .p2 {
+          font-size: 14px;
+          color: #f36f20;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .txt {
+    height: 70px;
+    margin-left: 60px;
+    background: #f5f5f5;
+    .tb {
+      display: table;
+      width: calc(100% - 60px);
+      height: 100%;
+      margin-left: 60px;
+      .td {
+        display: table-cell;
+        padding: 0 20px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 20px;
+        color: #555;
+        line-height: 1.2;
+        span {
+          color: #f36f20;
+        }
+      }
+    }
+  }
+  &.csvision3 .txt .tb .td {
+    font-size: 16px;
+  }
+}
+
+.nx-vision-wrap1 {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    margin-top: -1px;
+    background: #dedede;
+  }
+  .circle {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    margin-left: 20px;
+    background: #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    &:first-child {
+      margin-left: 0;
+    }
+    .tb {
+      display: table;
+      width: 100%;
+      height: 100%;
+      .td {
+        display: table-cell;
+        padding: 20px;
+        text-align: center;
+        vertical-align: middle;
+        .p1 {
+          margin-bottom: 20px;
+          font-size: 18px;
+          color: #555;
+          font-weight: 400;
+        }
+        .p2 {
+          font-size: 24px;
+          color: #222;
+          font-weight: 400;
+          line-height: 1.2;
+          span {
+            display: inline-block;
+          }
+        }
+      }
+    }
+    &.circle1 {
+      border: 2px solid #0066b3;
+      .tb .td .p2 span {
+        color: #0066b3;
+      }
+    }
+    &.circle2 {
+      border: 2px solid #8cc83c;
+      .tb .td .p2 span {
+        color: #8cc83c;
+      }
+    }
+    &.circle3 {
+      border: 2px solid #f06e1e;
+      .tb .td .p2 span {
+        color: #f06e1e;
+      }
+    }
+  }
+}
+
+.nx-vision-value {
+  overflow: hidden;
+  li {
+    overflow: hidden;
+    @include gallery(2, 20, 20);
+    border: 1px solid #dedede;
+    .img {
+      float: left;
+    }
+    .txt {
+      float: left;
+      width: calc(100% - 139px);
+      .tb {
+        display: table;
+        width: 100%;
+        height: 100%;
+        .td {
+          display: table-cell;
+          padding: 20px;
+          vertical-align: middle;
+          .p1 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #555;
+            font-weight: 400;
+          }
+          .p2 {
+            font-size: 14px;
+            color: #555;
+            font-weight: 400;
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+    &.value1 .txt .tb .td .p1 {
+      color: #f06e1e;
+    }
+    &.value2 .txt .tb .td .p1 {
+      color: #8cc83c;
+    }
+    &.value3 .txt .tb .td .p1 {
+      color: #faaf14;
+    }
+    &.value4 .txt .tb .td .p1 {
+      color: #005bac;
+    }
+  }
+}
+
+/* 상징 */
+
+.nx-symbol-ci {
+  overflow: hidden;
+  //max-width: 901px;
+  height: 196px;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  line-height: 196px;
+  text-align: center;
+  background: url(/thema/hub/assets/imgs/symbol/bg_ci.png) -1px -1px  repeat;
+  border: 1px solid #DEDEDE;
+}
+
+.nx-symbol-color {
+  overflow: hidden;
+  li {
+    list-style: none;
+    @include gallery(4, 20, 20);
+    .tb {
+      display: table;
+      width: 100%;
+      height: 140px;
+      margin-bottom: 10px;
+      .td {
+        display: table-cell;
+        padding: 15px;
+        vertical-align: bottom;
+        color: #fff;
+        line-height: 1.5;
+      }
+      &.color1 {
+        background: #005bac;
+      }
+      &.color2 {
+        background: #f06e1e;
+      }
+      &.color3 {
+        background: #faaf14;
+      }
+      &.color4 {
+        background: #8cc83c;
+      }
+    }
+    .p1 {
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #222;
+      font-weight: 400;
+    }
+    .p2 {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.2;
+    }
+  }
+}
+
+.nx-ethics-box1 {
+  padding: 20px;
+  background: #f5f5f5;
+  .program {
+    overflow: hidden;
+    margin: 20px 0 0;
+    &:first-child {
+      margin-top: 0;
+    }
+    dt {
+      float: left;
+      font-size: 14px;
+      color: #0066b3;
+      font-weight: 700;
+    }
+    dd {
+      margin-left: 40px;
+      line-height: 1.5;
+      font-size: 14px;
+      color: #555;
+    }
+  }
+}
+
+/* 찾아오시는 길 */
+.nx-page.location .nx-ts1 th:nth-child(1){
+  width: 250px;
+}
+
+
+/* 고객헌장 */
+
+.nx-charter-box1 {
+  padding: 6px;
+  border: 4px solid #f9d00f;
+  .nx-charter-box2 {
+    padding: 30px;
+    border: 2px solid #f9d00f;
+    .p1 {
+      font-size: 30px;
+      color: #222;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .p2 {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
+    .p3 {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.5;
+    }
+    .p4 {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.5;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+}
+
+/* CS비전 */
+
+.nx-csvision-lst {
+  overflow: hidden;
+  margin-left: 120px;
+  > li {
+    min-height: 180px;
+    @include gallery(3, 20, 20);
+    background: #f5f5f5;
+    list-style: none;
+    .p1 {
+      padding: 15px;
+      font-size: 14px;
+      color: #fff;
+      text-align: center;
+      line-height: 1.2;
+      background: #005bac;
+    }
+    .nx-lst1 {
+      padding: 20px;
+    }
+  }
+}
+
+/* 정부3.0 추진전략 */
+
+.nx_dsB {
+    display: block;
+}
+.mauto {
+    margin: 0 auto;
+}
+
+.nx-gover2-lst {
+  overflow: hidden;
+  > li {
+    @include gallery(3, 0, 0);
+    list-style: none;
+    img {
+      display: block;
+      width: 100%;
+    }
+    .txt {
+      padding: 20px;
+      background: #f5f5f5;
+      .p1 {
+        margin-bottom: 15px;
+        font-size: 20px;
+        color: #222;
+        font-weight: 400;
+        text-align: center;
+        span {
+          color: #f36f20;
+        }
+      }
+    }
+    &:nth-child(2) {
+      margin-top: 50px;
+      .txt {
+        background: #eee;
+      }
+    }
+  }
+}
+
+/* 정보공개제도란 */
+
+.nx-gover4-lst {
+  overflow: hidden;
+  > li {
+    position: relative;
+    @include gallery(4, 10, 10);
+    list-style: none;
+    padding-right: 30px;
+    &:not(:last-child) {
+      background: url(/thema/hub/assets/imgs/gover/img_gover4_arr.jpg) no-repeat right center;
+    }
+    .p1 {
+      padding: 15px;
+      font-size: 14px;
+      color: #fff;
+      text-align: center;
+      line-height: 1.2;
+      background: #005bac;
+    }
+    .tb {
+      display: table;
+      width: 100%;
+      min-height: 94px;
+      .td {
+        display: table-cell;
+        padding: 10px;
+        font-size: 14px;
+        color: #333;
+        text-align: center;
+        line-height: 1.2;
+        vertical-align: middle;
+        background: #f5f5f5;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1199px) {
+  /* 비전 */
+  .nx-vision-wrap1 .circle {
+    width: 200px;
+    height: 200px;
+    .tb .td .p2 {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+}
+
+@media screen and (max-width: 767px) {
+  .nx-page p {
+    word-break: keep-all;
+  }
+
+  .nx-page .nx-slogan1 .s1 {
+    font-size: 26px;
+  }
+
+  .nx-page .nx-tab1.ethics li {
+    float: none;
+    width: auto; width: 100%;
+    border: {
+      width: 1px;
+      color: #d9d9d9;
+      style: solid;
+    }
+    &:not(:first-child) {
+      margin-top: -1px;      
+    }
+    &.on {
+      border-color: #0066b3;
+      + li {
+        border-top-color: #0066b3;
+        border-left-color: #d9d9d9;
+      }
+      a {
+        color: #fff;
+        background: #0066b3;
+      }
+    }
+  }
+
+  /* 원장인사말 */
+  .nx-greeting-wrap {
+    .img {
+      width: 150px;
+      margin: 0 15px 15px 0;
+    }
+    .txt {
+      margin-left: 0;
+      .p1, .p2 {
+        font-size: 18px;
+      }
+    }
+  }
+
+  /* 비전 */
+  .nx-vision-box1 {
+    padding: 5px 0;
+    .circle {
+      width: 100px;
+      height: 100px;
+    }
+    .txt {
+      height: 90px;
+      .tb .td {
+        font-size: 16px;
+      }
+    }
+    &.csvision3 .txt .tb .td {
+      font-size: 14px;
+    }
+  }
+
+  .nx-vision-value{
+    li{
+      .txt{
+        .tb{
+          .td{padding: 10px 20px;
+            .p1{margin-bottom: 5px;}
+          }
+        }
+      }
+    }
+  }
+
+  /* 찾아오시는 길 */
+  .nx-page.location .nx-ts1 th:nth-child(1),
+  .nx-page.greeting .nx-ts1 th:nth-child(1){
+    width: 130px;
+  }
+
+
+  .nx-vision-wrap1 {
+    padding: 20px 0;
+    &:before {
+      top: 0;
+      left: 50%;
+      right: auto;
+      width: 2px;
+      height: 100%;
+      margin: 0 0 0 -1px;
+    }
+    .circle {
+      display: block;
+      margin: 20px auto 0;
+      &:first-child {
+        margin: 0 auto;
+      }
+    }
+  }
+  .nx-vision-value li {
+    @include gallery(1, 20, 20, down);
+  }
+
+  /* 상징 */
+  .nx-symbol-color li {
+    @include gallery(2, 20, 20, down);
+  }
+
+  /* CS비전 */
+  .nx-csvision-lst {
+    margin-left: 100px;
+    > li {
+      @include gallery(1, 20, 20, down);
+    }
+  }
+
+  /* 정보공개제도란 */
+  .nx-gover4-lst > li {
+    @include gallery(2, 10, 10);
+  }
+}

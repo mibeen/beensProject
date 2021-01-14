@@ -1,0 +1,349 @@
+<?php
+if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
+include_once(G5_PLUGIN_PATH.'/nx/common.php');
+
+$result = sql_fetch("SELECT * FROM g5_board_extend WHERE bo_table = '{$bo_table}' AND wr_id = '{$wr_id}' LIMIT 0, 1");
+#$sholar = sql_fetch($result);
+
+$sh_2 = $result['wr_2'];
+
+$attach_list = '';
+if ($view['link']) {
+	// 링크
+	for ($i=1; $i<=count($view['link']); $i++) {
+		if ($view['link'][$i]) {
+			$attach_list .= '<a class="list-group-item break-word" href="'.$view['link_href'][$i].'" target="_blank">';
+			$attach_list .= '<span class="label label-warning pull-right view-cnt">'.number_format($view['link_hit'][$i]).'</span>';
+			$attach_list .= '<i class="fa fa-link"></i> '.cut_str($view['link'][$i], 70).'</a>'.PHP_EOL;
+		}
+	}
+}
+
+// 가변 파일
+$j = 0;
+for ($i=0; $i<count($view['file']); $i++) {
+	if (isset($view['file'][$i]['source']) && $view['file'][$i]['source'] && !$view['file'][$i]['view']) {
+		if ($board['bo_download_point'] < 0 && $j == 0) {
+			$attach_list .= '<a class="list-group-item"><i class="fa fa-bell red"></i> 다운로드시 <b>'.number_format(abs($board['bo_download_point'])).'</b>'.AS_MP.' 차감 (최초 1회 / 재다운로드시 차감없음)</a>'.PHP_EOL;
+		}
+		$file_tooltip = '';
+		if($view['file'][$i]['content']) {
+			$file_tooltip = ' data-original-title="'.strip_tags($view['file'][$i]['content']).'" data-toggle="tooltip"';
+		}
+		$attach_list .= '<a class="list-group-item break-word view_file_download at-tip" href="'.$view['file'][$i]['href'].'"'.$file_tooltip.'>';
+		//$attach_list .= '<span class="label label-primary pull-right view-cnt">'.number_format($view['file'][$i]['download']).'</span>';
+		$attach_list .= '<i class="fa fa-download"></i>자기소개서 : '.$view['file'][$i]['source'].' ('.$view['file'][$i]['size'].') &nbsp;';
+		$attach_list .= '<span class="en font-11 text-muted"><i class="fa fa-clock-o"></i> '.apms_datetime(strtotime($view['file'][$i]['datetime']), "Y.m.d").'</span></a>'.PHP_EOL;
+
+
+		$j++;
+	}
+}
+
+#이미지 가져오기
+$v_img_count = count($view['file']);
+$v_img_view =  get_view_thumbnail($view['file'][0]['view']);
+
+
+
+// add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
+add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css" media="screen">', 0);
+
+?>
+<?php if($boset['video']) { ?>
+	<style>
+	.view-wrap .apms-autowrap { max-width:<?php echo (G5_IS_MOBILE) ? '100%' : $boset['video'];?> !important;}
+	</style>
+<?php } ?>
+<style>
+	.cutText{overflow: hidden;-ms-text-overflow: ellipsis;text-overflow: ellipsis;white-space: nowrap; width: 100% !important; position: relative; word-break: break-all;}
+	#wr_12, #wr_13{padding-right: 0%;}
+	#wr_12.cutText, #wr_13.cutText{padding-right: 5%;}
+	.list-group-item .more{display: none; cursor: pointer; display: inline-block; position: static; color: #FFF; margin-left: 10px; padding: 0 10px; border-radius: 4px; background: #8ec700;}
+	.list-group-item.cutText .more{position: absolute; right: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin-left: 0;}
+</style>
+<script src="<?php echo G5_JS_URL; ?>/viewimageresize.js"></script>
+
+
+<div class="view-wrap<?php echo (G5_IS_MOBILE) ? ' view-mobile font-14' : '';?>">
+
+	<div class="print-hide view-btn text-right">
+		<div class="btn-group">
+			<?php if ($prev_href) { ?>
+				<a href="<?php echo $prev_href ?>" class="btn btn-black btn-sm" title="이전글">
+					<i class="fa fa-chevron-circle-left"></i><span class="hidden-xs"> 이전</span>
+				</a>
+			<?php } ?>
+			<?php if ($next_href) { ?>
+				<a href="<?php echo $next_href ?>" class="btn btn-black btn-sm" title="다음글">
+					<i class="fa fa-chevron-circle-right"></i><span class="hidden-xs"> 다음</span>
+				</a>
+			<?php } ?>
+			<?php if ($copy_href) { ?>
+				<a href="<?php echo $copy_href ?>" class="btn btn-black btn-sm" onclick="board_move(this.href); return false;" title="복사">
+					<i class="fa fa-clipboard"></i><span class="hidden-xs"> 복사</span>
+				</a>
+			<?php } ?>
+			<?php if ($move_href) { ?>
+				<a href="<?php echo $move_href ?>" class="btn btn-black btn-sm" onclick="board_move(this.href); return false;" title="이동">
+					<i class="fa fa-share"></i><span class="hidden-xs"> 이동</span>
+				</a>
+			<?php } ?>
+			<?php if ($delete_href) { ?>
+				<a href="<?php echo $delete_href ?>" class="btn btn-black btn-sm" title="삭제" onclick="del(this.href); return false;">
+					<i class="fa fa-times"></i><span class="hidden-xs"> 삭제</span>
+				</a>
+			<?php } ?>
+			<?php if ($update_href) { ?>
+				<a href="<?php echo $update_href ?>" class="btn btn-black btn-sm" title="수정">
+					<i class="fa fa-plus"></i><span class="hidden-xs"> 수정</span>
+				</a>
+			<?php } ?>
+			<?php if ($search_href) { ?>
+				<a href="<?php echo $search_href ?>" class="btn btn-black btn-sm">
+					<i class="fa fa-search"></i><span class="hidden-xs"> 검색</span>
+				</a>
+			<?php } ?>
+			<a href="<?php echo $list_href ?>" class="btn btn-black btn-sm">
+				<i class="fa fa-bars"></i><span class="hidden-xs"> 목록</span>
+			</a>
+			<?php if ($reply_href) { ?>
+				<a href="<?php echo $reply_href ?>" class="btn btn-black btn-sm">
+					<i class="fa fa-comments"></i><span class="hidden-xs"> 답변</span>
+				</a>
+			<?php } ?>
+			<?php if ($write_href) { ?>
+				<a href="<?php echo $write_href ?>" class="btn btn-color btn-sm">
+					<i class="fa fa-pencil"></i><span class="hidden-xs"> 글쓰기</span>
+				</a>
+			<?php } ?>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
+	<div class="area-wrap">
+		<div class="img-box"><?php echo $v_img_view ?></div>
+		<div class="txt-box">
+			<h1><?php echo cut_str(get_text($view['wr_subject']), 70); ?></h1>
+<!-- 
+			<p><span class="title">문의전화</span><?php echo $result['wr_1']?></p>
+			<p><span class="title">주소</span>경기도 <?php echo $result['wr_3'] . " " . $result['wr_2']?></p> -->
+			<table class="area-info">
+				<tr>
+					<th>문의전화</th>
+					<td><?php echo $result['wr_1']?></td>
+				</tr>
+				<tr>
+					<th>주소</th>
+					<td><?php echo $result['wr_2']?></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+
+	<div class="view-content">
+		<h3 class="area-title">장소 소개</h3>
+		<?php echo get_view_thumbnail($view['content']); ?>
+
+		<hr>
+		<h3 class="area-title">장소 이용정보</h3>
+		<?php echo get_view_thumbnail($view['wr_1']); ?>
+
+		<hr>
+		<h3 class="area-title">장소(위치)</h3>
+		<div id="map" class="map" style="width: 100%; height: 500px;"></div>
+		<!-- <p class="text-right">경기도 <?php echo $result['wr_3'] . " " . $result['wr_2']?></p>	 -->
+
+		<hr>
+		<h3 class="area-title">장소 이미지</h3>
+	</div>
+
+		<?php
+		// 이미지 상단 출력
+		$v_img_count = count($view['file']);
+		if($v_img_count && $is_img_head) {
+			echo '<div class="view-img">'.PHP_EOL;
+			for ($i=0; $i<=count($view['file']); $i++) {
+				if ($view['file'][$i]['view']) {
+					echo get_view_thumbnail($view['file'][$i]['view']);
+				}
+			}
+			echo '</div>'.PHP_EOL;
+		}
+	 ?>
+
+	<?php
+		// 이미지 하단 출력
+		if($v_img_count && $is_img_tail) {
+			echo '<div class="view-img">'.PHP_EOL;
+			for ($i=0; $i<=count($view['file']); $i++) {
+				if ($view['file'][$i]['view']) {
+					echo get_view_thumbnail($view['file'][$i]['view']);
+				}
+			}
+			echo '</div>'.PHP_EOL;
+		}
+	?>
+
+	<div class="print-hide view-icon">
+		<div class="pull-right">
+			<div class="form-group">
+				<!--<span class="pull-right"><img src="/img/sns/print.png" alt="프린트" class="cursor at-tip" onclick="apms_print();" data-original-title="프린트" data-toggle="tooltip"></span>-->
+				<span class="pull-right"><img src="/img/sns/print.png" alt="프린트" class="cursor at-tip" onclick="apms_print();" data-original-title="프린트" data-toggle="tooltip"></span>
+				<?php if ($scrap_href) { ?>
+					<!--<a href="<?php echo $scrap_href;  ?>" target="_blank" class="btn btn-black btn-xs" onclick="win_scrap(this.href); return false;"><i class="fa fa-tags"></i> <span class="hidden-xs">스크랩</span></a>-->
+				<?php } ?>
+				<?php if ($is_shingo) { ?>
+					<button onclick="apms_shingo('<?php echo $bo_table;?>', '<?php echo $wr_id;?>');" class="btn btn-black btn-xs"><i class="fa fa-bell"></i> <span class="hidden-xs">신고</span></button>
+				<?php } ?>
+				<?php if ($is_admin) { ?>
+					<?php if ($view['is_lock']) { // 글이 잠긴상태이면 ?>
+						<button onclick="apms_shingo('<?php echo $bo_table;?>', '<?php echo $wr_id;?>', 'unlock');" class="btn btn-black btn-xs"><i class="fa fa-unlock"></i> <span class="hidden-xs">해제</span></button>
+					<?php } else { ?>
+						<!--<button onclick="apms_shingo('<?php echo $bo_table;?>', '<?php echo $wr_id;?>', 'lock');" class="btn btn-black btn-xs"><i class="fa fa-lock"></i> <span class="hidden-xs">잠금</span></button>-->
+					<?php } ?>
+				<?php } ?>
+			</div>
+		</div>
+		<div class="pull-left">
+			<div class="form-group">
+				<?php include_once(G5_SNS_PATH."/view.sns.skin.php"); // SNS ?>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
+	<?php if($is_signature) echo apms_addon('sign-basic'); // 회원서명 ?>
+
+	<!--<h3 class="view-comment">댓글</h3>-->
+	<div class="view-comment font-18 en">
+		<i class="fa fa-commenting"></i>  댓글
+	</div>
+	<?php include_once('./view_comment.php'); ?>
+
+	<div class="clearfix"></div>
+</div>
+<script>
+function board_move(href){
+	window.open(href, "boardmove", "left=50, top=50, width=500, height=550, scrollbars=1");
+}
+$(function() {
+	$("a.view_image").click(function() {
+		window.open(this.href, "large_image", "location=yes,links=no,toolbar=no,top=10,left=10,width=10,height=10,resizable=yes,scrollbars=no,status=no");
+		return false;
+	});
+	<?php if ($board['bo_download_point'] < 0) { ?>
+	$("a.view_file_download").click(function() {
+		if(!g5_is_member) {
+			alert("다운로드 권한이 없습니다.\n회원이시라면 로그인 후 이용해 보십시오.");
+			return false;
+		}
+
+		var msg = "파일을 다운로드 하시면 포인트가 차감(<?php echo number_format($board['bo_download_point']) ?>점)됩니다.\n\n포인트는 게시물당 한번만 차감되며 다음에 다시 다운로드 하셔도 중복하여 차감하지 않습니다.\n\n그래도 다운로드 하시겠습니까?";
+
+		if(confirm(msg)) {
+			var href = $(this).attr("href")+"&js=on";
+			$(this).attr("href", href);
+
+			return true;
+		} else {
+			return false;
+		}
+	});
+	<?php } ?>
+
+	$(document).on('click', '.list-group-item:not(.cutText) .more', function(e){
+		$(this).closest('.list-group-item').addClass('cutText').find('.more').text('more');
+	})
+
+	$(document).on('click', '.cutText .more', function(e){
+		$(this).closest('.list-group-item').removeClass('cutText').find('.more').text('close');
+	})
+
+
+});
+</script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=<?php echo(NX__DAUM_MAP_TOKEN)?>&libraries=services"></script>
+<script>
+    var map_button = document.getElementById('map_search');
+    var coods = '';
+	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+	    mapOption = {
+	        center: new daum.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+	        draggable: false,
+	        level: 3 // 지도의 확대 레벨
+	    };  
+
+	// 지도를 생성합니다    
+	var map = new daum.maps.Map(mapContainer, mapOption); 
+
+	// 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+	var mapTypeControl = new daum.maps.MapTypeControl();
+
+	// 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+	// daum.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+	map.addControl(mapTypeControl, daum.maps.ControlPosition.TOPRIGHT);
+
+	// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+	var zoomControl = new daum.maps.ZoomControl();
+	map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+
+	// 주소-좌표 변환 객체를 생성합니다
+	var geocoder = new daum.maps.services.Geocoder();
+
+	// 주소로 좌표를 검색합니다
+	geocoder.addressSearch('<?php echo $sh_2 ?>', function(result, status) {
+
+    // 정상적으로 검색이 완료됐으면 
+     if (status === daum.maps.services.Status.OK) {
+
+        coords = new daum.maps.LatLng(result[0].y, result[0].x);
+
+        // 결과값으로 받은 위치를 마커로 표시합니다
+        var marker = new daum.maps.Marker({
+            map: map,
+            position: coords
+        });
+
+        // 인포윈도우로 장소에 대한 설명을 표시합니다
+        var infowindow = new daum.maps.InfoWindow({
+            content: '<div style="width:150px;text-align:center;padding:6px 0;"><?php echo $view['wr_subject']?></div>'
+        });
+        infowindow.open(map, marker);
+
+        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+	        map.setCenter(coords);
+	    }
+	});  
+	$(document).ready(function() {
+		on_tab1();
+	});
+
+	$(window).resize(function() {
+		on_tab1();
+	});
+
+
+	function on_tab1() {
+		var $el = $('.map_wrap');
+		$el.height();
+		$el.width();
+
+		resizeMap1('map', $el.width(), $el.height());
+	}
+
+	function resizeMap1(el, ww, hh)
+	{
+		if ($('#'+el).length <= 0) return;
+
+		$('#'+el).css("width", ww);
+		$('#'+el).css("height", hh);
+
+		//map.relayout();
+		//map.setCenter(new daum.maps.LatLng(35.9645879, 126.9586316));
+		map.setCenter(coords);
+	}
+
+	//}  
+	</script>

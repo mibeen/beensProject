@@ -1,0 +1,48 @@
+# 페이지 Rewrite
+RewriteEngine On
+
+#RewriteCond %{REQUEST_URI} ^/udong(/*)$
+#RewriteRule ^udong /bbs/board.php?bo_table=area
+
+RewriteCond %{REQUEST_URI} ^/project/(evt|project|passwd).(.+)$
+RewriteRule ^project/(.+)$ /adm/evt/$1 [PT]
+
+RewriteCond %{REQUEST_URI} ^/udong-mng/(place|req|passwd).(.+)$
+RewriteRule ^udong-mng/(.+)$ /adm/udong/$1 [PT]
+
+RewriteCond %{REQUEST_URI} ^/hr/(evt|hr|passwd|member).(.+)$
+RewriteRule ^hr/(.+)$ /adm/hr/$1 [PT]
+
+RewriteCond %{REQUEST_URI} ^/udong/adm/(place|req|passwd|member).(.+)$
+#RewriteRule ^udong/adm/(.+)$ /adm/udong/$1 [PT]
+RewriteRule ^udong/adm/(.+)$ /adm/udong_adm/$1 [PT]
+
+# 오류가 보이도록 (TEMP)
+# 운영서버는 display_errors Off.
+php_flag display_errors Off
+php_value error_reporting 039
+
+# 첨부파일 사이즈 (150M/150M/150)
+php_value upload_max_filesize 150M
+php_value post_max_size 150M
+php_value max_file_uploads 150
+
+#order deny,allow
+#deny from all
+#allow from 121.153.17.7
+#allow from 121.153.17.8
+
+# http error
+ErrorDocument 400 /err/400.php
+ErrorDocument 401 /err/401.php
+ErrorDocument 403 /err/403.php
+ErrorDocument 404 /err/404.php
+ErrorDocument 408 /err/408.php
+ErrorDocument 410 /err/410.php
+ErrorDocument 500 /err/500.php
+ErrorDocument 502 /err/502.php
+ErrorDocument 503 /err/503.php
+ErrorDocument 504 /err/504.php
+
+RewriteCond %{REQUEST_URI} ^/(license|LICENSE|.git|install|cgi-bin).(.+)$
+RewriteRule ^(.*)$ /index.php [L]

@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+.nx_btn_style1 {
+  @include button(30px, 30px, null, null, 4px);
+}
+
+.nx_btn_style2 {
+  @include button(84px, 30px, null, null, 4px);
+}
+
+%btn_style3 {
+  @include button(50px, 50px, null, null, 4px);
+}
+
+%nx_mb_btn {
+  @include button(100px, 40px, null, null, 4px);
+}
+
+%btn_cms {
+  @include button(68px, 30px, null, null, 4px);
+}
+
+%btn_ico { /* 30px 아이콘 버튼 기본형 */
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+%btn_ico_round { /* 30px 둥근 아이콘 버튼 기본형 */
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 50%;
+}
+
+.nx_btn1 {
+  @extend .nx_btn_style1;
+  @include hover($color2);
+}
+
+.nx_btn2 {
+  @include button(30px, 30px, null, $color2_sub, 4px);
+  @include hover($color2);
+}
+
+.nx_btn3 {
+  @extend .nx_btn_style1;
+  @include hover($color3);
+}
+
+.nx_btn4 {
+  @extend .nx_btn_style1;
+  @include hover(#f15757);
+}
+
+.nx_btn5 {
+  @extend .nx_btn_style2;
+  background: $color1;
+  @include hover($color1, $color_menu2, background, change);
+}
+
+.nx_btn6 {
+  @extend .nx_btn_style2;
+  @include hover($color2);
+}
+
+.nx_btn7 {
+  @extend .nx_btn_style2;
+  @include hover($color3);
+}
+
+.nx_btn8 {
+  @extend .nx_btn_style2;
+  @include hover(#f15757);
+}
+
+.nx_btn_memb {
+  @extend %btn_style3;
+  width: 100%;
+  @include hover($color1);
+}
+
+.nx_btn_memb1 {
+  @extend %btn_style3;
+  min-width: 140px;
+  @include hover($color1);
+}
+
+.nx_btn_memb2 {
+  @include button(50px, 50px, null, $color2_sub, 4px);
+  min-width: 140px;
+  @include hover($color2);
+}
+
+.nx_btn_memb3 {
+  @extend %btn_style3;
+  min-width: 140px;
+  @include hover($color3);
+}
+
+.nx_mb_btn1 {
+  @extend %nx_mb_btn;
+  @include hover($color1);
+}
+
+.nx_mb_btn2 {
+  @include button(100px, 40px, null, $color2_sub, 4px);
+  @include hover($color2);
+}
+
+.nx_mb_btn3 {
+  @extend %nx_mb_btn;
+  @include hover($color3);
+}
+
+.nx_btn_ico4_r {
+  @extend %btn_ico_round; 
+  @include hover($color4);
+}
+
+.nx_btn_onoff {
+  @include button(70px, 30px, $color3, null, 4px); 
+  transition: background 0.25s ease-in-out;
+  &:hover, &.aon {
+    background: $color1;
+  }
+}
+
+.nx_btn_move {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  border-radius: 4px;
+  @include hover($color3);
+}

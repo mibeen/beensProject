@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<link rel="stylesheet" href="http://gnu.safetown.co.kr/thema/Basic/assets/bs3/css/bootstrap.min.css" type="text/css" class="thema-mode">
+	<script type="text/javascript" src="../../lib/core.js"></script>
+	<script type="text/javascript" src="../../lib/comm.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="../../css/admin.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/ico.css" />
+	<script type="text/javascript" language="javascript" src="../../lib/iscroll/iscroll.min.js"></script>
+	<script>
+	var iscroll1;
+	$(document).ready(function() {
+		// iScroll 객체 생성
+		iscroll1 = new IScroll('#mnb_wrap', {
+			scrollbars: true,
+			mouseWheel: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'scale',
+			fadeScrollbars: true,
+			click: true
+		});
+    });
+	</script>
+</head>
+<body>
+	<div id="mnb_layer" class="mnb_layer"></div>
+
+	<div class="header">
+		<a href="javascript:void(0);" id="m_menu" class="m_menu"><span class="ico_menu"></span></a>
+		<h1 class="logo">
+			<a href=""><img src="../../imgs/comm/logo.png" alt=""></a>
+		</h1>
+		<div class="h_btn">
+			<a href="" class="btn_doc">Home</a>
+			<a href="" class="btn_doc">Logout</a>
+		</div>
+	</div>
+
+	<div class="content_wrap">
+		<div class="layer_bg"></div>
+		<div id="mnb_wrap" class="mnb_wrap">
+			<ul class="mnb">
+				<li>
+					<a href="" class="aon"><span class="img_ico"><img src="../../imgs/comm/menu1_off.png" alt="" class="off"><img src="../../imgs/comm/menu1_on.png" alt="" class="on"></span><span class="txt">API</span></a>
+					<ul class="snb" style="display:block;">
+						<li><a href="">키 관리</a></li>
+						<li><a href="">회원 관리</a></li>
+					</ul>
+				</li>
+				<li><a href=""><span class="img_ico"><img src="../../imgs/comm/menu2_off.png" alt="" class="off"><img src="../../imgs/comm/menu2_on.png" alt="" class="on"></span><span class="txt">학습 카테고리</span></a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="page_ct">
+				<h2 class="page_tit">행사 만들기</h2>
+				<div class="cont_ct">
+					<div class="data_ct">
+
+						<!-- ~~~~~ 내용페이지 s. ~~~~~ -->
+
+						<div class="taR mb10">
+							<a href="" class="nx-btn-b3">뒤로</a>
+						</div>
+
+						<table border="0" cellpadding="0" cellspacing="0" class="nx-t-read1">
+							<colgroup>
+								<col width="130"><col width="">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>카테고리</th>
+									<td>
+										<span class="nx-slt">
+											<select id="" name="">
+												<option value="">카테고리를 선택하세요</option>
+												<option value="">카테고리1</option>
+												<option value="">카테고리2</option>
+											</select>
+											<span class="ico_select"></span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th>제목</th>
+									<td><input type="text" class="nx-ips1 wl"></td>
+								</tr>
+								<tr>
+									<th>분류</th>
+									<td>
+										<div class="radio1_wrap">
+											<input type="radio" id="aa1" name="aa" class="radio1"><label for="aa1"><span class="radbox"><span></span></span><span class="txt">행사</span></label>
+											<input type="radio" id="aa2" name="aa" class="radio1"><label for="aa2"><span class="radbox"><span></span></span><span class="txt">교육</span></label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>승인방식</th>
+									<td>
+										<div class="radio1_wrap">
+											<input type="radio" id="bb1" name="bb" class="radio1"><label for="bb1"><span class="radbox"><span></span></span><span class="txt">선착순</span></label>
+											<input type="radio" id="bb2" name="bb" class="radio1"><label for="bb2"><span class="radbox"><span></span></span><span class="txt">승인</span></label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>행사 시작일</th>
+									<td>
+										<span class="dsIB mr15">
+											<span class="nx-slt">
+												<select id="" name="">
+													<option value="">2017</option>
+												</select>
+												<span class="ico_select"></span>
+											</span>
+											<span class="nx-slt">
+												<select id="" name="">
+													<option value="">월</option>
+												</select>
+												<span class="ico_select"></span>
+											</span>
+											<span class="nx-slt">
+												<select id="" name="">
+													<option value="">일</option>
+												</select>
+												<span class="ico_select"></span>
+											</span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th>행사 종료일</th>
+									<td>
+										<span class="dsIB mr15">
+											<span class="nx-slt">
+												<select id="" name="">
+													<option value="">2017</option>
+												</select>
+												<span class="ico_select"></span>
+											</span>
+											<span class="nx-slt">
+												<select id="" name="">
+													<option value="">월</option>
+												</select>
+												<span class="ico_select"></span>
+											</span>
+											<span class="nx-slt">
+												<select id="" name="">
+													<option value="">일</option>
+												</select>
+												<span class="ico_select"></span>
+											</span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th>시작시간</th>
+									<td>
+										<input type="number" id="" name="" class="nx-ips1 ws3" min="0" max="23">
+										:
+										<input type="number" id="" name="" class="nx-ips1 ws3" min="0" max="59">
+									</td>
+								</tr>
+								<tr>
+									<th>종료시간</th>
+									<td>
+										<input type="number" id="" name="" class="nx-ips1 ws3" min="0" max="23">
+										:
+										<input type="number" id="" name="" class="nx-ips1 ws3" min="0" max="59">
+									</td>
+								</tr>
+								<tr>
+									<th>접수기간</th>
+									<td>
+										<span class="dsIB">
+											<span class="nx-slt">
+												<select id="" name="">
+													<option value="">2017</option>
+												</select>
+												<span class="ico_select"></span>
+											</span>
+											<span class="nx-slt">
+												<select id="" name="">
+													<option value="">월</option>
+												</select>
+												<span class="ico_select"></span>
+											</span>
+											<span class="nx-slt">
+												<select id="" name="">
+													<option value="">일</option>
+												</select>
+												<span class="ico_select"></span>
+											</span>
+										</span>
+										~
+										<span class="dsIB">
+											<span class="nx-slt">
+												<select id="" name="">
+													<option value="">2017</option>
+												</select>
+												<span class="ico_select"></span>
+											</span>
+											<span class="nx-slt">
+												<select id="" name="">
+													<option value="">월</option>
+												</select>
+												<span class="ico_select"></span>
+											</span>
+											<span class="nx-slt">
+												<select id="" name="">
+													<option value="">일</option>
+												</select>
+												<span class="ico_select"></span>
+											</span>
+										</span>
+								</tr>
+								<tr>
+									<th>인원</th>
+									<td>
+										<div class="chk1_wrap dsIB mr15">
+											<input type="checkbox" id="cc1" name="cc" class="chk1"><label for="cc1"><span class="chkbox"><span class="ico_check"></span></span><span class="txt">인원제한</span></label>
+										</div>
+										<input type="number" id="" name="" class="nx-ips1 ws2" min="1"> 명
+									</td>
+								</tr>
+								<tr>
+									<th>장소</th>
+									<td>
+										<input type="text" id="" name="" class="nx-ips1 wl" placeholder="주소를 입력하세요">
+									</td>
+								</tr>
+								<tr>
+									<th>행사 담당자명</th>
+									<td>
+										<input type="text" id="" name="" class="nx-ips1 ws2">
+									</td>
+								</tr>
+								<tr>
+									<th>담당자 연락처</th>
+									<td>
+										<input type="tel" id="" name="" class="nx-ips1 ws3" maxlength="3"> - 
+										<input type="tel" id="" name="" class="nx-ips1 ws3" maxlength="4"> - 
+										<input type="tel" id="" name="" class="nx-ips1 ws3" maxlength="4">
+									</td>
+								</tr>
+								<tr>
+									<th>담당자 e-mail</th>
+									<td>
+										<input type="email" id="" name="" class="nx-ips1 wm">
+									</td>
+								</tr>
+								<tr>
+									<th>대표이미지</th>
+									<td>
+										<div class="add_file">
+											<input type="hidden" id="" name="" value="" />
+											<a class="plus" href="javascript:void(0);"><span class="ico_plus1"></span><input type="FILE" name="" class="fl1" /></a>
+											<div class="file">
+												<div>
+													<p>첨부 파일 없음</p>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>내용등록</th>
+									<td>
+										<textarea id="" name="" class="nx-ips1" style="min-height: 200px;">이 부분은 위지위그 입니다.</textarea>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<h3 class="nx-tit2">추가 신청내역 (휴대폰, 이메일은 기본항목입니다.)</h3>
+						<div class="nx-box2">
+							<div class="nx-form-lst">
+								<div class="nx-form-item lh30">등록된 항목이 없습니다. '+ 추가' 버튼을 눌러 등록해 주세요.</div>
+								<div class="nx-form-item">
+									<span class="nx-slt vaM mr10">
+										<select id="" name="">
+											<option value="">1</option>
+										</select>
+										<span class="ico_select"></span>
+									</span>
+									<div class="fR ml15">
+										<span class="dsIB mr10 vaM">한줄텍스트</span>
+										<a href="javascript:EvtEdit();" class="nx-btn-s2" style="width:68px;">수정</a>
+										<a href="" class="nx-btn-s4" style="width:68px;">삭제</a>
+									</div>
+									항목명
+								</div>
+								<div class="nx-form-item">
+									<span class="nx-slt vaM mr10">
+										<select id="" name="">
+											<option value="">2</option>
+										</select>
+										<span class="ico_select"></span>
+									</span>
+									<div class="fR ml15">
+										<span class="dsIB mr10 vaM">한줄텍스트</span>
+										<a href="javascript:EvtEdit();" class="nx-btn2">수정</a>
+										<a href="" class="nx-btn4">삭제</a>
+									</div>
+									입력한 항목명이 보여집니다. 입력한 항목명이 보여집니다. 
+								</div>
+							</div>
+							<div class="taC mt15">
+								<a href="javascript:EvtEdit();" class="nx-btn2">+ 추가</a>
+							</div>
+						</div>
+
+						<div class="taR mt10">
+							<a href="" class="nx-btn-b2">등록</a>
+							<a href="" class="nx-btn-b3">뒤로</a>
+						</div>
+
+						<!-- 이 페이지에서 사용하는 스크립트 -->
+						<script>
+						//<[!CDATA[
+						function EvtEdit() {
+							var url = "evt_form_edit.html";
+							window.open(url, "evt_form_edit", "left=200,top=200,width=550,height=340,scrollbars=yes,resizable=yes");
+						}
+						//]]>
+						</script>
+
+						<!-- ~~~~~ 내용페이지 e. ~~~~~ -->
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="footer">
+		<p class="copy">저작권 ⓒ <?php echo $_SERVER['HTTP_HOST']; ?> All right reserved</p>
+	</div>
+
+	<div style="position:absolute;top:-10000px;left:-10000px">
+		<img id="res_w" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_w" />
+		<img id="res_wd" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_wd" />
+		<img id="res_wdt" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_wdt" />
+		<img id="res_d" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_d" />
+		<img id="res_dt" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_dt" />
+		<img id="res_tm" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_tm" />
+		<img id="res_t" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_t" />
+		<img id="res_m" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_m" />
+		<img id="res_mh" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_mh" />
+		<img id="res_mv" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_mv" />
+
+		<iframe src="" id="actIframe" name="actIframe" width="1" height="1" style="border:none; margin:0px;"></iframe>
+	</div>
+
+	<script>
+	//<[!CDATA[
+	var sTop;
+	var orgw = $(window).width();
+	$(document).ready(function() {
+		$('.mna').click(function(e) {
+			e.preventDefault();
+
+			if ($(this).next('.snb').length > 0) {
+				$('#mnb_wrap .mna.aon + .snb').slideUp(300);
+				$('#mnb_wrap .mna.aon').removeClass('aon');
+				$(this).next('.snb').slideToggle(300, function() {
+					iscroll1.refresh();
+				});
+
+				if ($(this).hasClass('aon')) $(this).removeClass('aon');
+				else $(this).addClass('aon');
+			}
+			else {
+				window.location.href=$(this).attr('href');
+			}
+		});
+
+		$('#m_menu').on('click', function() {
+			if (!$('#mnb_wrap').is(':hidden')) {
+				hideMnb();
+			} 
+			else {
+				$('#mnb_layer').fadeIn('fast');
+				$('#mnb_wrap').fadeIn(300);
+				$('#mnb_wrap').animate({"left":"0"}, 300);
+				scrollBlock();
+			}
+			iscroll1.refresh();
+		});
+
+		$('#mnb_layer').on('click', function() {
+			if (!$('#mnb_wrap').is(':hidden')) {
+				hideMnb();
+			}
+		});
+	});
+
+	$(window).on('resize', function() {
+		if ($(window).width() > 1024) {
+			$('#mnb_layer').hide();
+			$("#mnb_wrap").removeAttr("style");
+			unScrollBlock();
+		} 
+	});
+
+	function hideMnb() {
+		$('#mnb_wrap').fadeOut(300);
+		$('#mnb_wrap').animate({"left":"-280px"}, 300);
+		$('#mnb_layer').fadeOut(300);
+		unScrollBlock();
+	}
+
+	function scrollBlock() {
+		sTop = document.body.scrollTop;
+
+		$('body').css({"position": "fixed", "top": "-"+sTop+"px", "left": "0", "right": "0", "bottom": "0"});
+	}
+
+	function unScrollBlock() {
+		$('body').css({"position": "static", "top": "0"});
+		$('body').scrollTop(sTop);
+	}
+	//]]>
+	</script>
+</body>
+</html>
+

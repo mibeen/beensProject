@@ -1,0 +1,57 @@
+
+.popup-top{
+  position: relative;
+}
+.popup-top-wrap{
+  position: relative;
+}
+.popup-top-wrap > a{
+  display: block;height: 100%; position: relative; z-index: 500;
+}
+.popup-top .hd_pops_reject{
+  position: absolute; right: 110px; top: 50%; 
+  margin-top: -15px;
+  background: #000; 
+  border: none; color: #FFF; z-index: 1000;
+  padding: 3px 5px;
+}
+.btn_cls_ban2 {
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 110px;
+  //height: 72px;
+  height: 100%;
+  text-indent: -9999em;
+  z-index: 1000;
+  background-image: url(/img/btn_x.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+.hd_pops{
+  background-position: center;
+}
+
+.hd_pops_footer a{
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: 0;
+  background: #FFF;
+  color: #393939;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1300px){
+  .btn_cls_ban2{
+    background-size: 80%;
+  }
+}
+
+@media screen and (max-width: 991px){
+    .popup-top{display: none;}
+    .hd_pops{top: 120px !important; left: 50% !important; width: 90% !important; margin-left: -45% !important; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 5px; background: #FFF;}
+    .hd_pops .hd_pops_con{width: 100% !important; height: auto !important; min-height: 300px;}
+
+}

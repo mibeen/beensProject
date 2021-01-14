@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+.basic-category {
+    padding: 0px
+}
+.basic-category a {
+    display: block
+}
+.basic-category .ca-head {
+    height: 44px;
+    line-height: 44px;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 2px solid #55636F;
+    color: #333;
+    padding: 0 8px;
+    text-overflow: ellipsis;
+    overflow: hidden; white-space: nowrap;
+}
+.basic-category .ca-sub1 {
+    border-top: 1px solid #F1F1F1;
+}
+.basic-category .ca-sub1:first-child {
+    border-top: none
+}
+.basic-category .ca-sub1>a {
+    display: block;
+    position: relative;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 12px;
+    background: #fff;
+    font-size: 14px;
+    color: #222
+}
+.basic-category .ca-sub1.on>a,
+.basic-category .ca-sub1>a:hover {
+    /*color: #8ec700*/
+}
+.basic-category .ca-line {
+    padding: 8px 16px;
+    background: #fafafa;
+    border-bottom: 1px solid #eee
+}
+.basic-category .new {
+    color: crimson
+}
+.nx_basic_category {
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+
+/* 타이틀메뉴 */
+
+.basic-category {
+  .ca-sub1.tit-menu {
+    > a {   // 타이틀 메뉴
+      font-size: 16px;
+      cursor: default;
+      &:hover {
+        color: #222;
+      }
+    }
+    & ~ .ca-sub1:not(.tit-menu) {  // 타이틀 메뉴에 속한 메뉴
+      border-top: none;
+      > a {
+        height: 32px;
+        line-height: 32px;
+        padding-left: 24px;
+      }
+    }
+    & + .ca-sub1:not(.tit-menu) {
+      border-top: 1px solid #f1f1f1;
+    }
+    /*
+    & ~ .tit-menu {   // 다른 타이틀 메뉴
+      border-top: 1px solid #e5e5e5;
+    }
+    */
+  }
+}

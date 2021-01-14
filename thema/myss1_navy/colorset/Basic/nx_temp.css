@@ -1,0 +1,89 @@
+/*
+ * Custom Thema for Nextbiz by HoyeongKim 
+ */
+
+
+/* 일반게시판 리스트 */
+.list-board .div-head{background: #0065B3; border-top: none; color: #FFF; font-weight: 300;}
+.list-board .div-head span{border-right: none; font-weight: inherit; color: inherit;}
+.list-board .div-head a{color: inherit;}
+
+.list-board .bg-light{background: #FFF;}
+
+.list-wrap .list-page .pagination a{color: #0065B3 !important;}
+.list-wrap .list-page .pagination .active a, 
+.view-wrap .list-page .pagination .active a{background: #0065B3 !important; border-color: #0065B3 !important;}
+
+.bg-green, 
+i.bg-green, 
+.badge.bg-green{background: #0065B3;}
+
+.list-wrap .img-wrap .img-item{border: 1px solid #DDD;}
+
+.btn.btn-color{background: #0065B3; border-color: #0065B3;}
+.btn.active.btn-color, 
+.btn.btn-color:hover, 
+.btn.btn-color:focus, 
+.btn.btn-color:active{background: #0032A1;}
+
+
+/* 일반게시판 상세 */
+.view-wrap h1{ border-bottom: 2px solid #0065B3; }
+.panel-default > .panel-heading{background: #FFF;}
+.panel>.list-group .list-group-item{padding: 10px 15px; border-bottom: 1px solid #DBDBDB;}
+a.list-group-item{color: #666;}
+
+/* 댓글 */
+div.comment-box{background: #FFF; border: none;}
+.comment-box > .help-block{display: none;}
+div.comment-box .comment-content .comment-cell.comment-submit{background: #0065B3; color: #FFF;}
+
+/* Ebook 이북 */
+.nx-ebook-container .list-item h2{text-align: left; font-size: 16px; font-weight: 300; color: #858585;}
+
+/* gallery 갤러리 */
+.nx-gallery .list-item{border: 1px solid #ddd; transition: all .3s ease-in;}
+.nx-gallery .list-item:hover {border-color: #0065B3;}
+.nx-gallery .list-item .img-item{border: none;}
+.nx-gallery .list-item h2{color: #666;}
+.nx-gallery .list-item p{color: inherit; font-weight: 400; margin-bottom: 10px;}
+.nx-gallery .list-item a{display: block; color: inherit; height: 76px;}
+.nx-gallery .list-item .nx-post-subject{font-size: 14px; word-break: keep-all;}
+.nx-gallery .list-item .nx-post-date{font-size: 12px;}
+
+.nx_faq{transition: all .23s ease-in-out;}
+.nx_faq.active{background: #F5F5F5; border-top: 2px solid #0065B3;}
+.nx_faq td{vertical-align: middle;}
+.nx_faq .nx_faq_top{ background: url(/skin/board/Basic-Board/list/accordion/img/faq_arrow.png) 870px 50% no-repeat; }
+
+/* calendar 스케쥴, 달력 */
+.list-calendar .div-head {background: #FFF; color: #666;}
+.list-calendar .div-head .red{color: #F63535;}
+.list-calendar .div-head .blue{color: #0066B3;}
+
+.calendar-head{text-align: center; padding: 5px 0 10px;}
+.calendar-head h3{display: inline-block; margin: 0 25px;}
+.calendar-head > a{font-weight: 300; color: #575757;}
+
+.list-board .list-body > li.list-item ul.do-list li{padding-left: 5px; position: relative; overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+text-overflow: ellipsis; font-size: 12px;}
+.list-board .list-body > li.list-item ul.do-list li:after{content:'';position: absolute;left:0; top: 50%; display: inline-block; width: 2px; height: 2px; border-radius:5px; background: #0065B3; }
+
+
+@media screen and (max-width: 667px){
+	.nx-gallery .list-item a{height: auto;}
+	.responsive .view-wrap h1{border-bottom: none;}
+	.panel-default > .panel-heading{border-top: 2px solid #0065B3;}
+	.responsive .view-wrap h1 + .panel-default { border-top: none;}
+}
+
+.lightgreen, i.lightgreen{ color: #0065B3;}
+
+
+
+
+
+
+
+
+

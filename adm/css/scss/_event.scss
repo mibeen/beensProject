@@ -1,0 +1,245 @@
+@charset "UTF-8";
+
+/* 폼빌더 리스트 */
+
+.nx-form-item {
+  min-height: 30px;
+  padding: 14px 15px;
+  border: 1px solid #d5d5d5;
+  background: #f5f5f5;
+  box-sizing: content-box;
+}
+
+.nx-form-item + .nx-form-item {
+  margin-top: 15px;
+}
+
+
+/* 카테고리 관리 */
+
+.nx-cate-item {
+  position: relative;
+  padding-right: 120px;
+  .del,
+  .cancel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px; 
+  }
+  .edit,
+  .save {
+    position: absolute;
+    top: 0;
+    right: 60px;
+    width: 50px;
+  }
+}
+
+.nx-cate-item + .nx-cate-item {
+  margin-top: 20px;
+}
+
+
+/* 명찰관리 */
+
+.nx-template-lst {
+  overflow: hidden;
+  padding: 15px;
+  border: 1px solid #d5d5d5;
+  li {
+    @include column(4, 30, 15);
+  }
+  a {
+    display: block;
+  }
+  .img-wrap1 {
+    position: relative;
+    height: 0;
+    padding-bottom: 100%;
+  }
+  .img-wrap2 {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #d5d5d5;
+    background: #f1f1f1;
+    box-sizing: border-box;
+  }
+  .img {
+    display: block;
+    width: 100%;
+  }
+  .tit {
+    @include elss(2, 1.3);
+    margin-top: 5px;
+    text-align: center;
+    color: #222;
+  }
+}
+
+.nx-template-preview {
+  position: relative;
+  border: 1px solid #d5d5d5;
+  text-align: center;
+  vertical-align: middle;
+  background: {
+    repeat: no-repeat;
+    position: top center;
+  }
+  .item {
+    line-height: 1;
+    box-sizing: content-box;
+  }
+  .serial-num {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+    font-size: 13px;
+    color: #222;
+  }
+}
+
+.nx-namep-color {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  border: 1px solid #d5d5d5;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.nx-namep-deco-wrap {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+}
+
+.nx-namep-deco {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  + label {
+    display: inline-block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    border: 1px solid #d5d5d5;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    box-sizing: border-box;
+    /* 부트스트랩 css 리셋 */
+    max-width: none;
+    margin-bottom: 0;
+    font-weight: 400;
+    & + .nx-namep-deco + label {
+      border-left: none;
+    }
+    &.underline {
+      text-decoration: underline;
+    }
+  }
+  &:checked + label {
+    background: #39f;
+    color: #fff;
+  }
+}
+
+
+/* 만족도 - 질문관리 */
+
+.nx-poll-ques-item {
+  position: relative;
+  padding: 0 50px;
+  .num {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    line-height: 30px;
+    text-align: center;
+    color: #666;
+  }
+  .del {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: $color4;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    [class^=ico_]:before {
+      font-size: 16px;
+    }
+  }
+}
+
+.nx-poll-ques-item + .nx-poll-ques-item {
+  margin-top: 20px;
+}
+
+/* 만족도 - 결과 */
+
+.nx-poll-result-item {
+  .tit {
+    line-height: 130%;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #666;
+  }
+}
+
+.nx-poll-opt-lst {
+  max-width: 720px;
+  padding-left: 15px;
+  li {
+    overflow: hidden;
+    margin-top: 5px;
+    &:first-child {
+      margin-top: 0;
+    }
+    .txt {
+      float: left;
+      width: 140px;
+      line-height: 20px;
+    }
+    .graph {
+      float: left;
+      width: calc(100% - 300px);
+      margin-left: 10px;
+      padding: 6px 0;
+      .gage {
+        height: 8px;
+        background: #ddd;
+        border-radius: 4px;
+        .fill {
+          width: 0;
+          height: 100%;
+          background: $color2;
+          border-radius: 4px;
+        }
+      }
+    }
+    .count {
+      float: right;
+      width: 140px;
+      line-height: 20px;
+      text-align: right;
+    }
+  }
+}
+
+.nx-poll-result-item + .nx-poll-result-item {
+  margin-top: 20px;
+}

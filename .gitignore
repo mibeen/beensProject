@@ -1,0 +1,7 @@
+.settings/*
+.buildpath
+.project
+*.orig
+
+config.php
+gseek/api.php

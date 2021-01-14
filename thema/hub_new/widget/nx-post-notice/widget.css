@@ -1,0 +1,134 @@
+.nx-post-notice .nx_post_ct {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 14px
+}
+.nx-post-notice .nx_post_date {
+    margin: 5px 0 0;
+    text-align: right;
+    font-size: 12px;
+    color: #666
+}
+.nx-post-notice .post-list {
+    list-style: none;
+    padding: 0px;
+    margin: -2px 0px;
+    line-height: 22px
+}
+/*.nx-post-notice .post-list li {
+    padding: 15px 0;
+    margin: 0px;
+    border-top: 1px solid #e5e5e5
+}*/
+
+/* custom Hoyeongkim */
+.nx-post-notice ul{
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+}
+.nx-post-notice li{
+    font-size: 13px;
+    padding-top: 7px;
+}
+.nx-post-notice a{
+    display: block;
+}
+.nx-post-notice li > p {
+	float: left;
+}
+.nx-post-notice li:after {
+	content:'';clear: both;display: block;
+}
+.nx-post-notice li .title:last-child {
+    float: none;
+}
+.nx-post-notice li .title:nth-last-child(n+2) {
+     width: calc(100% - 50px);   
+}
+.nx-post-notice li .title a{
+    display: block; width: 100%;
+    overflow: hidden; -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.nx-post-notice li .date {
+	width: 50px;
+    text-align: right;
+    color: #999;
+}
+.nx-post-notice li .date a{
+    color: inherit;
+}
+/*
+.nx-post-notice li:first-child {
+    border-top: none
+}
+*/
+.nx-post-notice .post-list li:last-child {
+    padding-bottom: 0
+}
+.nx-post-notice .post-list li b {
+    letter-spacing: -1px;
+    padding-right: 1px
+}
+.nx-post-notice .post-list li .name {
+    letter-spacing: -1px;
+    color: #888;
+    padding-left: 4px;
+    padding-right: 1px
+}
+.nx-post-notice .post-list .txt-normal {
+    letter-spacing: 0
+}
+.nx-post-notice .post-none {
+    padding: 50px 10px;
+    text-align: center;
+    color: #888
+}
+.nx-post-notice .wr-text {
+    font-family: dotum;
+    font-size: 11px;
+    letter-spacing: -1px;
+    line-height: 11px;
+    font-weight: normal
+}
+.nx-post-notice .wr-icon {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    line-height: 12px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: 0px 0px
+}
+.nx-post-notice .wr-new {
+    width: 12px;
+    height: 12px;
+    background-image: url("./img/icon_new.gif")
+}
+.nx-post-notice .wr-secret {
+    width: 12px;
+    height: 12px;
+    background-image: url("./img/icon_secret.gif")
+}
+.nx-post-notice .wr-video {
+    width: 12px;
+    height: 12px;
+    background-image: url("./img/icon_video.gif")
+}
+.nx-post-notice .wr-image {
+    width: 12px;
+    height: 12px;
+    background-image: url("./img/icon_image.gif")
+}
+.nx-post-notice .wr-file {
+    width: 12px;
+    height: 12px;
+    background-image: url("./img/icon_file.gif")
+}
+.nx-post-notice .nx_post_title {
+    margin: 5px 0 0;
+    font-size: 16px;
+    color: #222
+}

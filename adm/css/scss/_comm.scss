@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+/* 검색 */
+
+.sch_box {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  padding: 15px 90px 15px 20px;
+  background: #eee;
+  border-radius: 6px;
+  .sch_opt1 {
+    display: table;
+    width: 100%;
+    min-height: 50px;
+    .sch_opt2 {
+      display: table-cell;
+      padding-top: 5px;
+      vertical-align: middle;
+      > .sch_ipt {
+        display: inline-block;
+        width: 100%;
+      }
+      > .sch_ipt, > [class*="slt"] {
+        margin-bottom: 5px;
+        vertical-align: bottom !important;
+        &:nth-last-child(n+2) {
+          margin-right: 10px;
+        }
+      }
+      > .sch_term {
+        display: inline-block;
+        width: 394px;
+        margin-bottom: 5px;
+        vertical-align: bottom !important;
+        &:nth-last-child(n+2) {
+          margin-right: 10px;
+        }
+        .tilde {
+          display: inline-block;
+          margin: 0 5px;
+          vertical-align: middle;
+        }
+      }
+      > [data-tit] {
+        position: relative;
+        margin-top: 20px;
+        &:before {
+          content: attr(data-tit);
+          display: block;
+          position: absolute;
+          top: -22px;
+          left: 0;
+          line-height: 20px;
+          font-size: 14px;
+          color: #444;
+        }
+      }
+    }
+  }
+  .sch_state {
+    display: inline-block;
+    vertical-align: bottom !important;
+    &:nth-last-child(n+2) {
+      margin-right: 10px;
+    }
+    input.fill+label {
+      margin-bottom: 5px;
+    }
+    > [class^=btn] {
+      margin-bottom: 5px;
+    }
+  }
+  .btn_sch {
+    position: absolute;
+    right: 20px;
+    bottom: 50%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: -25px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    @include hover($color2);
+    span[class^="ico_"]:before {
+      font-size: 24px;
+    }
+  }
+  .btn_sch_term {
+    @extend .nx-btn-s3;
+    min-width: 60px;
+    transition: background 0.25s;
+    &:hover, &.aon {
+      background: $color1;
+    }
+  }
+}
+
+
+/* Tab */
+
+.nx-tab1 {
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d5d5d5;
+  li {
+    float: left;
+    margin-left: 2px;
+    a {
+      display: block;
+      min-width: 100px;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 5px;
+      text-align: center;
+      font-size: 14px;
+      color: #000;
+      border-radius: 4px 4px 0 0;
+      box-sizing: border-box;
+      &:hover {
+        background: rgba(213, 213, 213, 0.5);
+      }
+      &.aon {
+        background: #d5d5d5;
+      }
+    }
+  }
+}
+
+
+/* Box */
+
+.nx-box1 {
+  padding: 20px;
+  border: 1px solid #d5d5d5;  
+  background: #fff;
+}
+
+.nx-box2 {
+  padding: 40px;
+  border: 1px solid #d5d5d5;  
+  background: #fff;
+}
+
+.nx-box3 {
+  padding: 20px;
+  background: #f5f5f5; 
+}
+
+
+/* Title */
+
+.nx-tit1 {
+  margin: 30px 0 10px;
+  font-size: 16px;
+  color: #000;
+  font-weight: 700;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.nx-tit2 {
+  margin: 30px 0 10px;
+  font-size: 14px;
+  color: #000;
+  font-weight: 700;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.nx-tip {
+  color: #5eb5d5;
+}
+
+
+/* 기타 */
+
+.nx-top-bd {
+  padding-top: 20px;
+  border-top: 1px solid #d5d5d5;
+}
+
+
+/* 모바일가로 */
+@media only screen and (max-width: 759px) {
+  .sch_box {
+    padding: 5px 54px 5px 10px;
+    .btn_sch {
+      right: 10px;
+      bottom: 10px;
+      width: 34px;
+      height: 34px;
+      line-height: 34px;
+      margin-bottom: 0;
+      span[class^="ico_"]:before {
+        font-size: 18px;
+      }
+    }
+  } 
+}
+
+
+/* 모바일세로 */
+@media only screen and (max-width: 519px) {
+  .sch_box .sch_opt1 .sch_opt2 {
+    > .sch_ipt {
+      max-width: none !important;
+      &[data-tit] {
+        width: calc(100% - 85px);
+      }
+    }
+    > .sch_term {
+      width: none !important;
+      &[data-tit] {
+        width: calc(100% - 85px);
+      }
+      input[type="text"] {
+        max-width: calc(100% - 30px) !important;
+      }
+      .tilde {
+        display: block;
+      }
+    }
+    > [class*="slt"] {
+      width: 100%;
+      &[data-tit] {
+        width: calc(100% - 85px);
+      }
+      select {
+        width: 100%;
+        min-width: 0 !important;
+      }
+    }
+    [data-tit] {
+      margin-top: 0;
+      margin-left: 85px;
+      &:before {
+        top: 0;
+        left: -85px;
+        line-height: 30px;
+      }
+    }
+  }
+}

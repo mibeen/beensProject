@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.event_lst {
+  overflow:hidden;
+  li {
+    @include gallery(3, 20, 20);
+    a {
+      display: block;
+      border: 1px solid #dbdbdb;
+    }
+  }
+}

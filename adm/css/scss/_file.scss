@@ -1,0 +1,474 @@
+@charset "UTF-8";
+
+/* 업로드 팝업 */
+
+.upload_popup {
+  max-width: 320px;
+  width: 100%;
+  padding: 15px;
+  margin: 0 auto;
+  background: #f4bb5b;
+  border-radius: 5px;
+  box-sizing: border-box;
+  .top {
+    position: relative;
+    margin-bottom: 20px;
+    background: #f4bb5b;
+    .tit {
+      font-size: 16px;
+      color: #fff;
+      text-align: center;
+    }
+    .ico_cls {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: 13px;
+      padding: 10px;
+    }
+  }
+  .p1 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+  }
+  .gage_wrap {
+    overflow: hidden;
+    width: 200px;
+    margin: 0 auto 20px;
+    background: #f39800;
+    border-radius: 5px;
+    .gage {
+      height: 8px;
+      background: #fff;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.upload_lst {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  max-height: 174px;
+  li {
+    position: relative;
+    display: block;
+    height: 36px;
+    padding: 2px 40px 0 15px;
+    margin-top: 1px;
+    color: #333;
+    background: #fff;
+    &:first-child {
+      margin-top: 0;
+    }
+    p {
+      font-size: 12px;
+    }
+    .tit {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      line-height: 150%;
+    }
+    .del {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 9px;
+      height: 9px;
+      padding: 14px;
+      img {
+        display: block;
+      }
+    }
+  }
+}
+
+/* 첨부파일 리스트 */
+
+.attachment_lst {
+  max-width: 400px;
+  padding: 10px 10px 10px 35px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  background:  {
+    color: #eee;
+    image: url(../imgs/ico/ico_download.png);
+    repeat: no-repeat;
+    position: 10px 10px;
+    size: 14px 18px;
+  }
+  @include border-radius(4px);
+  li {
+    margin-top: 8px;
+    color: #787878;
+    &:first-child {
+      margin-top: 0;
+    }
+    a {
+      color: #666;
+      &:hover {
+        color: #999;
+      }
+    }
+  }
+}
+
+.attachment_lst2 {
+  /* 기존 올리사이트 첨부파일 리스트 */
+  display: inline-block;
+  padding: 5px 10px;
+  margin-top: 10px;
+  background: #e8f3ff;
+  @include border-radius(4px);
+  li {
+    margin-top: 8px;
+    color: #787878;
+    &:first-child {
+      margin-top: 0;
+    }
+    a {
+      color: #5fa0e6;
+    }
+  }
+}
+
+.file_list {
+  display: inline-block;
+  padding: 7px 10px;
+  background: #e8f3ff;
+  @include border-radius(3px);
+  li {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #787878;
+    &:first-child {
+      margin-top: 0;
+    }
+    .name {
+      font-size: 14px;
+      color: #5fa0e6;
+    }
+    .del {
+      color: #f00;
+      font-size: 13px;
+    }
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
+/* 파일첨부 */
+
+.add_file {
+  overflow: hidden;
+  position: relative;
+  .plus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #ddd;
+    span[class*="ico_"] {
+      display: inline-block;
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+  .file {
+    max-width: 170px;
+    height: 30px;
+    margin: 0px 90px 0px 30px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    p {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      line-height: 28px;
+      font-size: 12px;
+    }
+    &.over {
+      color: #fff;
+      background: #5fa0e6;
+    }
+    &.added {
+      position: relative;
+      padding-left: 5px;
+      text-align: left;
+      border: 1px solid #ddd;
+      background: #f9f9f9;
+      p {
+        margin-right: 30px;
+        line-height: 1.2;
+        span {
+          line-height: 1.2;
+          &.s1 {
+            display: block;
+            color: #5fa0e6;
+          }
+          &.s2 {
+            display: block;
+            font-size: 11px;
+          }
+        }
+      }
+      .del_btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        img {
+          display: block;
+        }
+        span[class^="ico_"] {
+          font-size: 18px;
+          color: #bbb;
+          &:before {
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+  .fl1[type=file] {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity = 0);
+    opacity: 0;
+    -moz-opacity: 0;
+    cursor: pointer;
+  }
+}
+
+.add_file2 {
+  overflow: hidden;
+  position: relative;
+  max-width: 380px;
+  margin: 0 auto;
+  padding-right: 100px;
+  .file {
+    position: relative;
+    max-width: 340px;
+    height: 40px;
+    margin: 0px 40px 0px 0px;
+    padding-left: 20px;
+    text-align: left;
+    background: #fff;
+    @include border-radius-separate(5px, 0, 0, 5px);
+    @include box-sizing(border-box);
+    .plus {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 40px;
+      height: 40px;
+      background: #bbb url(../imgs/rms/plus1.png) no-repeat center center;
+      background-size: 14px;
+      @include border-radius(0 5px 5px 0);
+    }
+    p {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      line-height: 40px;
+      font-size: 14px;
+    }
+    &.over {
+      color: #fff;
+      background: #5fa0e6;
+    }
+    &.added {
+      position: relative;
+      text-align: left;
+      background: #f9f9f9;
+      p {
+        margin-right: 30px;
+        line-height: 1.2;
+        span {
+          line-height: 1.5;
+          &.s1 {
+            display: block;
+            color: #5fa0e6;
+          }
+          &.s2 {
+            display: block;
+            font-size: 11px;
+          }
+        }
+      }
+      .del_btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 13px;
+        img {
+          display: block;
+        }
+      }
+    }
+  }
+  .fl1[type=file] {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity = 0);
+    opacity: 0;
+    -moz-opacity: 0;
+    cursor: pointer;
+  }
+}
+
+.add_file3 {
+  position: relative;
+  .btn_file_add {
+    margin: 0 6px 5px 0;
+  }
+  .file_list {
+    margin-bottom: 5px;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:not(:first-child) {
+    margin-top: 15px;
+  }
+  .file_type_box {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 0;
+    z-index: 1000;
+  }
+}
+
+.file_type_box {
+  display: none;
+  overflow: hidden;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  li {
+    float: left;
+    border-left: 1px solid #c6dcf4;
+    a {
+      display: block;
+      width: 70px;
+      height: 62px;
+      text-align: center;
+      padding: 10px;
+      background: #8db8e8;
+      box-sizing: border-box;
+      &:hover {
+        background: #9ec2eb;
+      }
+      span[class^='ico'] {
+        font-size: 20px;
+        color: #fff;
+      }
+      .ico_x {
+        line-height: 42px;
+      }
+      .type {
+        color: #fff;
+      }
+    }
+    &:first-child {
+      border-left: 0;
+      a {
+        border-radius: 4px 0 0 4px;
+      }
+    }
+    &:last-child a {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+}
+
+    
+/* 가로모드면서 높이가 높은 단말기 */
+@media only screen and (min-width: 520px) and (max-width: 759px) and (max-height: 640px) {
+  .upload_popup {
+    position: relative;
+    min-height: 300px;
+    height: 100%;
+    .top {
+      margin-bottom: 10px;
+    }
+    .p1 {
+      margin-bottom: 5px;
+    }
+    .btn_area1 {
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+    }
+  }
+  .upload_lst {
+    position: absolute;
+    top: 90px;
+    left: 15px;
+    right: 15px;
+    bottom: 56px;
+    max-height: 100%;
+  }
+}
+
+/* 높이가 낮지만 가로모드인 단말기 */
+@media only screen and (max-width: 519px) and (orientation: landscape) {
+  .upload_popup {
+    position: relative;
+    min-height: 300px;
+    height: 100%;
+    .top {
+      margin-bottom: 10px;
+    }
+    .p1 {
+      margin-bottom: 5px;
+    }
+    .btn_area1 {
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+    }
+  }
+  .upload_lst {
+    position: absolute;
+    top: 90px;
+    left: 15px;
+    right: 15px;
+    bottom: 56px;
+    max-height: 100%;
+  }
+}
+
+/* 모바일세로 */
+@media only screen and (max-width: 519px) {
+  .add_file {
+    .fL {
+      float: none;
+      margin-bottom: 5px;
+      .file {
+        width: auto;
+        margin: 0 0 0 35px;
+      }
+    }
+    .fR {
+      float: none;
+      text-align: right;
+    }
+  }
+}

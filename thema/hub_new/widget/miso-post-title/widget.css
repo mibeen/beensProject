@@ -1,0 +1,286 @@
+@charset "utf-8";
+
+/*-------------------------------------------------------*/
+/* 공통
+/*-------------------------------------------------------*/
+.miso-post-title { 
+	position:relative; overflow:hidden; background-size: cover; background-position: center center; background-color:#333;
+}
+.miso-post-title .item { 
+	background-size: cover; background-position: center center;
+}
+@media only screen and (min-width: 768px) {
+	.miso-post-title.is-parallax { background-attachment: fixed !important; }
+}
+.miso-post-title .at-container { 
+	border:0 !important;
+}
+.miso-post-title .img-bg {
+	background-size: cover !important; background-position: center top !important; 
+}
+.miso-post-title .img-layer {
+	position: absolute; width: 100%; height: 100%; left: 0; top: 0; overflow:hidden;
+}
+.miso-post-title .img-tbl { 
+	position:relative; z-index:1; display:table; width:100%; table-layout:fixed; margin:0; border-collapse: collapse;
+}
+.miso-post-title .img-cell { 
+	display:table-cell; vertical-align:middle; padding:0;
+}
+.miso-post-title .bg-black { 
+	background-color:#000; 
+}
+.miso-post-title .btn-wset { 
+	position:absolute; z-index:9999; bottom:60px; left:50%; width:120px; margin-left:-60px; 
+}
+
+/* opacity */
+.miso-post-title .img-opa-bg { 
+	background-color:#000;
+}
+/* 개별사용시 주석 풀어 주세요.
+.miso-post-title .img-opa10 { 
+	opacity:0.1; -webkit-opacity:0.1; -moz-opacity:0.1; -khtml-opacity:0.1; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)"; filter: alpha(opacity=10); 
+}
+.miso-post-title .img-opa20 { 
+	opacity:0.2; -webkit-opacity:0.2; -moz-opacity:0.2; -khtml-opacity:0.2; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)"; filter: alpha(opacity=20); 
+}
+.miso-post-title .img-opa30 { 
+	opacity:0.3; -webkit-opacity:0.3; -moz-opacity:0.3; -khtml-opacity:0.3; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; filter: alpha(opacity=30); 
+}
+.miso-post-title .img-opa40 { 
+	opacity:0.4; -webkit-opacity:0.4; -moz-opacity:0.4; -khtml-opacity:0.4; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; filter: alpha(opacity=40); 
+}
+.miso-post-title .img-opa50 { 
+	opacity:0.5; -webkit-opacity:0.5; -moz-opacity:0.5; -khtml-opacity:0.5; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; filter: alpha(opacity=50); 
+}
+.miso-post-title .img-opa60 { 
+	opacity:0.6; -webkit-opacity:0.6; -moz-opacity:0.6; -khtml-opacity:0.6; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; filter: alpha(opacity=60); 
+}
+.miso-post-title .img-opa70 { 
+	opacity:0.7; -webkit-opacity:0.7; -moz-opacity:0.7; -khtml-opacity:0.7; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; filter: alpha(opacity=70); 
+}
+.miso-post-title .img-opa80 { 
+	opacity:0.8; -webkit-opacity:0.8; -moz-opacity:0.8; -khtml-opacity:0.8; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; filter: alpha(opacity=80); 
+}
+*/
+
+/* raster */
+/* 개별사용시 주석 풀어 주세요.
+.miso-post-title .img-raster1 {
+	background-image: url('./img/raster-1.png');
+}
+.miso-post-title .img-raster2 {
+	background-image: url('./img/raster-2.png');
+}
+.miso-post-title .img-raster3 {
+	background-image: url('./img/raster-3.png');
+}
+.miso-post-title .img-raster4 {
+	background-image: url('./img/raster-4.png');
+}
+.miso-post-title .img-raster5 {
+	background-image: url('./img/raster-5.png');
+}
+*/
+
+/* color */
+.miso-post-title .bg-1,
+.miso-post-title .bg-h1:hover { 
+	background-color:#eb5451; border-color:#eb5451; color:#fff; /* red */
+}
+.miso-post-title .bg-2,
+.miso-post-title .bg-h2:hover { 
+	background-color:#756fad; border-color:#756fad; color:#fff; /* purple */
+}
+.miso-post-title .bg-3,
+.miso-post-title .bg-h3:hover {
+	background-color:#0092e0; border-color:#0092e0; color:#fff; /* blue */
+}
+.miso-post-title .bg-4,
+.miso-post-title .bg-h4:hover {
+	background-color:#4c6187; border-color:#4c6187; color:#fff; /* navy */
+}
+.miso-post-title .bg-5,
+.miso-post-title .bg-h5:hover {
+	background-color:#8cc346; border-color:#8cc346; color:#fff; /* green */
+}
+.miso-post-title .bg-6,
+.miso-post-title .bg-h6:hover {
+	background-color:#5d588f; border-color:#5d588f; color:#fff; /* deeppurple */
+}
+.miso-post-title .bg-7,
+.miso-post-title .bg-h7:hover {
+	background-color:#71757e; border-color:#71757e; color:#fff; /* gray */
+}
+.miso-post-title .bg-8,
+.miso-post-title .bg-h8:hover {
+	background-color:#d82c29; border-color:#d82c29; color:#fff; /* deepred */
+}
+.miso-post-title .bg-9,
+.miso-post-title .bg-h9:hover {
+	background-color:#12cebd; border-color:#12cebd; color:#fff; /* mint */
+}
+.miso-post-title .bg-0,
+.miso-post-title .bg-h0:hover {
+	background-color:#21a6ed; border-color:#21a6ed; color:#fff; /* lightblue */
+}
+
+/*-------------------------------------------------------*/
+/* BxSlider
+/*-------------------------------------------------------*/
+.miso-post-title .bxslider { 
+	padding:0; margin:0;
+}
+.miso-post-title .bx-wrapper { 
+	margin-bottom:0; 
+}
+.miso-post-title .bx-wrapper .bx-viewport {
+	border: 0; left: 0;	background: none !important; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+}
+.miso-post-title .bx-wrapper .bx-controls-direction a {
+    text-indent:0 !important; text-align:center; color:#fff; font-size:50px; line-height:50px; margin-top:-25px; height:50px; width:30px; opacity:0.5;
+}
+.miso-post-title .bx-wrapper .bx-controls-direction a:hover {
+    opacity:1;
+}
+.miso-post-title .bx-wrapper .bx-prev {
+    background: none; z-index:3;
+}
+.miso-post-title .bx-wrapper .bx-next {
+    background: none; z-index:3;
+}
+.miso-post-title .bx-wrapper .bx-pager {
+	position:relative; bottom:0;
+}
+.miso-post-title.is-slider .bx-wrapper .bx-pager {
+	position:absolute; bottom:10%;
+}
+.miso-post-title .bx-wrapper .bx-pager.bx-default-pager a {
+	background: rgba(238,238,238,0.75);
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+.miso-post-title .bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: rgb(233, 27, 35);
+	width:30px;
+}
+
+/*-------------------------------------------------------*/
+/* YTPlayer
+/*-------------------------------------------------------*/
+.miso-post-title .YTPOverlay { 
+	display:none !important; 
+}
+.miso-post-title .mbYTP_wrapper,
+.miso-post-title .playerBox { 
+	backface-visibility: hidden !important; -webkit-backface-visibility: hidden !important; -webkit-transform: translate3d(0,0,0);
+}
+.buttonBar {
+	display: none;
+}
+@media (min-width: 992px) {
+	.miso-post-title.is-video .mb_YTPBar {
+		bottom:auto !important; top:0 !important;
+		height:4px !important;
+		padding:0px !important;
+		opacity: 0.5;
+	}
+
+	.miso-post-title.is-video .mb_YTPBar:hover {
+		opacity: 1;
+	}
+
+	.miso-post-title.is-video .mb_YTPProgress,
+	.miso-post-title.is-video .mb_YTPLoaded,
+	.miso-post-title.is-video .mb_YTPseekbar {
+		height:4px !important;
+	}
+
+	.miso-post-title.is-video .buttonBar {
+		top:4px !important;
+		background : none !important;
+		max-width:480px;
+	}
+}
+@media (max-width: 991px) {
+	.miso-post-title.is-video .mb_YTPProgress {
+		display:none !important;
+	}
+	.miso-post-title.is-video .mb_YTPBar {
+		background : none !important;
+	}
+
+	.miso-post-title.is-video .mb_YTPBar:hover {
+		background : #333 !important;
+		opacity: 1;
+	}
+	.miso-post-title.is-video .mb_YTPBar:hover .mb_YTPProgress {
+		display:block !important;
+	}
+	.miso-post-title.is-video .mb_YTPBar:hover .buttonBar {
+		background:#000 !important;
+	}
+}
+
+/*-------------------------------------------------------*/
+/* .title-basic
+/*-------------------------------------------------------*/
+.miso-post-title .title-basic a { 
+	color:#fff;
+}
+.miso-post-title .title-basic .title-logo { 
+	display:inline-block; padding:15px 20px; 
+}
+.miso-post-title .title-basic .title-logo img { 
+	display:inline-block; max-height:160px; 
+}
+.miso-post-title .title-basic .title-search { 
+	padding:15px 20px; 
+}
+.miso-post-title .title-basic .title-search form { 
+	max-width:260px; padding:0px; margin:0px auto; border:1px solid #fff; border-radius:20px; 
+}
+.miso-post-title .title-basic .title-search form.focus { 
+	background: rgba(0,0,0,0.7); border:1px solid #000;
+}
+.miso-post-title .title-basic .title-search input { 
+	color:#fff; background: transparent !important; border:0px; box-shadow: none !important; -webkit-box-shadow: none !important; 
+}
+.miso-post-title .title-basic .title-search .btn { 
+	color:#fff !important; background: transparent !important; border:0px !important; 
+}
+@media all and (max-width:480px) {
+	.responsive .miso-post-title .title-basic .title-search form { 
+		max-width:220px; 
+	}
+}
+.miso-post-title .title-basic .title-content {
+	color:#fff; padding:20px 50px; text-align:center; 
+}
+.miso-post-title.is-slider .title-basic .title-content {
+	height:auto; max-width:900px; margin:0 auto;
+}
+.miso-post-title .title-basic .title-content h3 { 
+	font-size:32px; padding:0; margin:0 0 20px; line-height:1.4;
+}
+.miso-post-title .title-basic .title-content p { 
+	font-size:17px; padding:0; margin:0; line-height:2;
+}
+.miso-post-title .title-basic .title-content hr { 
+	display:inline-block; width: 80px; height: 3px; padding:0; margin:0 0 15px; border: none; line-height:1px;
+}
+.miso-post-title .title-basic .title-video { 
+	margin:0 auto; max-width:600px;
+}
+@media all and (max-width:480px) {
+	.miso-post-title .title-basic .title-content h3 { 
+		font-size:22px; margin:0 0 10px;
+	}
+	.miso-post-title .title-basic .title-content p { 
+		font-size:14px; line-height:1.6;
+	}
+	.miso-post-title .title-basic .title-content hr { 
+		margin:0 0 10px;
+	}
+}

@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+/* Button */
+
+.btn_style1 {
+  @include button(68px, 30px, null, null, 4px);
+  font-weight: 400;
+}
+
+.btn_style2 {
+  @include button(30px, 30px, null, null, 4px);
+  font-weight: 400;
+}
+
+.btn_style3 {
+  @include button(100px, 36px, null, null, 4px);
+  font-weight: 400;
+}
+
+.nx-btn1 {
+  @extend .btn_style1;
+  background: $color1;
+}
+
+.nx-btn2 {
+  @extend .btn_style1;
+  background: $color2;
+}
+
+.nx-btn3 {
+  @extend .btn_style1;
+  background: $color3;
+}
+
+.nx-btn4 {
+  @extend .btn_style1;
+  background: $color4;
+}
+
+.nx-btn-s1 {
+  @extend .btn_style2;
+  background: $color1;
+}
+
+.nx-btn-s2 {
+  @extend .btn_style2;
+  background: $color2;
+}
+
+.nx-btn-s3 {
+  @extend .btn_style2;
+  background: $color3;
+}
+
+.nx-btn-s4 {
+  @extend .btn_style2;
+  background: $color4;
+}
+
+.nx-btn-b1 {
+  @extend .btn_style3;
+  background: $color1;
+}
+
+.nx-btn-b2 {
+  @extend .btn_style3;
+  background: $color2;
+}
+
+.nx-btn-b3 {
+  @extend .btn_style3;
+  vertical-align: middle;
+  background: $color3;
+}
+
+.nx-btn-b4 {
+  @extend .btn_style3;
+  background: $color4;
+}
+
+.nx-btn-new {
+  background: #fbbc05;
+}
+
+.btn_cal {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #b5b5b5;
+    vertical-align: middle;
+    background: #fff;
+    box-sizing: border-box;
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 7px;
+      background: $color1;
+    }
+  }

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.local_sch .btn_submit_2{padding:4px 5px}
+
+.place_list{display:inline-block;padding:20px}
+.place_list li{float:left;width:180px;border:1px solid #666;list-style:none;margin:15px}
+.place_list li a{display: block;text-decoration:none}
+.place_list li a p{padding:0 5px}
+.place_list .place_img_wrap{width:100%;padding-bottom:10px;min-height:120px}
+.place_list .place_img_wrap img{width:100%;max-height:100%}
+
+.act_button_only{padding:4px 8px 5px}
+.btn_list01 .back_button{background:#617d46;color:#fff}
+
+.anchor a.active{background:#b9cfdc}
+
+.place_req_list td{border:1px solid #ccc;padding:10px 20px;text-align: center}
+.place_req_list .middle_td{text-align:left}
+.place_req_list .middle_td ul{padding:0;margin:0}
+.place_req_list .middle_td li{list-style:none;margin:7px 0}
+.place_req_list .middle_td li .req_list_link{display:block;width:70%;position:relative;padding:5px}
+.place_req_list .middle_td li .req_list_link span{position:absolute;right:10px}
+.place_req_list .middle_td .req_list_type_A{background:#ceeae5}
+.place_req_list .middle_td .req_list_type_B{background:#d3dff7}
+.place_req_list .middle_td .req_list_type_C{background:#f4dbf9}
+.place_req_list .middle_td .req_list_type_D{background:#7d80da}
+
+.req_popup_wrap{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:20;}
+.req_popup_bg{background:#000;opacity:0.5;width:100%;height:100%;position:absolute;top:0;left:0}
+.req_popup{position:absolute;width:50%;max-width:500px;top:50px;left:calc(50% - 250px);background:#fff;border:1px solid #ccc;z-index:10}
+.req_popup_titile{color:#fff;background:#688093;padding:5px 10px;position: relative}
+.req_popup_titile a{color:#fff;position: absolute;right:10px}
+.req_wrap{padding:10px;text-align:left;}
+.req_wrap_line{background:#ccc;margin-bottom:1px;width:100%;height:1px;margin-bottom:10px}
+.req_small_title{font-size:18px}
+.req_wrap p{text-align: left;}
+.req_wrap ul{padding:0}
+.req_wrap ul li{list-style:none}
+.req_wrap textarea{width:100%;height:100px;border:1px solid #ccc}
+.req_wrap .req_form_wrap .small_text{width:80px}
+.req_wrap .req_form_wrap .small_text{width:80px}
+.req_wrap .req_form_wrap .end_date_text{display:none}

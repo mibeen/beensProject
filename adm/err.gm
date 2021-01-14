@@ -1,0 +1,4 @@
+<?php
+	include $_SERVER["DOCUMENT_ROOT"] . "/lib/noCache.gm";
+	include $_SERVER["DOCUMENT_ROOT"] . "/lib/globalVal.gm";
+?>

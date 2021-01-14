@@ -1,0 +1,235 @@
+<?php
+// 이 파일은 새로운 파일 생성시 반드시 포함되어야 함
+#if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
+
+// 테마 head.sub.php 파일
+if(defined('_THEME_PREVIEW_') && _THEME_PREVIEW_ === true) {
+	if(defined('G5_THEME_PATH') && is_file(G5_THEME_PATH.'/head.sub.php')) {
+	    require_once(G5_THEME_PATH.'/head.sub.php');
+		return;
+	}
+} else if(USE_G5_THEME) {
+	if(!defined('G5_IS_ADMIN') && defined('G5_THEME_PATH') && is_file(G5_THEME_PATH.'/head.sub.php')) {
+		require_once(G5_THEME_PATH.'/head.sub.php');
+	    return;
+	}
+}
+
+$begin_time = get_microtime();
+
+if (!isset($g5['title'])) {
+    $g5['title'] = $config['cf_title'];
+    $g5_head_title = $g5['title'];
+}
+else { // 상태바에 표시될 제목
+    $g5_head_title = $g5['title'].' > '.$config['cf_title'];
+}
+
+$g5_head_title = apms_get_text($g5_head_title);
+
+// 현재 접속자
+// 게시판 제목에 ' 포함되면 오류 발생
+$g5['lo_location'] = addslashes($g5['title']);
+if (!$g5['lo_location'])
+    $g5['lo_location'] = addslashes(clean_xss_tags($_SERVER['REQUEST_URI']));
+$g5['lo_url'] = addslashes(clean_xss_tags($_SERVER['REQUEST_URI']));
+if (strstr($g5['lo_url'], '/'.G5_ADMIN_DIR.'/') || $is_admin == 'super') $g5['lo_url'] = '';
+?>
+<!DOCTYPE html>
+<html lang="<?php echo $aslang['html_lang']; //ko ?>">
+<head>
+	<?php
+	if($config['cf_add_meta'])
+    echo $config['cf_add_meta'].PHP_EOL;
+    ?>
+	<title><?php echo $g5_head_title; ?></title>
+	<?php
+	if (defined('G5_IS_ADMIN')) {
+	    echo '<link rel="stylesheet" href="'.G5_ADMIN_URL.'/css/admin.css">'.PHP_EOL;
+	} else {
+	    $shop_css = '';
+	    if (defined('_SHOP_')) $shop_css = '_shop';
+	    echo '<link rel="stylesheet" href="'.G5_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').$shop_css.'.css?ver='.APMS_SVER.'">'.PHP_EOL;
+	}
+	echo '<link rel="stylesheet" href="'.G5_CSS_URL.'/apms.css?ver='.APMS_SVER.'">'.PHP_EOL;
+	echo '<link rel="stylesheet" href="'.G5_CSS_URL.'/font-awesome/css/font-awesome.min.css?ver='.APMS_SVER.'">'.PHP_EOL;
+	if($xp['xp_icon'] == 'txt') {
+		echo '<link rel="stylesheet" href="'.G5_CSS_URL.'/level/'.$xp['xp_icon_css'].'.css?ver='.APMS_SVER.'">'.PHP_EOL;
+	}
+	?>
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<meta name="description" content="국내 최대 오픈 교육 플랫폼 지식(GSEEK)의 OPEN API, 통계 제공">
+	<!-- <link rel="shortcut icon" href="/adm/imgs/comm/favicon.ico"> -->
+	<!-- <link rel="apple-touch-icon-precomposed" href="/adm/imgs/comm/favicon-152.png"> -->
+	<link rel="stylesheet" href="/thema/Basic/assets/bs3/css/bootstrap.min.css" type="text/css" class="thema-mode">
+	<script type="text/javascript" async><?php include G5_PATH . "/adm/lib/core.js"; ?></script>
+	<!-- <script type="text/javascript" src="/adm/lib/jquery.centermodal/jquery.centermodal.min.js" defer></script> -->
+	<script type="text/javascript" src="/adm/lib/comm.js" defer></script>
+	<!-- <script type="text/javascript" src="/adm/lib/comm.gm" defer></script> -->
+	<link rel="stylesheet" type="text/css" href="/adm/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/adm/css/ico.css" />
+	<script type="text/javascript" language="javascript" src="/adm/lib/iscroll/iscroll.min.js"></script>
+	<script>
+	var iscroll1;
+	$(document).ready(function() {
+		// iScroll 객체 생성
+		iscroll1 = new IScroll('#mnb_wrap', {
+			scrollbars: true,
+			mouseWheel: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'scale',
+			fadeScrollbars: true,
+			click: true
+		});
+
+		/*
+		$(document).on('click', '#changePhoto', function(e){
+			e.preventDefault();
+			var newwin = window.open('/bbs/myphoto.php', 'changePhoto', 'width=500, height=600, scrollbars=true');
+		})
+		*/
+    });
+	</script>
+<?php
+if($xp['xp_icon'] == 'txt') {
+	echo '<link rel="stylesheet" href="'.G5_CSS_URL.'/level/'.$xp['xp_icon_css'].'.css?ver='.APMS_SVER.'">'.PHP_EOL;
+}
+?>
+<!--[if lte IE 8]>
+<script src="<?php echo G5_JS_URL ?>/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "<?php echo G5_URL ?>";
+var g5_bbs_url   = "<?php echo G5_BBS_URL ?>";
+var g5_is_member = "<?php echo isset($is_member)?$is_member:''; ?>";
+var g5_is_admin  = "<?php echo isset($is_admin)?$is_admin:''; ?>";
+var g5_is_mobile = "<?php echo G5_IS_MOBILE ?>";
+var g5_bo_table  = "<?php echo isset($bo_table)?$bo_table:''; ?>";
+var g5_sca       = "<?php echo isset($sca)?$sca:''; ?>";
+var g5_pim       = "<?php echo APMS_PIM ?>";
+var g5_editor    = "<?php echo ($config['cf_editor'] && $board['bo_use_dhtml_editor'])?$config['cf_editor']:''; ?>";
+var g5_responsive    = "<?php echo (_RESPONSIVE_) ? 1 : '';?>";
+var g5_cookie_domain = "<?php echo G5_COOKIE_DOMAIN ?>";
+<?php if($is_admin || defined('G5_IS_ADMIN')) { ?>
+var g5_admin_url = "<?php echo G5_ADMIN_URL; ?>";
+<?php } ?>
+var g5_purl = "<?php echo $seometa['url']; ?>";
+</script>
+<?php
+//if(!defined('G5_IS_ADMIN') && $config['cf_add_script']) {
+if($config['cf_add_script']) {
+    echo $config['cf_add_script'].PHP_EOL;
+}
+?>
+
+<script src="<?php echo G5_JS_URL ?>/jquery-1.11.3.min.js"></script>
+<script src="<?php echo G5_JS_URL ?>/jquery-migrate-1.2.1.min.js"></script>
+<script src="<?php echo APMS_LANG_URL ?>/lang.js?ver=<?php echo APMS_SVER; ?>"></script>
+<script src="<?php echo G5_JS_URL ?>/common.js?ver=<?php echo APMS_SVER; ?>"></script>
+<script src="<?php echo G5_JS_URL ?>/wrest.js?ver=<?php echo APMS_SVER; ?>"></script>
+<script src="<?php echo G5_JS_URL ?>/apms.js?ver=<?php echo APMS_SVER; ?>"></script>
+<style>
+	#changePhoto {color: #FFF;}
+</style>
+</head>
+<body>
+	<div id="mnb_layer" class="mnb_layer"></div>
+
+	<div class="header">
+		<a href="javascript:void(0);" id="m_menu" class="m_menu"><span class="ico_menu"></span></a>
+		<div class="logo">
+			<div class="logo-tb">
+				<div class="logo-cell">
+					<?php
+					if ($member['mb_level'] == 4) {
+						echo '<a href="'.G5_URL.'/udong-mng/"><img src="/adm/imgs/comm/logo.png" alt=""></a>';
+					}
+					else if ($member['mb_level'] == 5) {
+						echo '<a href="'.G5_URL.'/project/"><img src="/adm/imgs/comm/logo.png" alt=""></a>';
+					}
+					else if ($member['mb_level'] == 6) {
+						echo '<a href="'.G5_URL.'/hr/"><img src="/adm/imgs/comm/logo.png" alt=""></a>';
+					}
+					else if ($member['mb_level'] == 3) {
+						echo '<a href="'.G5_URL.'/udong/adm/"><img src="/adm/imgs/comm/logo.png" alt=""></a>';
+					}
+					else {
+						echo '<a href="'.G5_URL.'/adm/"><img src="/adm/imgs/comm/logo.png" alt=""></a>';
+					}
+					?>
+				</div>	
+			</div>
+		</div>
+		<div class="h_btn">
+			<span class="name">
+				<?php echo($member['mb_name'])?>(<?php echo($member['mb_id'])?>)
+				<?php
+				# 시설관리자의 경우 휴대폰, 이메일 표시
+				if ($member['mb_level'] == 4) {
+					echo '<span class="res_wd2">';
+						echo ' / ' . $member['mb_hp'] . ' / ' . $member['mb_email'];
+					echo '</span>';
+				}
+				?>
+			</span>
+			<a href="<?php echo G5_URL. '/' ?>" class="btn_doc" title="홈페이지로 이동"><span class="pc">Home</span><span class="mb"><i class="fa fa-home"></i></span></a>
+			<a href="<?php echo G5_URL. '/bbs/logout.php' ?>" class="btn_doc" title="로그아웃"><span class="pc">Logout</span><span class="mb"><i class="fa fa-sign-out"></i></span></a>
+		</div>
+	</div>
+
+	<div class="content_wrap">
+		<div class="layer_bg"></div> <!-- 위치 변경 170914 최선민 -->
+		<div id="mnb_wrap" class="mnb_wrap">
+			<?php
+			$gnb_str = "<ul class=\"mnb\">";
+
+            foreach($amenu as $key=>$value) {
+            	# 시설 관리자인 경우
+            	if ($member['mb_level'] == 4) {
+            		if ($key != 970) continue;
+            	}
+            	# 공모사업 관리자인 경우
+            	if ($member['mb_level'] == 5) {
+            		if ($key != 980) continue;
+            	}
+            	# 교육강사 관리자인 경우
+            	if ($member['mb_level'] == 6 || $member['mb_level'] == 7) {
+            		if ($key != 985) continue;
+            	}
+
+            	$current_class = "";
+                if (isset($sub_menu) && (substr($sub_menu, 0, 3) == substr($menu['menu'.$key][0][0], 0, 3)))
+                    //$current_class = " aon current_mna";
+                    $current_class = " current_mna";
+
+                $href1 = $href2 = '';
+
+                #현재 카테고리가 아니고, 하위메뉴가 있으면 .mna를 붙인다.
+                $mna   = ' ';
+                if( count($menu['menu'.$key][0]) > 1 && strlen($current_class) < 1 ){
+                	$mna = " mna";
+                }
+                if ($menu['menu'.$key][0][2]) {
+                    $href1 = '<a href="'.$menu['menu'.$key][0][2].'" class="'.$current_class.$mna.'"><span class="img_ico">';
+                    $href1.= '<img src="'. $menu['menu'.$key][0][4] .'_off.png" class="off" alt=""><img src="'. $menu['menu'.$key][0][4] .'_on.png" class="on" alt="">';
+                    $href1.= '</span><span class="txt">';
+                    $href2 = '</span></a>';
+                } else {
+                    continue;
+                }
+                $gnb_str .= '<li>'.PHP_EOL;
+                $gnb_str .=  $href1 . $menu['menu'.$key][0][1] . $href2;
+                $gnb_str .=  print_menu1('menu'.$key, 1);
+                $gnb_str .=  "</li>";
+            }
+            $gnb_str .= "</ul>";
+            echo $gnb_str;
+            ?>
+		</div>
+		<div class="content">
+			<div class="page_ct">
+				<h2 class="page_tit"><?php echo $g5['title'] ?></h2>
+				<div class="cont_ct" style="max-width:1200px">
+					<div class="data_ct">

@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+/* Reset 스타일 */
+.nx-slt select {
+  border-radius: 0;
+  @include wan;
+  &:focus {
+      border: 1px solid #8db8e8 !important;
+      box-shadow: 0 0 5px #BBE0FD;
+      -webkit-box-shadow: 0 0 5px #BBE0FD;
+      -moz-box-shadow: 0 0 5px #BBE0FD;
+  }
+}
+
+/* Placeholder 색상 */
+
+::-webkit-input-placeholder {
+   color: #bbb !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #bbb !important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #bbb !important;  
+}
+
+:-ms-input-placeholder {  
+   color: #bbb !important;
+}
+
+/* 텍스트 */
+
+input[type="text"] {
+  resize: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.nx-ips1 {
+  width: 100%;
+  height: 30px;
+  padding: 3px;
+  border: 1px solid #d5d5d5;
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+
+/* 라디오, 체크박스 */
+
+.chk1_wrap {
+  position: relative;
+  &.mb .chk1 + label {
+    margin-bottom: 5px;
+  }
+}
+
+.chk1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  + label {
+    /* 부트스트랩 css 리셋 */
+    max-width: none;
+    margin-bottom: 0;
+    font-weight: 400;
+    &:nth-last-child(n+2) {   // 라디오 버튼이 여러개인 경우 맨 마지막것 외 우측 여백 부여
+      margin-right: 15px;
+    }
+    .chkbox {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+      border: 1px solid #d5d5d5;
+      line-height: 20px;
+      text-align: center;
+      vertical-align: middle;
+      background: #fff;
+      color: $color2;
+      box-sizing: border-box;
+      [class*=ico] {
+        display: none;
+        &:before {
+          font-size: 16px;
+        }
+      }
+    }
+    .txt {
+      display: inilne-block;
+      vertical-align: middle;
+    }
+  }
+  &:checked + label .chkbox [class*=ico] {
+    display: block;
+  }
+  &[disabled] + label .chkbox {
+    background: #e5e5e5;
+  }
+}
+
+.radio1_wrap {
+  position: relative;
+  &.mb .radio1 + label {
+    margin-bottom: 5px;
+  }
+}
+
+.radio1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  + label {
+    /* 부트스트랩 css 리셋 */
+    max-width: none;
+    margin-bottom: 0;
+    font-weight: 400;
+    &:nth-last-child(n+2) {   // 라디오 버튼이 여러개인 경우 맨 마지막것 외 우측 여백 부여
+      margin-right: 15px;
+    }
+    .radbox {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+      padding: 4px;
+      border: 1px solid #d5d5d5;
+      vertical-align: middle;
+      background: #fff;
+      border-radius: 50%;
+      box-sizing: border-box;
+      span {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: $color2;
+        border-radius: 50%;
+      }
+    }
+    .txt {
+      display: inilne-block;
+      vertical-align: middle;
+    }
+  }
+  &:checked + label .radbox span {
+    display: block;
+  }
+}
+
+/* 버튼스타일의 라디오, 체크박스 */
+input[type="radio"].fill, input[type="checkbox"].fill {
+  position: absolute;
+  opacity: 0;
+}
+
+input[type="radio"].fill + label, input[type="checkbox"].fill + label {
+  display: inline-block;
+  position: relative;
+  min-width: 100px;
+  min-height: 32px;
+  padding: 0 10px;
+  line-height: 32px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #666;
+  background: #e0e0e0;
+  box-sizing: border-box;
+}
+
+input[type="radio"].fill:checked + label, input[type="checkbox"].fill:checked + label {
+  background: $color2;
+  color: #fff;
+}
+
+input[type="radio"].fill:disabled + label, input[type="checkbox"].fill:disabled + label {
+  cursor: default;
+  -webkit-appearance: none;
+}
+
+/* Select */
+
+.nx-slt {
+  display: inline-block;
+  position: relative;
+  background-color: #fff;
+  select {
+    position: relative;
+    z-index: 11;
+    min-width: 60px;
+    height: 30px;
+    padding: 3px 25px 3px 3px;
+    border: 1px solid #d5d5d5;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #000;
+    background-color: transparent;
+  }
+  span[class^="ico_"] {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    z-index: 10;
+    font-size: 14px;
+    color: #666;
+    line-height: 30px;
+  }
+}
+
+.nx-slt.r_full {
+  display: block;
+  select {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+/* 모바일가로 */
+@media only screen and (max-width: 759px) {
+  /* Select */
+  .nx-slt.r_mh_full {
+    display: block;
+    select {
+      width: 100%;
+    }
+  }
+}
+
+/* 모바일세로 */
+@media only screen and (max-width: 519px) {
+  /* Select */
+  .nx-slt.r_mv_full {
+    display: block;
+    select {
+      width: 100%;
+    }
+  }
+}

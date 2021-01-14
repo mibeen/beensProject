@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+.basic-outlogin label { line-height:12px; font-weight: normal; cursor: pointer; }
+.basic-outlogin .profile .photo { margin-right:12px; }
+.basic-outlogin .profile .photo img { width:60px; height:60px; border-radius: 50%; border:0; }
+.basic-outlogin .profile h3 { font-size:18px; line-height:32px; padding:0px; margin:0px; letter-spacing:-1px; display:block; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal; overflow:hidden; }
+.basic-outlogin .login-line { border-top:1px solid #eee; margin:5px 0px 7px; padding-top:6px; }
+.basic-outlogin .form-group { margin-bottom:10px; }
+
+.nx_main_memb { overflow: hidden; border: 1px solid #e5e5e5; background: #fff; border-radius: 6px; }
+.nx_main_memb.before .top { padding: 20px 24px 16px; background: #8ec700; }
+.nx_main_memb.before .top .nx_tit { margin: 0 0 10px; font-size: 18px; font-weight: 700; color: #fff; }
+.nx_main_memb.before .top .main_log { position: relative; }
+.nx_main_memb.before .top .main_log .main_log_input { margin-right: 106px; }
+.nx_main_memb.before .top .main_log .main_log_submit { position: absolute; top: 0; right: 0; }
+.nx_main_memb.before .top input[type="text"], .nx_main_memb.before .top input[type="password"] { width: 100%; height: 30px; padding: 0 10px; border: 1px solid #fff; background: #fff; font-size: 14px; color: #222; border-radius: 4px; box-sizing: border-box; }
+.nx_main_memb.before .top .id_save { line-height: 28px; }
+.nx_main_memb.before .top .id_save .chk1_wrap .chk1 + label .chkbox { background: #fff; }
+.nx_main_memb.before .top .id_save .chk1_wrap .chk1 + label .txt { margin-left: 5px; color: #fff; }
+.nx_main_memb.before .top .nx_btn_login { display: block; width: 100%; height: 30px; margin: 0; padding: 0 10px; line-height: 30px; text-align: center; font-size: 16px; color: #a36813; border-radius: 4px !important; background: #ffd839; transition: background 0.25s ease-in-out; }
+.nx_main_memb.before .top .nx_btn_login:hover { background: #ffce06; }
+.nx_main_memb.before .top .nx_link { margin: 8px 0 0; line-height: 1.2;}
+.nx_main_memb.before .top .nx_link li a {font-size: 14px;}
+.nx_main_memb.after .top { padding: 25px 20px; background: #8ec700; }
+.nx_main_memb.after .top .nx_pimg { display: block; float: left; width: 80px; height: 80px; border-radius: 50%; }
+.nx_main_memb.after .top .nx_txt_wrap { margin-left: 94px; padding: 10.5px 0; }
+.nx_main_memb.after .top .nx_txt_wrap .nx_p1 { font-size: 15px; color: #fff; margin-bottom: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nx_main_memb .nx_link {margin-bottom:0;}
+.nx_main_memb .nx_link li { display: inline-block; }
+.nx_main_memb .nx_link li a { color: #fff; }
+.nx_main_memb .nx_link li a:hover { color: #222; }
+.nx_main_memb .nx_link li + li { margin-left: 4px; padding-left: 8px; border-left: 1px solid #fff; }

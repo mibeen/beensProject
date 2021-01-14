@@ -1,0 +1,597 @@
+@charset "UTF-8";
+
+/* 게시판 */
+.nx_board_lst {
+  border-top: 1px solid #e5e5e5;
+  li {
+    position: relative;
+    padding: 15px 10px 41px 60px;
+    border-bottom: 1px solid #e5e5e5;
+    &.top {
+      background: #f6fcfe;
+    }
+    &.nodata {
+      padding: 30px 10px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+    a {
+      display: block;
+      &:hover .nx_tit {
+        text-decoration: underline;
+      }
+    }
+    .num {
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 60px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      .top {
+        display: inline-block;
+        width: 30px;
+        height: 18px;
+        line-height: 18px;
+        text-align: center;
+        background: $color1;
+        font-size: 11px;
+        color: #fff;
+        border-radius: 2px;
+      }
+      .new {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        text-align: center;
+        background: $color4;
+        font-size: 11px;
+        color: #fff;
+        border-radius: 2px;
+      }
+    }
+    .nx_tit {
+      display: block;
+      margin: 0 105px 10px 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: #222;
+      @include ellipsis1;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .nx_ct {
+      display: block;
+      font-size: 14px;
+      color: #666;
+      line-height: 150%;
+    }
+    .writer {
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      width: 90px;
+      font-size: 14px;
+      color: #666;
+      text-align: right;
+      @include ellipsis1;
+    }
+    .cate {
+      position: absolute;
+      bottom: 15px;
+      left: 60px;
+      font-size: 14px;
+      color: #38c2f3;
+    }
+    .date {
+      position: absolute;
+      bottom: 15px;
+      right: 10px;
+      font-size: 14px;
+      color: #666;
+    }
+  }
+}
+
+.nx_gall {
+  overflow: hidden;
+  li {
+    @include gallery(4, 20, 20);
+    &.nodata {
+      float: none !important;
+      width: auto !important;
+      padding: 30px 10px;
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+    a {
+      display: block;
+      .img_wrap1 {
+        position: relative;
+        height: 0;
+        padding-bottom: 100%;        
+        .img_wrap2 {
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 6px;
+          .img {
+            display: block;
+          }
+        }
+      }
+      .nx_txt_wrap {
+        margin-top: 5px;
+        .date {
+          margin-bottom: 5px;
+        }
+        .nx_tit {
+          font-size: 15px;
+          color: #222;
+          word-break: break-all;
+          @include elss(3, 1.5);
+        }
+        .cate {
+          margin-top: 5px;
+          color: $color_menu4;
+        }
+      }
+    }
+  }
+}
+
+.nx_faq li {
+  border-top: 1px solid #e0e0e0;
+  background: #fff;
+  &:last-child {
+    border-bottom: 1px solid #e0e0e0;
+  }
+  &.nodata {
+    padding: 30px 10px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+  }
+  &.on {
+    background: #f6fcfe;
+    a .fold {
+      .ico_arr1_u {
+        display: inline;
+      }
+      .ico_arr1_d {
+        display: none;
+      }
+    }
+  }
+  a {
+    display: block;
+    position: relative;
+    min-height: 80px;
+    padding: 18px 50px 17px 70px;
+    box-sizing: border-box;
+    .q {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      img {
+        display: block;
+        width: 29.5px;
+      }
+    }
+    .nx_tit_wrap {
+      width: 100%;
+      min-height: 45px;
+      td {
+        .cate {
+          margin-bottom: 5px;
+          color: #38c2f3;
+        }
+        .nx_tit {
+          font-size: 16px;
+          color: #222;
+          line-height: 150%;
+        }
+      }
+    }
+    .fold {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      height: 30px;
+      margin-top: -15px;
+      line-height: 30px;
+      color: $color1;
+      .ico_arr1_u {
+        display: none;
+      }
+    }
+  }
+  .nx_ct {
+    display: none;
+    position: relative;
+    margin: 0 20px 0 70px;
+    padding: 20px 50px 20px 50px;
+    font-size: 14px;
+    color: #666;
+    line-height: 150%;
+    border-top: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 27.5px;
+      height: 29.5px;
+      max-width: 100%;
+      background: {
+        image: url('../imgs/ico/ico_a.png');
+        repeat: no-repeat;
+        position: 0 0;
+        size: 27.5px 29.5px;
+      }
+    }
+    &.hide {
+      padding: 0;
+    }
+  }
+}
+
+.nx_coun_lst {
+  border-top: 1px solid #e5e5e5;
+  li {
+    position: relative;
+    padding: 10px 140px 10px 140px;
+    border-bottom: 1px solid #e5e5e5;
+    &.nodata {
+      padding: 30px 10px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+    a {
+      display: block;
+      min-height: 54px;
+      .num {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 60px;
+        font-size: 14px;
+        color: #666;
+        line-height: 54px;
+        text-align: center;
+      }
+      .status {
+        position: absolute;
+        top: 10px;
+        left: 60px;
+        width: 54px;
+        height: 54px;
+        padding-top: 11px;
+        font-size: 14px;
+        color: #666;
+        text-align: center;
+        background: #eee;
+        border-radius: 50%;
+        box-sizing: border-box;
+        &.on {
+          background: $color_menu4;
+          color: #fff;
+        }
+      }
+      .nx_tit {
+        width: 100%;
+        min-height: 54px;
+        td {
+          font-size: 16px;
+          color: #222;
+          line-height: 150%;
+        }
+      }
+      .date {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
+        color: #666;
+        line-height: 54px;
+      }
+    }
+  }
+}
+
+.nx_data_lst1 {
+  overflow: hidden;
+  li {
+    overflow: hidden;
+    @include gallery(4, 20, 20);
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    .nx_tit_wrap1 {
+      display: table;
+      .nx_tit_wrap2 {
+        display: table-cell;
+        padding: 15px;
+        vertical-align: middle;
+        .nx_tit {
+          font-size: 16px;
+          color: #222;
+          @include elss(3, 1.5);
+        }
+      }
+    }
+    .file {
+      padding: 15px;
+      text-align: center;
+      font-size: 14px;
+      color: #38c2f3;
+      border-top: 1px solid #e5e5e5;
+      img {
+        vertical-align: text-top;
+      }
+    }
+  }
+}
+
+.nx_data_lst2 {
+  li {
+    position: relative;
+    padding: 15px 10px 41px 60px;
+    margin-top: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    &:first-child {
+      margin-top: 0;
+    }
+    &.top {
+      background: #f6fcfe;
+    }
+    &.nodata {
+      padding: 30px 10px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+    a {
+      display: block;
+      &:hover .nx_tit {
+        text-decoration: underline;
+      }
+      .num {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 60px;
+        font-size: 14px;
+        color: #666;
+        text-align: center;
+        .top {
+          display: inline-block;
+          width: 30px;
+          height: 18px;
+          line-height: 18px;
+          text-align: center;
+          background: $color1;
+          font-size: 11px;
+          color: #fff;
+          border-radius: 2px;
+        }
+        .new {
+          display: inline-block;
+          width: 18px;
+          height: 18px;
+          line-height: 18px;
+          text-align: center;
+          background: $color4;
+          font-size: 11px;
+          color: #fff;
+          border-radius: 2px;
+        }
+      }
+      .nx_tit {
+        display: block;
+        margin: 0 105px 10px 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: #222;
+        @include ellipsis1;
+      }
+      .nx_ct {
+        display: block;
+        font-size: 14px;
+        color: #666;
+        line-height: 150%;
+      }
+      .writer {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        width: 90px;
+        font-size: 14px;
+        color: #666;
+        text-align: right;
+        @include ellipsis1;
+      }
+      .file {
+        position: absolute;
+        bottom: 15px;
+        left: 60px;
+        font-size: 14px;
+        color: #38c2f3;
+        img {
+          vertical-align: text-top;
+        }
+      }
+      .date {
+        position: absolute;
+        bottom: 15px;
+        right: 10px;
+        font-size: 14px;
+        color: #666;
+      }
+    }
+  }
+}
+
+/* 상세페이지 */
+.nx_board_read {
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  > tbody > tr > th, > tbody > tr > td {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 150%;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  > tbody > tr:last-child > th, > tbody > tr:last-child > td {
+    border-bottom: none;
+  }
+  > tbody > tr > th {
+    padding-right: 0;
+    text-align: left;
+    font-weight: normal;
+    vertical-align: top;
+    color: #222;
+  }
+  > tbody > tr > td {
+    max-width: 1px;
+  }
+}
+
+/* 커뮤니티 메인 */
+
+.comm_main {
+  @include gallery(2, 50, 40);
+  > .nx_tit {
+    position: relative;
+    padding: 0 100px 12px 0;
+    font-size: 25px;
+    color: #000;
+    font-weight: 700;
+    a {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-weight: 300;
+    }
+  }
+  .nx_board_lst li {
+    &.top {
+      background: #f8f8f8;
+    }
+    .nx_tit {
+      margin-right: 0;
+    }
+  }
+  .nx_gall li {
+    width: calc((100% - 21px) / 2) !important;
+    margin-left: 20px !important;
+    clear: none !important;
+    &:nth-child(n+3) {
+      margin-top: 10px !important;
+    }
+    &:nth-child(2n+1) {
+      clear: both !important;
+      margin-left: 0 !important;
+    }
+    a .nx_txt_wrap {
+      .nx_tit {
+        @include elss(1, 1.5);
+      }
+      .date {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/* 모바일가로 */
+@media screen and (max-width: 759px) {
+  .nx_gall li {
+    @include gallery(3, 20, 20, down);
+  }
+
+  .nx_coun_lst li {
+    padding: 10px 10px 35px 140px;
+    a .date {
+      top: auto;
+      bottom: 10px;
+      line-height: 1.5;
+    }
+  }
+
+  .nx_data_lst1 li {
+    @include gallery(3, 20, 20, down);
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .nx_gall li {
+    @include gallery(2, 20, 10, down);
+  }
+
+  .comm_main {
+    @include gallery(1, 50, 0, down);
+  }
+}
+
+@media screen and (max-width: 519px) {
+  .nx_board_read {
+    display: block;
+    overflow: hidden;
+    > thead, > tbody, > tbody > tr, > tbody > tr > th, > tbody > tr > td {
+      display: block;
+      float: left;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    > tbody > tr > th {
+      padding-bottom: 0;
+      font-weight: 600;
+      border-bottom: none;
+    }
+    > tbody > tr > td {
+      max-width: 100%;
+      padding: 10px 10px 10px 20px;
+    }
+    > tbody > tr.top > td {
+      float: left;
+      width: 50%;
+      padding: 10px;
+    }
+    > tbody > tr.top + tr > .nx_taR {
+      text-align: left !important;
+    }
+  }
+
+  .nx_faq li {
+    .nx_ct {
+      margin: 0 10px 0 20px;
+      padding: 15px 0 15px 25px;
+      &:before {
+        width: 14px;
+        height: 15px;
+        background-size: 14px 15px;
+      }
+    }
+  }
+
+  .nx_data_lst1 li {
+    @include gallery(2, 20, 20, down);
+  }
+}

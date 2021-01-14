@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+@import "../scss/config";
+
+.basic-category { padding:0px; }
+.basic-category a { display:block; }
+.basic-category .ca-head { height: 44px; line-height: 44px; text-align: center; background: $color1; font-size: 20px; font-weight: 700; color: #fff; }
+/*.basic-category .ca-sub1.on > a { font-weight:bold !important; color: crimson !important; }*/
+/* .basic-category .ca-sub1 > a.no-sub::after { top: 0px; font-family: "FontAwesome"; float: right; position: relative; content: "\f105"; }
+.basic-category .ca-sub1 > a.is-sub::after { top: 0px; font-family: "FontAwesome"; float: right; position: relative; content: "+"; } */
+/*.basic-category .ca-sub2 { padding:0; margin:0; list-style:none; background: #fafafa; padding:4px 0px; margin:0px; border-bottom:1px solid #eee }*/
+.basic-category .ca-sub1 {border-top: 1px solid #e5e5e5;}
+.basic-category .ca-sub1:first-child { border-top: none; }
+.basic-category .ca-sub1 > a { display: block; position: relative; height: 42px; line-height: 42px; padding: 0 12px; background: #fff; font-size: 16px; color: #222;  }
+.basic-category .ca-sub1.on > a, .basic-category .ca-sub1 > a:hover { color: $color1; }
+.basic-category .ca-line { padding:8px 16px; background:#fafafa; border-bottom:1px solid #eee; }
+.basic-category .new { color:crimson; }
+
+.nx_basic_category {overflow: hidden; position: relative; z-index: 2; border: 1px solid #e5e5e5; border-radius: 6px; box-sizing: border-box;}

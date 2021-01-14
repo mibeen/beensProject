@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+@import "option";
+
+.basic-post-gallery {
+	overflow: hidden;
+	line-height: 20px;
+
+	.txt-normal {
+		letter-spacing: 0;
+	}
+		
+	.txt-short {
+		letter-spacing: -1px;
+		padding-right: 1px;
+	}
+		
+	.post-vicon {
+		position: absolute;
+		left: 6px;
+		top: 6px;
+		color: #fff;
+		font-size: 20px;
+		z-index: 1;
+		text-shadow: 1px 1px 1px #000;
+	}
+		
+	.post-none {
+		padding: 50px 10px;
+		text-align: center;
+		color: #888;
+	}
+		
+	.post-row {
+		float: left;
+		overflow: hidden;
+	}
+		
+	.post-list {
+		overflow: hidden;
+	}
+		
+	.post-image {
+		position: relative;
+		overflow: hidden;
+	}
+		
+	.post-content {
+		padding-top: 10px;
+		margin: -2px 0px;
+		overflow: hidden;
+	}
+		
+	.post-subject {
+		overflow: hidden;
+		letter-spacing: -1px;
+		padding-right: 1px;
+	}
+		
+	.post-sp {
+		color: #ccc;
+		margin: 0px 4px;
+	}
+		
+	.post-text {
+		font-size: $name_size;
+		color: $name_color;
+		margin-top: 4px;
+	}
+}
+	
+	
+.is-pc .ko .basic-post-gallery .post-ko {
+	font-size: 11px;
+}
+	

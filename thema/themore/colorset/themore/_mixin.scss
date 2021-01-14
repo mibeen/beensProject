@@ -1,0 +1,415 @@
+@charset "utf-8";
+
+/* ------------------------------------------------------------------------------------------
+
+  사용법
+  @include border-radius(10px);
+  @include border-top-left-radius(10px 20px); ----- 왼쪽상단의 위, 왼쪽
+  @include border-top-right-radius(10px 20px); ----- 오른쪽상단의 위, 오른쪽
+  @include border-bottom-right-radius(10px 20px); ----- 오른쪽하단의 아래, 오른쪽
+  @include border-bottom-left-radius(10px 20px); ----- 오른쪽하단의 아래, 왼쪽
+  @include border-radius-separate(10px, 5px, 5px, 10px); ------ 왼쪽상단, 오른쪽상단, 오른쪽하단, 왼쪽하단.
+  @include box-sizing(border-box);
+  @include wan; ------ input, select, textaRea 등의 기본스타일 제거.
+  @include ellipsis1; ------ 한줄 텍스트 말줄임.
+  @include elss(5, 1.5); ------  줄 수, line-height.
+  @include v-gradient(#000000 0%, #999999 50%, #ffffff 100%); ------ ↓
+  @include h-gradient(#000000 0%, #999999 50%, #ffffff 100%); ------ →
+  @include d45-gradient(#000000 0%, #999999 50%, #ffffff 100%); ------ ↗
+  @include d135-gradient(#000000 0%, #999999 50%, #ffffff 100%); ------ ↘
+  @include rad-gradient(#000000 0%, #999999 50%, #ffffff 100%); ------ ○
+  @include opacity(0.5);
+  @include color-opacity(background, #ff0000, 0.5); ------ background, color, border-color 등 가능.
+  @include retina-image(dtm, "../imgs/ico/ico1.png", 20px, 0 center); ------ 디바이스(d:데스크탑, t:태블릿, m:모바일, mh:모바일가로, mv:모바일세로), 이미지경로, background-size, background-position(null).
+  @include transform-rotate(90deg);
+  @include gallery(4, 10, 10, down); ------ 한 줄의 개수, 상하 여백, 좌우 여백, 이전 사이즈 대비 한줄 개수 : up, down (null) - 이전사이즈가 4이고 현재 사이즈가 3이면 down.
+  @include button(84px, 30px, #5fa0e6, #3462b4, 3px); ------ 너비, 높이, 배경색(null), 글자색(null, null이면 #fff), 라운드(null);
+  @include auto-nth-last(margin-right, 10, 50, 1, 3) ------ css 속성, 수치 기본값, 수치 곱해질 값, 시작 nth, 끝 nth;
+  @include auto-nth-last-type(margin-right, 10, 50, 1, 3) ------ css 속성, 수치 기본값, 수치 곱해질 값, 시작 nth, 끝 nth;
+  @include hover(#fff, #aaa, background, darken, 0.25s, ease-in-out) ------ 변하기전 색상, 변한 후 색상, 적용될 속성, 타입(darken이면 10% 어둡게, change이면 변한 후 색상으로, 시간, 효과)
+------------------------------------------------------------------------------------------ */
+
+@mixin border-radius($val) {
+  -webkit-border-radius: $val;
+     -moz-border-radius: $val;
+      -ms-border-radius: $val;
+          border-radius: $val;
+}
+
+@mixin border-top-left-radius($val) {
+  -webkit-border-top-left-radius: $val;
+     -moz-border-top-left-radius: $val;
+      -ms-border-top-left-radius: $val;
+          border-top-left-radius: $val; 
+}
+
+@mixin border-top-right-radius($val) {
+  -webkit-border-top-right-radius: $val;
+     -moz-border-top-right-radius: $val;
+      -ms-border-top-right-radius: $val;
+          border-top-right-radius: $val; 
+}
+
+@mixin border-bottom-right-radius($val) {
+  -webkit-border-bottom-right-radius: $val;
+     -moz-border-bottom-right-radius: $val;
+      -ms-border-bottom-right-radius: $val;
+          border-bottom-right-radius: $val; 
+}
+
+@mixin border-bottom-left-radius($val) {
+  -webkit-border-bottom-left-radius: $val;
+     -moz-border-bottom-left-radius: $val;
+      -ms-border-bottom-left-radius: $val;
+          border-bottom-left-radius: $val; 
+}
+
+@mixin border-radius-separate($topLeftRadius, $topRightRadius, $bottomRightRadius, $bottomLeftRadius) {
+  -webkit-border-top-left-radius:     $topLeftRadius;
+  -webkit-border-top-right-radius:    $topRightRadius;
+  -webkit-border-bottom-right-radius: $bottomRightRadius;
+  -webkit-border-bottom-left-radius:  $bottomLeftRadius;
+
+  -moz-border-radius-topleft:     $topLeftRadius;
+  -moz-border-radius-topright:    $topRightRadius;
+  -moz-border-radius-bottomright: $bottomRightRadius;
+  -moz-border-radius-bottomleft:  $bottomLeftRadius;
+
+  -ms-border-radius-topleft:     $topLeftRadius;
+  -ms-border-radius-topright:    $topRightRadius;
+  -ms-border-radius-bottomright: $bottomRightRadius;
+  -ms-border-radius-bottomleft:  $bottomLeftRadius;
+
+  border-top-left-radius:     $topLeftRadius;
+  border-top-right-radius:    $topRightRadius;
+  border-bottom-right-radius: $bottomRightRadius;
+  border-bottom-left-radius:  $bottomLeftRadius;
+}
+
+@mixin box-sizing($val) {
+  -webkit-box-sizing: $val;
+     -moz-box-sizing: $val;
+       -o-box-sizing: $val;
+      -ms-box-sizing: $val;
+          box-sizing: $val;
+}
+
+@mixin wan {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+@mixin ellipsis1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin elss($row, $line-height) {
+  $max: ($line-height * $row);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $row;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: #{$line-height}em;
+  max-height: #{$max}em !important;
+}
+
+@mixin v-gradient($clr_pos...) {
+  $num: length($clr_pos);
+  $first_color: nth(nth($clr_pos, 1), 1);
+  $last_color: nth(nth($clr_pos, $num), 1);
+
+  background: #{$first_color}; /* Old browsers */
+  background: -moz-linear-gradient(top,  $clr_pos); /* FF3.6+ */
+  background: -webkit-linear-gradient(top,  $clr_pos); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $clr_pos); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $clr_pos); /* IE10+ */
+  background: linear-gradient(to bottom,  $clr_pos); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$first_color}', endColorstr='#{$last_color}',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin h-gradient($clr_pos...) {
+  $num: length($clr_pos);
+  $first_color: nth(nth($clr_pos, 1), 1);
+  $last_color: nth(nth($clr_pos, $num), 1);
+
+  background: #{$first_color}; /* Old browsers */
+  background: -moz-linear-gradient(left,  $clr_pos); /* FF3.6+ */
+  background: -webkit-linear-gradient(left,  $clr_pos); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  $clr_pos); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  $clr_pos); /* IE10+ */
+  background: linear-gradient(to right,  $clr_pos); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$first_color}', endColorstr='#{$last_color}',GradientType=1 ); /* IE6-9 */
+}
+
+@mixin d45-gradient($clr_pos...) {
+  $num: length($clr_pos);
+  $first_color: nth(nth($clr_pos, 1), 1);
+  $last_color: nth(nth($clr_pos, $num), 1);
+
+  background: #{$first_color}; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  $clr_pos); /* FF3.6+ */
+  background: -webkit-linear-gradient(45deg,  $clr_pos); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  $clr_pos); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  $clr_pos); /* IE10+ */
+  background: linear-gradient(45deg,  $clr_pos); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$first_color}', endColorstr='#{$last_color}',GradientType=1 ); /* IE6-9 */
+}
+
+@mixin d135-gradient($clr_pos...) {
+  $num: length($clr_pos);
+  $first_color: nth(nth($clr_pos, 1), 1);
+  $last_color: nth(nth($clr_pos, $num), 1);
+
+  background: #{$first_color}; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  $clr_pos); /* FF3.6+ */
+  background: -webkit-linear-gradient(-45deg,  $clr_pos); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  $clr_pos); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  $clr_pos); /* IE10+ */
+  background: linear-gradient(135deg,  $clr_pos); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$first_color}', endColorstr='#{$last_color}',GradientType=1 ); /* IE6-9 */
+}
+
+@mixin rad-gradient($clr_pos...) {
+  $num: length($clr_pos);
+  $first_color: nth(nth($clr_pos, 1), 1);
+  $last_color: nth(nth($clr_pos, $num), 1);
+
+  background: #{$first_color}; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  $clr_pos); /* FF3.6+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  $clr_pos); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  $clr_pos); /* Opera 11.10+ */
+  background: -ms-radial-gradient(center, ellipse cover,  $clr_pos); /* IE10+ */
+  background: radial-gradient(ellipse at center,  $clr_pos); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$first_color}', endColorstr='#{$last_color}',GradientType=1 ); /* IE6-9 */
+}
+
+@mixin opacity($opacity) {
+  $opacityMultiplied: ($opacity * 100);
+  filter: alpha(opacity=$opacityMultiplied);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $opacityMultiplied + ")";
+  opacity: $opacity;
+}
+
+@mixin color-opacity($property, $color, $opacity) {
+  #{$property}: $color;
+  #{$property}: rgba($color, $opacity);
+}
+
+@mixin retina-image($device, $url, $size, $position: null) {
+  $url_: str_insert($url, "@2x", -5);
+  @if $device == "d" {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) {
+      background: {
+        image: url($url);
+        image/*\**/: url($url);
+	position: $position;
+	size: $size;
+      }
+    }
+  } @else if $device == "dt" {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
+      background: {
+        image: url($url);
+        image/*\**/: url($url);
+	position: $position;
+	size: $size;
+      }
+    }
+  } @else if $device == "dtmh" {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 520px) {
+      background: {
+        image: url($url);
+        image/*\**/: url($url);
+	position: $position;
+	size: $size;
+      }
+    }
+  } @else if $device == "dtm" {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+      background: {
+        image: url($url);
+        image/*\**/: url($url);
+	position: $position;
+	size: $size;
+      }
+    }
+  } @else if $device == "t" {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px) and (min-width: 768px) {
+      background: {
+        image: url($url);
+        image/*\**/: url($url);
+	position: $position;
+	size: $size;
+      }
+    }
+  } @else if $device == "tmh" {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px) and (min-width: 520px) {
+      background: {
+        image: url($url);
+        image/*\**/: url($url);
+	position: $position;
+	size: $size;
+      }
+    }
+  } @else if $device == "tm" {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px) {
+      background: {
+        image: url($url);
+        image/*\**/: url($url);
+	position: $position;
+	size: $size;
+      }
+    }
+  } @else if $device == "m" {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px) {
+      background: {
+        image: url($url);
+        image/*\**/: url($url);
+	position: $position;
+	size: $size;
+      }
+    }
+  } @else if $device == "mh" {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px) and (min-width: 520px) {
+      background: {
+        image: url($url);
+        image/*\**/: url($url);
+	position: $position;
+	size: $size;
+      }
+    }
+  } @else if $device == "mv" {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 519px) {
+      background: {
+        image: url($url);
+        image/*\**/: url($url);
+	position: $position;
+	size: $size;
+      }
+    }
+  }
+}
+
+@mixin transform-rotate($val) {
+  transform: rotate($val);
+  -webkit-transform: rotate($val);
+  -moz-transform: rotate($val);
+  -o-transform: rotate($val);
+  -ms-transform: rotate($val);
+}
+
+@mixin gallery($num_row, $margin-top, $margin-left, $responsive: null) {
+  $li_tot_margin: ($margin-left * ($num_row - 1)) + 1; // ie에서 깨져서 +1px
+
+  width: calc((100% - #{$li_tot_margin}px) / #{$num_row});
+  margin-left: #{$margin-left}px;
+
+  &:nth-child(-n+#{$num_row}) {
+    margin-top: 0;
+  }
+  &:nth-child(n+#{($num_row + 1)}) { // 두번째 줄 부터 상단마진 적용
+    margin-top: #{$margin-top}px;
+  }
+
+  @if $responsive == null { // 최초 1회만 적용
+    float: left;
+  }
+
+  @if $responsive != null {
+    $res : -($responsive);
+    @if $responsive == "up" {
+      $res : -1;
+    }
+    @if $responsive == "down" {
+      $res : 1;
+    }
+    $num_row_before: $num_row + ($res);
+    &:nth-child(#{$num_row_before}n+1) {
+      clear: none;
+      margin-left: #{$margin-left}px;
+    }
+  }
+
+  // 각 줄의 첫번째 좌측 마진 삭제
+  &:nth-child(#{$num_row}n+1) {
+    clear: both;
+    margin-left: 0;
+  }
+}
+
+%btn_origin { /* 버튼 기본 */
+  display: inline-block;
+  padding: 0 10px;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+@mixin button($m_width, $height, $bg_color: null, $color: null, $radius: null) {
+  @extend %btn_origin;
+  min-width: $m_width;
+  height: $height;
+  line-height: $height;
+  background-color: $bg_color;
+  color: $color;
+  border-radius: $radius;
+  @if $color == null {
+    color: #fff !important;
+  }
+}
+
+@mixin auto-nth-last($opt, $s_val, $val, $start, $last) {
+  $cnt : ($last - $start) + 1;
+  $i : 1;
+  @while $i <= $cnt {
+    &:nth-last-child(#{$start}) {
+      $v : ($val * $i) + $s_val;
+      #{$opt}: #{$v}px;
+    }
+    $i : $i + 1;
+    $start : $start + 1;
+  }
+}
+
+@mixin auto-nth-last-type($opt, $s_val, $val, $start, $last) {
+  $cnt : ($last - $start) + 1;
+  $i : 1;
+  @while $i <= $cnt {
+    &:nth-last-of-type(#{$start}) {
+      $v : ($val * $i) + $s_val;
+      #{$opt}: #{$v}px;
+    }
+    $i : $i + 1;
+    $start : $start + 1;
+  }
+}
+
+@mixin hover($color, $color_after: null, $style: null, $type: null, $duration: null, $timing: null) {
+  @if $style == null {
+    $style: background;
+  }
+  @if $type == null {
+    $type: darken;
+  }
+  @if $duration == null {
+    $duration: 0.25s;
+  }
+  @if $timing == null {
+    $timing: ease-in-out;
+  }
+  #{$style}: $color;
+  transition: #{$style} #{$duration} #{$timing};
+  &:hover {
+    @if $type == darken {
+      #{$style}: darken($color, 10%);
+    } @else if $type == change {
+      #{$style}: $color_after;
+    }
+  }
+}

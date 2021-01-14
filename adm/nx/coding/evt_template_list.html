@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<link rel="stylesheet" href="http://gnu.safetown.co.kr/thema/Basic/assets/bs3/css/bootstrap.min.css" type="text/css" class="thema-mode">
+	<script type="text/javascript" src="../../lib/core.js"></script>
+	<script type="text/javascript" src="../../lib/comm.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="../../css/admin.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/ico.css" />
+	<script type="text/javascript" language="javascript" src="../../lib/iscroll/iscroll.min.js"></script>
+	<script>
+	var iscroll1;
+	$(document).ready(function() {
+		// iScroll 객체 생성
+		iscroll1 = new IScroll('#mnb_wrap', {
+			scrollbars: true,
+			mouseWheel: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'scale',
+			fadeScrollbars: true,
+			click: true
+		});
+    });
+	</script>
+</head>
+<body>
+	<div id="mnb_layer" class="mnb_layer"></div>
+
+	<div class="header">
+		<a href="javascript:void(0);" id="m_menu" class="m_menu"><span class="ico_menu"></span></a>
+		<h1 class="logo">
+			<a href=""><img src="../../imgs/comm/logo.png" alt=""></a>
+		</h1>
+		<div class="h_btn">
+			<a href="" class="btn_doc">Home</a>
+			<a href="" class="btn_doc">Logout</a>
+		</div>
+	</div>
+
+	<div class="content_wrap">
+		<div class="layer_bg"></div>
+		<div id="mnb_wrap" class="mnb_wrap">
+			<ul class="mnb">
+				<li>
+					<a href="" class="aon"><span class="img_ico"><img src="../../imgs/comm/menu1_off.png" alt="" class="off"><img src="../../imgs/comm/menu1_on.png" alt="" class="on"></span><span class="txt">API</span></a>
+					<ul class="snb" style="display:block;">
+						<li><a href="">키 관리</a></li>
+						<li><a href="">회원 관리</a></li>
+					</ul>
+				</li>
+				<li><a href=""><span class="img_ico"><img src="../../imgs/comm/menu2_off.png" alt="" class="off"><img src="../../imgs/comm/menu2_on.png" alt="" class="on"></span><span class="txt">학습 카테고리</span></a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="page_ct">
+				<h2 class="page_tit">명찰템플릿 관리</h2>
+				<div class="cont_ct">
+					<div class="data_ct">
+
+						<!-- ~~~~~ 내용페이지 s. ~~~~~ -->
+
+						<div class="taR mb10">
+							<a href="" class="nx-btn-b3">뒤로</a>
+						</div>
+
+						<div class="sch_box">
+							<div class="sch_opt1">
+								<div class="sch_opt2">
+									<span class="sch_ipt wm2" data-tit="템플릿명">
+										<input type="text" id="" name="" class="nx-ips1">
+									</span>
+								</div>
+							</div>
+
+							<a href="javascript:void(0);" class="btn_sch"><span class="ico_search2"></span></a>
+						</div>
+
+						<div class="taR mb10">
+							<a href="" class="nx-btn-b2">템플릿 등록</a>
+						</div>
+
+						<table border="0" cellpadding="0" cellspacing="0" class="nx-t-list1">
+							<colgroup>
+								<col width=""><col width="15%"><col width="15%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>템플릿명</th>
+									<th>가로사이즈(px)</th>
+									<th>세로사이즈(px)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><td colspan="3">등록된 템플릿이 없습니다.</td></tr>
+								<tr>
+									<td class="taL">
+										<a href="" class="color-tit">템플릿명</a>
+									</td>
+									<td>400</td>
+									<td>600</td>
+								</tr>
+								<tr>
+									<td class="taL">
+										<a href="" class="color-tit">템플릿명</a>
+									</td>
+									<td>400</td>
+									<td>600</td>
+								</tr>
+								<tr>
+									<td class="taL">
+										<a href="" class="color-tit">템플릿명</a>
+									</td>
+									<td>400</td>
+									<td>600</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<!-- <ul class="nx-template-lst">
+							<li>
+								<a href="">
+									<div class="img-wrap1">
+										<div class="img-wrap2">
+											<img src="http://placehold.it/400x500" alt="" class="img">
+										</div>
+									</div>
+									<div class="tit">템플릿명 1</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="img-wrap1">
+										<div class="img-wrap2">
+											<img src="http://placehold.it/400x400" alt="" class="img">
+										</div>
+									</div>
+									<div class="tit">템플릿명 2</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="img-wrap1">
+										<div class="img-wrap2">
+											<img src="http://placehold.it/400x200" alt="" class="img">
+										</div>
+									</div>
+									<div class="tit">템플릿명 3</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="img-wrap1">
+										<div class="img-wrap2">
+											<img src="http://placehold.it/400x300" alt="" class="img">
+										</div>
+									</div>
+									<div class="tit">템플릿명이 길게 들어갑니다. 템플릿명이 길게 들어갑니다. 템플릿명이 길게 들어갑니다. 템플릿명이 길게 들어갑니다. 템플릿명이 길게 들어갑니다. 템플릿명이 길게 들어갑니다.</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="img-wrap1">
+										<div class="img-wrap2">
+											<img src="http://placehold.it/400x300" alt="" class="img">
+										</div>
+									</div>
+									<div class="tit">템플릿명 5</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="img-wrap1">
+										<div class="img-wrap2">
+											<img src="http://placehold.it/400x400" alt="" class="img">
+										</div>
+									</div>
+									<div class="tit">템플릿명 6</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="img-wrap1">
+										<div class="img-wrap2">
+											<img src="http://placehold.it/400x500" alt="" class="img">
+										</div>
+									</div>
+									<div class="tit">템플릿명이 길게 들어갑니다. 템플릿명이 길게 들어갑니다. 템플릿명이 길게 들어갑니다. 템플릿명이 길게 들어갑니다. 템플릿명이 길게 들어갑니다. 템플릿명이 길게 들어갑니다.</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="img-wrap1">
+										<div class="img-wrap2">
+											<img src="http://placehold.it/400x200" alt="" class="img">
+										</div>
+									</div>
+									<div class="tit">템플릿명 8</div>
+								</a>
+							</li>
+						</ul> -->
+
+						<div class="taR mt10">
+							<a href="" class="nx-btn-b2">템플릿 등록</a>
+						</div>
+
+						<nav class="pg_wrap">
+							<span class="pg">
+								<span class="sound_only">현재</span>
+								<strong class="pg_current">1</strong>
+								<span class="sound_only">페이지</span>
+								<a href="/adm/board_list.php?sst=&amp;sod=&amp;sfl=&amp;stx=&amp;page=2" class="pg_page">2<span class="sound_only">페이지</span></a>
+								<a href="/adm/board_list.php?sst=&amp;sod=&amp;sfl=&amp;stx=&amp;page=2" class="pg_page pg_end">맨끝</a>
+							</span>
+						</nav>
+
+						<!-- ~~~~~ 내용페이지 e. ~~~~~ -->
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="footer">
+		<p class="copy">저작권 ⓒ <?php echo $_SERVER['HTTP_HOST']; ?> All right reserved</p>
+	</div>
+
+	<div style="position:absolute;top:-10000px;left:-10000px">
+		<img id="res_w" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_w" />
+		<img id="res_wd" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_wd" />
+		<img id="res_wdt" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_wdt" />
+		<img id="res_d" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_d" />
+		<img id="res_dt" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_dt" />
+		<img id="res_tm" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_tm" />
+		<img id="res_t" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_t" />
+		<img id="res_m" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_m" />
+		<img id="res_mh" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_mh" />
+		<img id="res_mv" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_mv" />
+
+		<iframe src="" id="actIframe" name="actIframe" width="1" height="1" style="border:none; margin:0px;"></iframe>
+	</div>
+
+	<script>
+	//<[!CDATA[
+	var sTop;
+	var orgw = $(window).width();
+	$(document).ready(function() {
+		$('.mna').click(function(e) {
+			e.preventDefault();
+
+			if ($(this).next('.snb').length > 0) {
+				$('#mnb_wrap .mna.aon + .snb').slideUp(300);
+				$('#mnb_wrap .mna.aon').removeClass('aon');
+				$(this).next('.snb').slideToggle(300, function() {
+					iscroll1.refresh();
+				});
+
+				if ($(this).hasClass('aon')) $(this).removeClass('aon');
+				else $(this).addClass('aon');
+			}
+			else {
+				window.location.href=$(this).attr('href');
+			}
+		});
+
+		$('#m_menu').on('click', function() {
+			if (!$('#mnb_wrap').is(':hidden')) {
+				hideMnb();
+			} 
+			else {
+				$('#mnb_layer').fadeIn('fast');
+				$('#mnb_wrap').fadeIn(300);
+				$('#mnb_wrap').animate({"left":"0"}, 300);
+				scrollBlock();
+			}
+			iscroll1.refresh();
+		});
+
+		$('#mnb_layer').on('click', function() {
+			if (!$('#mnb_wrap').is(':hidden')) {
+				hideMnb();
+			}
+		});
+	});
+
+	$(window).on('resize', function() {
+		if ($(window).width() > 1024) {
+			$('#mnb_layer').hide();
+			$("#mnb_wrap").removeAttr("style");
+			unScrollBlock();
+		} 
+	});
+
+	function hideMnb() {
+		$('#mnb_wrap').fadeOut(300);
+		$('#mnb_wrap').animate({"left":"-280px"}, 300);
+		$('#mnb_layer').fadeOut(300);
+		unScrollBlock();
+	}
+
+	function scrollBlock() {
+		sTop = document.body.scrollTop;
+
+		$('body').css({"position": "fixed", "top": "-"+sTop+"px", "left": "0", "right": "0", "bottom": "0"});
+	}
+
+	function unScrollBlock() {
+		$('body').css({"position": "static", "top": "0"});
+		$('body').scrollTop(sTop);
+	}
+	//]]>
+	</script>
+</body>
+</html>
+

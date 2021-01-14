@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+/* 컬러 */
+$color1: #0066b3; /* 탁한파란색 */
+$color2: #6d9df4; /* 하늘색 */
+$color3: #222; /* 진한 회색 */
+
+// (TEMP)
+$color4: #f00; /* 진한 회색 */
+
+$pcolor1: #f36f20; /* 오렌지 */
+
+$color2_sub: #a36813; /* 갈색 */
+
+/* -------------------------
+z-index
+
+.nx_header - 헤더: 500
+------------------------- */
+
+/* 말줄임 */
+.elss1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* 라인수 */
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.5em;
+  max-height: 1.5em !important;
+}
+
+.elss2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* 라인수 */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.5em;
+  max-height: 3em !important;
+}
+
+.elss3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* 라인수 */
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.5em;
+  max-height: 4.5em !important;
+}
+
+/* no select */
+.noselect {
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -webkit-touch-callout:none;
+  -moz-touch-callout:none;
+  pointer-events: none;
+}
+
+
+/* responsive css */
+.res_w, .res_wd, .res_wdt, .res_wdtmh {
+  display: block !important;
+}
+.res_w2, .res_wd2, .res_wdt2, .res_wdtmh2 {
+  display: inline-block !important;
+}
+.res_d, .res_dt, .res_dtm, .res_dtmh, .res_t, .res_tm, .res_m, .res_mh, .res_mv, .res_d2, .res_dt2, .res_dtm2, .res_dtmh2, .res_t2, .res_tm2, .res_m2, .res_mh2, .res_mv2 {
+  display: none !important;
+}
+
+/* pc */
+@media only screen and (max-width: 1279px) {
+  .res_w, .res_w2 {
+    display: none !important;
+  }
+  .res_d, .res_dt, .res_dtm {
+    display: block !important;
+  }
+  .res_d2, .res_dt2, .res_dtm2 {
+    display: inline-block !important;
+  }
+}
+
+/* tablet */
+@media only screen and (max-width: 1023px) {
+  .res_wd, .res_d, .res_wd2, .res_d2 {
+    display: none !important;
+  }
+  .res_t, .res_tm {
+    display: block !important;
+  }
+  .res_t2, .res_tm2 {
+    display: inline-block !important;
+  }
+}
+
+/* mobile landscape */
+@media only screen and (max-width: 759px) {
+  .res_wdt, .res_dt, .res_t, .res_wdt2, .res_dt2, .res_t2 {
+    display: none !important;
+  }
+  .res_m, .res_mh {
+    display: block !important;
+  }
+  .res_m2, .res_mh2 {
+    display: inline-block !important;
+  }
+}
+
+/* mobile vertical */
+@media only screen and (max-width: 519px) {
+  .res_wdtmh, .res_dtmh, .res_mh, .res_wdtmh2, .res_dtmh2, .res_mh2 {
+    display: none !important;
+  }
+  .res_mv {
+    display: block !important;
+  }
+  .res_mv2 {
+    display: inline-block !important;
+  }
+}

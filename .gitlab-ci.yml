@@ -1,0 +1,63 @@
+# --------------------------------
+# DEVELOP
+# --------------------------------
+develop:
+    only:
+        - dev-xxx
+    tags:
+        - GM_TMYWEB, dev
+    variables:
+        GIT_STRATEGY: clone
+        GIT_CHECKOUT: "true"
+    script:
+        - sh deploy-develop.sh
+
+# --------------------------------
+# STAGE
+# --------------------------------        
+stage01:
+    only:
+        - stage
+    tags:
+        - GIL_web01, stage
+    variables:
+        GIT_STRATEGY: clone
+        GIT_CHECKOUT: "true"
+    script:
+        - sh deploy-stage.sh
+        
+stage02:
+    only:
+        - stage
+    tags:
+        - GIL_web02, stage
+    variables:
+        GIT_STRATEGY: clone
+        GIT_CHECKOUT: "true"
+    script:
+        - sh deploy-stage.sh
+         
+# --------------------------------
+# OPERATION
+# --------------------------------
+operation01:
+    only:
+        - master
+    tags:
+        - GIL_web01, operation
+    variables:
+        GIT_STRATEGY: clone
+        GIT_CHECKOUT: "true"
+    script:
+        - sh deploy-operation.sh
+        
+operation02:
+    only:
+        - master
+    tags:
+        - GIL_web02, operation
+    variables:
+        GIT_STRATEGY: clone
+        GIT_CHECKOUT: "true"
+    script:
+        - sh deploy-operation.sh

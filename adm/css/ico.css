@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'ico';
+  src: url('../font/ico.eot?15897708');
+  src: url('../font/ico.eot?15897708#iefix') format('embedded-opentype'),
+       url('../font/ico.woff2?15897708') format('woff2'),
+       url('../font/ico.woff?15897708') format('woff'),
+       url('../font/ico.ttf?15897708') format('truetype'),
+       url('../font/ico.svg?15897708#ico') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ico_"]:before, [class*=" ico_"]:before {
+  font-family: "ico";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+}
+ 
+/* 일반 */
+.ico_home:before { content: '\e826'; } /* '' */
+.ico_menu:before { content: '\e82a'; } /* '' */
+.ico_sett:before { content: '\e833'; } /* '' */
+.ico_bookmark:before { content: '\e83c'; } /* '' */
+.ico_o:before { content: '\e818'; } /* '' */
+.ico_x:before { content: '\e805'; } /* '' */
+.ico_plus1:before { content: '\e83b'; } /* '' */
+.ico_minus1:before { content: '\e83a'; } /* '' */
+.ico_search:before { content: '\e821'; } /* '' */
+.ico_search2:before { content: '\e827'; } /* '' */
+
+.ico_star:before { content: '\e80b'; } /* '' */
+.ico_heart:before { content: '\e80c'; } /* '' */
+.ico_comment:before { content: '\e819'; } /* '' */
+.ico_file:before { content: '\e81b'; } /* '' */
+.ico_member:before { content: '\e82b'; } /* '' */
+
+
+/* 화살표 */
+.ico_arr1_d:before { content: '\e814'; } /* 아래 */
+.ico_arr1_l:before { content: '\e815'; } /* 왼쪽 */
+.ico_arr1_r:before { content: '\e816'; } /* 오른쪽 */
+.ico_arr1_u:before { content: '\e817'; } /* 위 */
+
+.ico_arr2_d:before { content: '\e834'; } /* 아래 */
+.ico_arr2_l:before { content: '\e837'; } /* 왼쪽 */
+.ico_arr2_r:before { content: '\e838'; } /* 오른쪽 */
+.ico_arr2_u:before { content: '\e839'; } /* 위 */
+
+/* 인풋 */
+.ico_check:before { content: '\e804'; } /* '' */
+.ico_select:before { content: '\e810'; } /* '' */
+
+/* 비디오 플레이어 */
+.ico_play:before { content: '\e83f'; } /* '' */
+.ico_pause:before { content: '\e83e'; } /* '' */
+.ico_stop:before { content: '\e840'; } /* '' */
+.ico_mute:before { content: '\e83d'; } /* '' */
+.ico_unmute:before { content: '\e842'; } /* '' */
+.ico_speed:before { content: '\e841'; } /* '' */
+.ico_fullscreen:before { content: '\e843'; } /* '' */
+.ico_loop:before { content: '\e844'; } /* '' */
+
+/* 페이징 */
+.ico_btn_p1:before { content: '\e82f'; } /* '' */
+.ico_btn_p2:before { content: '\e830'; } /* '' */
+.ico_btn_n1:before { content: '\e831'; } /* '' */
+.ico_btn_n2:before { content: '\e832'; } /* '' */
+
+/* 별점 */
+.ico_star_full:before { content: '\e828'; } /* '' */
+.ico_star_half:before { content: '\e829'; } /* '' */
+
+/* Fontello Download */
+.ico_info:before { content: '\f129'; } /* '' */
+.ico_trash:before { content: '\f1f8'; } /* '' */
+.ico_logout:before { content: '\e800'; } /* '' */
+.ico_list:before { content: '\e801'; } /* '' */
+.ico_back:before { content: '\e802'; } /* '' */
+.ico_etc:before { content: '\e803'; } /* '' */
+.ico_schedule:before { content: '\e82d'; } /* '' */

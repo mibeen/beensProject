@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.page-tabs-box h1 { padding:0px; margin:0px; font-size:20px; font-weight:bold; letter-spacing:-1px; line-height:46px; padding-left:20px; border-bottom:1px solid #ddd; white-space:nowrap; height:47px; }
+.page-tabs .tabs { margin: 0px; margin-bottom:-46px;}
+.page-tabs .tabs::before { display: table; content: " "; }
+.page-tabs .tabs::after { display: table; content: " "; clear:both; }
+.page-tabs .tabs ul.nav-tabs { margin: 0px; border:0px; border-left:1px solid #ddd; float:right; margin-right:20px; }
+.page-tabs .tabs ul.nav-tabs li.active a { background: rgb(255, 255, 255); color: rgb(233, 27, 35); font-weight:bold; border-bottom:1px solid #fff;}
+.page-tabs .tabs ul.nav-tabs a { padding:8px 15px; background: rgb(247, 247, 247); color: #333; margin-right: 0px; border-radius: 0px; -moz-border-radius: 0; -webkit-border-radius: 0; border:1px solid #ddd; border-left:0px; }
+.page-tabs .tabs ul.nav-tabs a:hover, .page-wrap .tabs ul.nav-tabs a:active, .page-wrap .tabs ul.nav-tabs a:focus { color: #fff; background: rgb(233, 27, 35); }
+.page-select { margin:0px 20px 15px; }
+.page-icon { text-align:right; padding-right:20px; }
+.page-icon img { width:20%; max-width:34px; border-radius:50%; margin-bottom:5px; }

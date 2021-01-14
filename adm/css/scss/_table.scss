@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* 테이블 스크롤 wrapper */
+
+.nx-tb-scroll {
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+
+/* List Table */
+
+.nx-t-list1 {
+    width: 100%;
+    border: 1px solid #d5d5d5;
+    background: #fff;
+    > thead > tr > th, > tbody > tr > th, > tbody > tr > td {
+        text-align: center;
+        font-size: 14px;
+    }
+    > thead > tr > th {
+        padding: 12px 0;
+        border-bottom: 1px solid #d5d5d5;
+        background: #eee;
+        font-weight: 700;
+        color: #000;
+    }
+    > tbody > tr > td {
+      padding: 10px 5px;
+      line-height: 130%;
+      color: #666;
+    }
+    > tbody > tr > th, > tbody > tr > td {
+        border-bottom: 1px solid #d5d5d5;
+        background: #fff;
+    }
+}
+
+
+/* Read Table */
+
+.nx-t-read1 {
+    width: 100%;
+    border: 1px solid #d5d5d5;
+    background: #fff;
+    > thead > tr > th,
+    > tbody > tr > th {
+        padding: 12px 0;
+        border-top: 1px solid #d5d5d5;
+        text-align: center;
+        font-size: 14px;
+        color: #444;
+    }
+    > tbody > tr > td  {
+        padding: 12px 10px 12px 20px;
+        border-top: 1px solid #d5d5d5;
+        line-height: 1.5;
+        text-align: left;
+        font-size: 14px;
+        color: #666;
+    }
+    > tbody > tr:first-child > th,
+    > tbody > tr:first-child > td {
+        border-top: none;
+    }
+}
+
+.nx-t-read2 {
+    width: 100%;
+    border: 1px solid #d5d5d5;
+    background: #fff;
+    > thead > tr > th,
+    > tbody > tr > th {
+        padding: 10px 0;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        color: #444;
+    }
+    > tbody > tr > td  {
+        padding: 10px 10px 10px 20px;
+        line-height: 1.5;
+        text-align: left;
+        font-size: 14px;
+        color: #666;
+    }
+}

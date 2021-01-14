@@ -1,0 +1,797 @@
+@charset "UTF-8";
+
+/* 갤러리형 */
+.learn_lst1 {
+  overflow: hidden;
+  li {
+    @include gallery(4, 20, 20);
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    border-radius: 6px;
+    box-sizing: border-box;
+    &:hover {
+      border-color: $color1;
+    }
+    &.nodata {
+      float: none !important;
+      width: auto !important;
+      height: 90px;
+      line-height: 90px;
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+      text-align: center;
+    }
+    > a {
+      display: block;
+    }
+    > .inner .nx_txt_wrap {
+      padding: 12px 10px 36px;
+      .nx_tit a:hover {
+        text-decoration: underline;
+      }
+    }
+    .img_wrap1 {
+      position: relative;
+      height: 0;
+      padding-bottom: 56.25%;
+      .img_wrap2 {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        .img {
+          display: block;
+        }
+      }
+    }
+    .nx_txt_wrap {
+      position: relative;
+      padding: 12px 10px;
+      box-sizing: border-box;
+      .nx_tit {
+        height: 2.6em;
+        font-size: 15px;
+        font-weight: 500;
+        color: #222;
+        @include elss(2, 1.3);
+      }
+      .name {
+        margin-top: 10px;
+        color: $color1;
+      }
+      .cancel {
+        color: #ff6b6b;
+      }
+      .star_rate_wrap {
+        margin-top: 8px;
+      }
+      .nx_progress {
+        overflow: hidden;
+        position: relative;
+        margin-top: 12px;
+        .txt {
+          float: left;
+          font-size: 12px;
+        }
+        .bar {
+          position: absolute;
+          top: 50%;
+          left: 45px;
+          right: 35px;
+          height: 6px;
+          margin-top: -5px;
+          padding: 1px;
+          border: 1px solid #e5e5e5;
+          background: #fff;
+          border-radius: 5px;
+          .gage {
+            display: block;
+            height: 100%;
+            background: #38c2f3;
+            border-radius: 3px;
+            transition: all 1s ease;
+          }
+        }
+        .percent {
+          float: right;
+          font-size: 12px;
+        }
+      }
+      .nx_btn {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        color: #fff;
+          @include hover($color1);
+        &.finish {
+          @include hover($color2);
+          color: $color2_sub;
+        }
+      }
+      .nx_tit + .name {
+        position: static;
+      }
+    }
+  }
+  &.no_ct li a .nx_txt_wrap {
+    height: 110px;
+    padding: 10px 10px 35px 10px;
+    .nx_tit {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.star_rate_wrap {
+  .cnt {
+    display: inline-block;
+    min-width: 40px;
+    vertical-align: middle;
+    font-size: 13px;
+  }
+}
+
+.star_rate {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  > .star_ico {
+    display: block;
+    float: right;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+  }
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    & + label {
+      display: block;
+      float: right;
+      position: relative;
+      width: 26px;
+      height: 26px;
+      line-height: 26px;
+      &:first-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+  span[class^="ico_star"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    &:before {
+      display: block;
+      line-height: inherit;
+    }
+  }
+  .ico_star_full {
+    display: block;
+    color: #e5e5e5;
+  }
+  .ico_star_half {
+    display: block;
+    color: transparent;
+  }
+  .star_ico.on .ico_star_full {
+    color: #e5e5e5;
+  } 
+  .star_ico.on, {
+    .ico_star_full, & ~ .star_ico .ico_star_full {
+      color: #ffd839;
+    }
+    &.half {
+      .ico_star_full {
+        color: #e5e5e5;
+      }
+      .ico_star_half {
+        color: #ffd839;
+      }
+    }
+  }
+  input[type="radio"]:checked {
+    &.half + label .ico_star_full {
+      color: #afafaf;
+    }
+  }
+  &.disabled input[type="radio"] + label {
+    cursor: default;
+  }
+}
+
+.learn_tit {
+  margin: 25px 0 15px;
+  line-height: 1.3;
+  font-size: 24px;
+  color: #222;
+}
+
+/* 강의 상세 */
+
+.learn_read_info {
+  overflow: hidden;
+  position: relative;
+  .nx_title_img {
+    float: left;
+    width: calc(100% - 314px);
+    .img_wrap1 {
+      position: relative;
+      height: 0;
+      padding-bottom: 56.25%;
+      .img_wrap2 {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 6px;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .info_wrap {
+    margin-left: calc(100% - 314px);
+    padding: 8px 0 0 20px;
+    box-sizing: border-box;
+    .nx_btn_area {
+      margin-top: 50px;
+      .nx_btn {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        border-radius: 4px;
+        &.type1 {
+          @include hover($color1);
+        }
+        &.type2 {
+          color: $color2_sub;
+          @include hover($color2);
+        }
+        &.type3 {
+          @include hover($color3);
+        }
+        &:first-child {
+          &:nth-last-child(2) {
+            float: left;
+            width: calc(50% - 5px);
+            & + .nx_btn {
+              float: left;
+              width: calc(50% - 5px);
+              margin-left: 10px;
+            }
+          }
+          &:nth-last-child(3) {
+            float: left;
+            width: calc(40%);
+            & ~ .nx_btn {
+              float: left;
+              width: calc(30% - 8px);
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .star_rate {
+    .star_ico {
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      span[class^="ico_star"] {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.learn_info_dl dl {
+  margin-bottom: 5px;
+  dt {
+    float: left;
+    width: 80px;
+    line-height: 1.3;
+    font-size: 15px;
+    font-weight: 700;
+    color: #222;
+  }
+  dd {
+    margin-left: 65px;
+    line-height: 1.3;
+    font-size: 15px;
+    color: #666;
+  }
+}
+
+.learn_tab {
+  overflow: hidden;
+  position: relative;
+  margin: 30px 0 60px;
+  > div {
+    float: left;
+    width: calc((100% - 1px) / 3);
+    &.on a {
+      background: #f0f0f0;
+    }
+    a {
+      display: block;
+      height: 50px;
+      border-bottom: 1px solid $color1;
+      line-height: 49px;
+      text-align: center;
+      background: #f8f8f8;
+      font-size: 18px;
+      color: #666;
+      box-sizing: border-box;
+      transition: background 0.25s ease-in-out;
+    }
+  }
+  .border {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: calc((100% - 1px) / 3);
+    height: 0;
+    background: $color1;
+    transition: left 0.3s linear;
+  }
+  > div.on {
+    ~ .border {
+      height: 3px;
+    }
+    &:nth-of-type(1) ~ .border {
+      left: 0;
+    }
+    &:nth-of-type(2) ~ .border {
+      left: calc((100% - 1px) / 3);
+    }
+    &:nth-of-type(3) ~ .border {
+      left: calc(((100% - 1px) / 3) * 2);
+    }
+  }
+  > div:hover {
+    ~ .border {
+      height: 3px;
+    }
+    &:nth-of-type(1) ~ .border {
+      left: 0;
+    }
+    &:nth-of-type(2) ~ .border {
+      left: calc((100% - 1px) / 3);
+    }
+    &:nth-of-type(3) ~ .border {
+      left: calc(((100% - 1px) / 3) * 2);
+    }
+  }
+}
+
+.learn_tab.two {
+  > div {
+    width: 50%;
+  }
+  .border {
+    width: 50%;
+  }
+  > div.on {
+    &:nth-of-type(2) ~ .border {
+      left: 50%;
+    }
+  }
+  > div:hover {
+    &:nth-of-type(2) ~ .border {
+      left: 50%;
+    }
+  }
+}
+
+.learn_read_ct {
+  margin-left: 10px;
+}
+
+.learn_session_wrap {
+  &.nodata {
+    height: 90px;
+    line-height: 90px;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    text-align: center;
+    color: #666;
+    border-radius: 0;
+  }
+  > .top {
+    position: relative;
+    padding: 10px 20px;
+    color: #333;
+    background: #f0f0f0;
+    border-radius: 2px 2px 0 0;
+    .num {
+      display: block;
+      float: left;
+      width: 70px;
+      line-height: 30px;
+      font-size: 14px;
+    }
+    .name {
+      display: table;
+      width: calc(100% - 40px);
+      margin: 0 40px 0 80px;
+      &:first-child {
+        margin: 0 40px 0 0;
+      }
+      &:nth-last-child(3) {
+        width: calc(100% - 210px);
+        margin: 0 130px 0 80px;
+      }
+      &:before {
+        content: "";
+        display: table-cell;
+        width: 1px;
+        height: 30px;
+      }
+      p {
+        display: table-cell;
+        line-height: 1.5;
+        text-align: left;
+        vertical-align: middle;
+        font-size: 14px;
+      }
+    }
+    .nx_btn {
+      position: absolute;
+      top: 10px;
+      right: 60px;
+    }
+    .fold {
+      display: inline-block;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      vertical-align: middle;
+      box-sizing: border-box;
+      @include hover($color3);
+      color: #fff;
+      border-radius: 50%;
+      .ico_arr1_u {
+        display: none;
+      }
+      &.on {
+        .ico_arr1_u {
+          display: inline;
+        }
+        .ico_arr1_d {
+          display: none;
+        }
+      }
+    }
+  }
+  > .nx_ct {
+    overflow: hidden;
+    border-top: 1px solid #b9b9b9;
+    border-radius: 0 0 2px 2px;
+  }
+  .nx_btn {
+    @include button(30px, 30px, null, #fff, 4px);
+    &.type1 {
+      @include hover($color1);
+    }
+    &.type2 {
+      color: $color2_sub;
+      @include hover($color2);
+    }
+    &.type3 {
+      @include hover($color3);
+    }
+    &.type4 {
+      background: none;
+      border: 1px solid #bbb;
+      color: #bbb !important;
+      cursor: default;
+    }
+  }
+  & + .learn_session_wrap {
+    margin-top: 30px;
+  }
+}
+
+.learn_session_lst {
+  li {
+    position: relative;
+    overflow: hidden;
+    padding: 15px 0 15px 100px;
+    &:nth-child(odd) {
+      background: #f8f8f8;
+    }
+    &:nth-child(even) {
+      background: #f0f0f0;
+    }
+    .num {
+      float: left;
+      width: 60px;
+      color: #666;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+    .nx_tit {
+      margin: 0 140px 0 70px;
+      color: #666;
+      line-height: 1.5;
+      font-size: 14px;
+      .per {
+        display: inline-block;
+        padding: 2px;
+        font-size: 12px;
+        color: #fff;
+        background: #939393;
+        border-radius: 4px;
+      }
+    }
+    .percent {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      line-height: 30px;
+      color: #666;
+    }
+    .nx_btn {
+      position: absolute;
+      top: 10px;
+      right: 60px;
+    }
+  }
+}
+
+.star_average {
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+  .star_rate {
+    .star_ico {
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      span[class^="ico_star"] {
+        font-size: 36px;
+      }
+    }
+    .star_ico.on {
+      .ico_star_full, & ~ .star_ico .ico_star_full {
+        color: #fba830;
+      }
+      &.half {
+        .ico_star_full {
+          color: #e5e5e5;
+        }
+        .ico_star_half {
+          color: #fba830;
+        }
+      }
+    }
+  }
+  .average {
+    display: inline-block;
+    vertical-align: middle;
+    .rate {
+      display: inline-block;
+      line-height: 28px;
+      vertical-align: bottom;
+      font-size: 24px;
+      color: #222;
+    }
+    .txt {
+      display: inline-block;
+      line-height: 28px;
+      vertical-align: bottom;
+      font-size: 16px;
+    }
+  }
+}
+
+.star_set {
+  margin-bottom: 5px;
+  .star_rate {
+    input[type="radio"] + label {
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      span[class^="ico_star"] {
+        font-size: 24px;
+      }
+    }
+    input[type="radio"]:checked + label {
+      .ico_star_full, & ~ label .ico_star_full {
+        color: #fba830;
+      }
+    }
+  }
+}
+
+/* 나의학습 */
+
+.my_talk {
+  border-top: 1px solid #e5e5e5;
+  li {
+    border-bottom: 1px solid #e5e5e5;
+    > .top {
+      overflow: hidden;
+      padding: 15px;
+      .nx_tit {
+        float: left;
+        width: calc(100% - 120px);
+        font-size: 18px;
+        color: #222;
+        line-height: 1.5;
+      }
+      .toggle {
+        float: right;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px 0 15px;
+        @include hover($color1);
+        color: #fff;
+        border-radius: 4px;
+        .ico_arr1_u {
+          display: none;
+        }
+        &.on {
+          .ico_arr1_u {
+            display: inline;
+          }
+          .ico_arr1_d {
+            display: none;
+          }
+        }
+      }
+    }
+    > .cmt_outer {
+      background: #f5f5f5;
+      .cmt_wrap {
+        padding: 30px 20px 20px;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 819px) {
+  .learn_lst1 li {
+    @include gallery(3, 20, 20, down);
+    > .inner .nx_txt_wrap {
+      padding: 8px 8px 36px;
+    }
+    .nx_txt_wrap {
+      padding: 8px;
+      .nx_tit {
+        font-size: 14px;
+      }
+      .name {
+        margin-top: 5px;
+        font-size: 12px;
+      }
+      .star_rate_wrap {
+        margin-top: 4px;
+        .star_rate {
+          .star_ico, input[type="radio"]+label {
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            span[class^="ico_star"] {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      .cnt {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .learn_tit {
+    font-size: 18px;
+  }
+  .learn_read_info {
+    .nx_title_img {
+      float: none;
+      width: auto;
+      .img_wrap1 {
+        height: auto;
+        padding-bottom: 0;
+        .img_wrap2 {
+          position: static;
+        }
+      }
+    }
+    .info_wrap {
+      margin-left: 0;
+      padding: 20px;
+      .nx_btn_area {
+        position: static;
+        margin-top: 25px;
+        .nx_btn {
+          max-width: 300px;
+        } 
+      }
+    }
+  }
+  .learn_session_lst li {
+    padding: 15px 10px 15px 30px;
+  }
+  .learn_tab > div a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .learn_lst1 li {
+    @include gallery(2, 10, 10, down);
+  }
+}
+
+@media screen and (max-width: 519px) {
+  .lesson_lst li {
+    padding: 15px;
+    .num {
+      font-size: 14px;
+    }
+    .nx_tit {
+      font-size: 16px;
+      margin-right: 0;
+    }
+    > a {
+      top: 11px;
+      right: 15px;
+      margin-top: 0;
+      height: 24px;
+      line-height: 24px;
+      font-size: 12px;
+    }
+  }
+  .learn_session_wrap > .top .name {
+    width: 100% !important;
+    margin: 40px 0 0 !important;
+  }
+  .learn_session_lst li {
+    .num {
+      float: none;
+      width: auto;
+      margin-bottom: 5px;
+    }
+    .nx_tit {
+      margin: 0;
+    }
+    .nx_btn {
+      right: 20px;
+    }
+  }
+}

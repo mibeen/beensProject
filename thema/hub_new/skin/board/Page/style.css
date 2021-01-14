@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/* 페이지 공통 */
+.page-wrap { width:100%; line-height:180%; overflow:hidden; }
+.page-wrap img,
+.page-wrap iframe { max-width:100%; }
+.page-wrap .page-none { text-align:center; margin:0px; padding:100px 0px; }
+.pw { min-width:140px; }
+.pwl { min-width:200px; }
+
+/* 쓰기 공통 */
+.write-wrap { width:100%; overflow:hidden; }
+.write-wrap h2 { padding:0px; margin:0px; font-size:14px; font-weight:bold; }
+.write-wrap label { font-weight:bold; margin-top:4px; }
+.write-wrap .write-content { height: 100px; }
+.write-wrap .write-file { border:0;box-shadow:none; }
+.write-wrap .write-btn { margin:15px 0px 25px; text-align:center; }
+.write-wrap .delete-file { margin:0px; padding:0px 10px; font-weight:normal; }
+.write-wrap .delete-file label { font-weight: normal; }
+.write-wrap .sp-label { font-weight:normal; margin-right:10px; }
+.write-wrap .sp-label input[type="checkbox"], .write-wrap .sp-label input[type="radio"] { margin-top:0px; }
+
+#autosave_pop div { text-align:right; }
+#autosave_pop button { margin:0; margin-left:10px; padding:0; border:0; background:transparent; color:#888; }
+#autosave_pop ul { margin:0; padding:0; padding-left:15px; list-style:disc; }
+#autosave_pop li { padding:2px 5px;  }
+#autosave_pop li:after { display:block; visibility:hidden; clear:both; content:""; }
+#autosave_pop a { display:block; float:left; }
+#autosave_pop span { display:block;; float:right; }
+
+/* Comment */
+.view-comment { margin: 20px 0px 0px; padding: 0px 0px 5px; text-transform: capitalize; overflow: hidden; border-bottom: 1px solid rgb(51, 51, 51); display: inline-block; position: relative; }
+.comment-media { margin:10px 0px; }
+.comment-media .photo i { background: rgb(245, 245, 245); padding: 15px; border-radius: 50%; width: 64px; height: 64px; text-align: center; color: rgb(143, 143, 143); font-size: 30px; display: inline-block; }
+.comment-media .photo img { border-radius: 50%; width: 64px !important; height: 64px !important; display:inline-block; }
+.view-mobile .comment-media .photo i { padding: 10px; width: 54px; height: 54px; }
+.view-mobile .comment-media .photo img { width: 54px !important; height: 54px !important; }
+
+.comment-media .media { border-top:1px solid #eee; margin:7px 0px; padding:7px 0px 0px; }
+.comment-media :first-child.media { border-top:0px; margin-top:0px; padding-top:0px; }
+.comment-media h5 { margin:2px 0px; line-height: 22px; }
+.comment-media .media .media-body { padding-left:0px; }
+.comment-media .media .media-info { margin-left:10px; }
+.comment-media .media .media-content { margin-top:8px; }
+.comment-media .media .media-btn {	margin-left:4px; }
+.comment-media .cmt-good-btn { text-align:right; padding-right:1px; }
+.comment-media .cmt-good, .comment-media .cmt-nogood { display:inline-block; width:74px; height:20px; margin-top:10px; padding-right:10px; margin-right:-1px; font:bold 11px verdana; text-align:right; letter-spacing:-1px; line-height:19px; cursor:pointer; }
+.comment-media .cmt-good { background: url('../../img/cmt_good.gif') no-repeat left center; color:#f4695b; }
+.comment-media .cmt-nogood { background: url('../../img/cmt_nogood.gif') no-repeat left center; color:#888; }
+
+.comment-form { padding-top:10px; }
+.comment-box { border:1px solid #ddd; padding:12px 12px 0px; margin-bottom:15px; background:#fbfbfb; }
+.comment-content { display:table; width:100%; table-layout:fixed; }
+.comment-content .comment-cell { display:table-cell; padding:0px; text-align:center; vertical-align:middle; }
+.comment-content .comment-cell.comment-submit { width:80px; height:100%; background:#fafafa; border:1px solid #ccc; border-left:0px; cursor:pointer; }
+.comment-btn .cursor { margin-left:12px; color:#787878; }
+
+#wr_content { resize:none; }
+#bo_vc_opt ol {	margin:0;padding:0;list-style:none;zoom:1; }
+#bo_vc_opt ol:after { display:block;visibility:hidden;clear:both;content:""; }
+#bo_vc_opt ol li { float:left;margin:0; }
+#bo_vc_send_sns ul { margin:0;padding:0;list-style:none;zoom:1; }
+#bo_vc_send_sns ul:after { display:block;visibility:hidden;clear:both;content:""; }
+#bo_vc_send_sns ul li {	float:left;margin:0 20px 0 0; }
+#bo_vc_send_sns input {	margin:0 0 0 5px; }

@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+@import "../../../board-config";
+
+/* List */
+.list-media { margin:0; }
+.list-item { padding-bottom:15px; border-bottom:1px solid #eee; margin-bottom:15px; }
+.list-item .img-left { margin-right:15px; }
+.list-item .img-right { margin-left:15px; }
+.list-item h2.media-heading { display:block; font-size:16px; line-height:22px; margin:0px; padding:0px 0px 4px; }
+.list-item .list-details { margin-top:6px; padding:6px 0px; border-top:1px dotted #ccc; border-bottom:1px dotted #ccc; font-size: 14px; }
+.list-item .list-details .member, .list-item .list-details .guest { color:#787878 !important; }
+.list-item .list-cont { margin-top:8px; padding:0; line-height:20px; font-size: 14px; }
+.list-item .list-sp { margin:0 7px; color:#ddd; font-size:11px; }
+
+
+/********************************************************
+■ Myss Custom
+********************************************************/
+
+.nx_faq {border-top: 1px solid #e0e0e0; background-color:initial;}
+.nx_faq:last-child {border-bottom: 1px solid #e0e0e0;}
+.nx_faq_wrap .nx_faq + .nx_faq {margin-top: 0;}
+.nx_faq_top {position: relative; min-height: 80px; padding: 18px 50px 17px 70px; box-sizing: border-box;}
+.nx_panel_title {line-height:150%; color:#222;}
+.nx_faq_adm_check {position:absolute; top:32px; left:0;}
+.nx_faq_q {position: absolute; top: 20px; left: 20px;}
+.nx_faq_q img {display: block; width: 29.5px;}
+.nx_faq .nx_tit_wrap {width: 100%; min-height: 45px;}
+.nx_faq .nx_tit_wrap .nx_faq_cate {margin-bottom: 5px; line-height: 1.2; font-size: 16px; color: #38c2f3;}
+.nx_faq .nx_tit_wrap .nx_faq_tit {margin-bottom:0;font-size: 14px; color: #222; line-height: 150%;}
+.nx_faq .nx_tit_wrap .nx_faq_tit:hover {color: #8ec700;}
+.nx_faq_ct {position: relative; margin: 0 20px 0 70px; padding: 20px 50px 20px 50px; font-size: 14px !important; color: #666; line-height: 150%; border-top: 1px solid #e5e5e5; box-sizing: border-box;}
+.nx_faq_ct .nx_faq_a {display: block; position: absolute; top: 20px; left: 0; width: 27.5px; height: 29.5px; max-width: 100%;}
+
+/* 반응형 공통 */
+@media all and (max-width:460px) {
+	.responsive .list-btn { text-align:center; margin:0px auto; }
+	.responsive .pull-right.list-btn { float:none !important; margin-bottom:14px; }
+	.responsive .view-wrap h1 { text-overflow:clip; overflow:none; white-space:normal; line-height: 24px; font-size: 18px; margin-bottom:10px; }
+	.responsive .view-wrap h1 .photo { display:none; }
+	.responsive .view-btn i { margin-right:0px; }
+	.responsive .view-author .auth-photo { float:none; width:100%; padding-right:0px; }
+	.responsive .comment-btn { text-align:center; }
+	.responsive .comment-btn .pull-right { float:none !important; }
+}

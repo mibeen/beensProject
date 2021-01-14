@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<link rel="stylesheet" href="http://gnu.safetown.co.kr/thema/Basic/assets/bs3/css/bootstrap.min.css" type="text/css" class="thema-mode">
+	<script type="text/javascript" src="../../lib/core.js"></script>
+	<script type="text/javascript" src="../../lib/comm.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="../../css/admin.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/ico.css" />
+	<script type="text/javascript" language="javascript" src="../../lib/iscroll/iscroll.min.js"></script>
+	<script>
+	var iscroll1;
+	$(document).ready(function() {
+		// iScroll 객체 생성
+		iscroll1 = new IScroll('#mnb_wrap', {
+			scrollbars: true,
+			mouseWheel: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'scale',
+			fadeScrollbars: true,
+			click: true
+		});
+    });
+	</script>
+</head>
+<body>
+	<div id="mnb_layer" class="mnb_layer"></div>
+
+	<div class="header">
+		<a href="javascript:void(0);" id="m_menu" class="m_menu"><span class="ico_menu"></span></a>
+		<h1 class="logo">
+			<a href=""><img src="../../imgs/comm/logo.png" alt=""></a>
+		</h1>
+		<div class="h_btn">
+			<a href="" class="btn_doc">Home</a>
+			<a href="" class="btn_doc">Logout</a>
+		</div>
+	</div>
+
+	<div class="content_wrap">
+		<div class="layer_bg"></div>
+		<div id="mnb_wrap" class="mnb_wrap">
+			<ul class="mnb">
+				<li>
+					<a href="" class="aon"><span class="img_ico"><img src="../../imgs/comm/menu1_off.png" alt="" class="off"><img src="../../imgs/comm/menu1_on.png" alt="" class="on"></span><span class="txt">API</span></a>
+					<ul class="snb" style="display:block;">
+						<li><a href="">키 관리</a></li>
+						<li><a href="">회원 관리</a></li>
+					</ul>
+				</li>
+				<li><a href=""><span class="img_ico"><img src="../../imgs/comm/menu2_off.png" alt="" class="off"><img src="../../imgs/comm/menu2_on.png" alt="" class="on"></span><span class="txt">학습 카테고리</span></a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="page_ct">
+				<h2 class="page_tit">명찰템플릿 편집</h2>
+				<div class="cont_ct">
+					<div class="data_ct">
+
+						<!-- ~~~~~ 내용페이지 s. ~~~~~ -->
+
+						<div class="taR mb10">
+							<a href="" class="nx-btn-b3">뒤로</a>
+						</div>
+
+						<table border="0" cellpadding="0" cellspacing="0" class="nx-t-read1">
+							<colgroup>
+								<col width="130"><col width="">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>템플릿명</th>
+									<td>
+										<input type="text" id="" name="" class="nx-ips1 wl">
+									</td>
+								</tr>
+								<tr>
+									<th>사이즈</th>
+									<td>
+										<span class="dsIB mr20">가로 <input type="text" id="" name="" class="nx-ips1 ws2" value="400"> px</span> <span class="dsIB">세로 <input type="text" id="" name="" class="nx-ips1 ws2" value="600"> px</span>
+									</td>
+								</tr>
+								<tr>
+									<th>배경이미지</th>
+									<td>
+										<input type="file" id="" name="" class="dsIB">
+										<span class="nx-tip">(가로 : 400px)</span>
+									</td>
+								</tr>
+								<tr>
+									<th>A 내용</th>
+									<td>
+										항목명
+										<span class="nx-slt mr15">
+											<select id="" name="">
+												<option value="">항목을 선택하세요</option>
+												<option value="">항목1</option>
+												<option value="">항목2</option>
+											</select>
+											<span class="ico_select"></span>
+										</span>
+										색상
+										<a href="javascript:void(0);" class="nx-namep-color mr15" style="background-color:#ad251f"></a>
+										<div class="nx-namep-deco-wrap mr15">
+											<input type="checkbox" id="bb1" name="bb1" class="nx-namep-deco"><label for="bb1">B</label>
+											<input type="checkbox" id="bb2" name="bb2" class="nx-namep-deco"><label for="bb2" class="underline">U</label>
+										</div>
+										<a href="" class="nx-btn-s2">적용</a>
+									</td>
+								</tr>
+								<tr>
+									<th>B 내용</th>
+									<td>
+										항목명
+										<span class="nx-slt mr15">
+											<select id="" name="">
+												<option value="">항목을 선택하세요</option>
+												<option value="">항목1</option>
+												<option value="">항목2</option>
+											</select>
+											<span class="ico_select"></span>
+										</span>
+										색상
+										<a href="javascript:void(0);" class="nx-namep-color mr15"></a>
+										<div class="nx-namep-deco-wrap mr15">
+											<input type="checkbox" id="bb1" name="bb1" class="nx-namep-deco"><label for="bb1">B</label>
+											<input type="checkbox" id="bb2" name="bb2" class="nx-namep-deco"><label for="bb2" class="underline">U</label>
+										</div>
+										<a href="" class="nx-btn-s2">적용</a>
+									</td>
+								</tr>
+								<tr>
+									<th>항목 위치 조정</th>
+									<td>
+										<div class="nx-template-preview" style="width:400px;height:600px;background-image:url(http://placekitten.com/g/400/400);">
+											<div class="item" style="position:absolute;top:50%;left:30%;height:26.4px;font-size: 26.4px;color:darkgrey">이름</div>
+											<div class="item" style="position:absolute;top:70%;left:30%;height:42px;font-size: 42px;color:grey">기관명</div>
+											<span class="serial-num">신청번호 : 170810-A001</span>
+										</div>
+										<div class="mt10">
+											<a href="" class="nx-btn-b2">편집하기</a>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="ofH mt10">
+							<div class="fL">
+								<a href="" class="nx-btn-b4">삭제</a>
+							</div>
+							<div class="fR">
+								<a href="" class="nx-btn-b3">복제</a>
+								<a href="" class="nx-btn-b2">저장</a>
+								<a href="" class="nx-btn-b3">취소</a>
+							</div>
+						</div>
+						<div class="taR mt10">
+						</div>
+
+						<!-- ~~~~~ 내용페이지 e. ~~~~~ -->
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="footer">
+		<p class="copy">저작권 ⓒ <?php echo $_SERVER['HTTP_HOST']; ?> All right reserved</p>
+	</div>
+
+	<div style="position:absolute;top:-10000px;left:-10000px">
+		<img id="res_w" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_w" />
+		<img id="res_wd" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_wd" />
+		<img id="res_wdt" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_wdt" />
+		<img id="res_d" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_d" />
+		<img id="res_dt" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_dt" />
+		<img id="res_tm" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_tm" />
+		<img id="res_t" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_t" />
+		<img id="res_m" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_m" />
+		<img id="res_mh" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_mh" />
+		<img id="res_mv" src="../../imgs/space.gif" width="1" height="1" alt="" class="res_mv" />
+
+		<iframe src="" id="actIframe" name="actIframe" width="1" height="1" style="border:none; margin:0px;"></iframe>
+	</div>
+
+	<script>
+	//<[!CDATA[
+	var sTop;
+	var orgw = $(window).width();
+	$(document).ready(function() {
+		$('.mna').click(function(e) {
+			e.preventDefault();
+
+			if ($(this).next('.snb').length > 0) {
+				$('#mnb_wrap .mna.aon + .snb').slideUp(300);
+				$('#mnb_wrap .mna.aon').removeClass('aon');
+				$(this).next('.snb').slideToggle(300, function() {
+					iscroll1.refresh();
+				});
+
+				if ($(this).hasClass('aon')) $(this).removeClass('aon');
+				else $(this).addClass('aon');
+			}
+			else {
+				window.location.href=$(this).attr('href');
+			}
+		});
+
+		$('#m_menu').on('click', function() {
+			if (!$('#mnb_wrap').is(':hidden')) {
+				hideMnb();
+			} 
+			else {
+				$('#mnb_layer').fadeIn('fast');
+				$('#mnb_wrap').fadeIn(300);
+				$('#mnb_wrap').animate({"left":"0"}, 300);
+				scrollBlock();
+			}
+			iscroll1.refresh();
+		});
+
+		$('#mnb_layer').on('click', function() {
+			if (!$('#mnb_wrap').is(':hidden')) {
+				hideMnb();
+			}
+		});
+	});
+
+	$(window).on('resize', function() {
+		if ($(window).width() > 1024) {
+			$('#mnb_layer').hide();
+			$("#mnb_wrap").removeAttr("style");
+			unScrollBlock();
+		} 
+	});
+
+	function hideMnb() {
+		$('#mnb_wrap').fadeOut(300);
+		$('#mnb_wrap').animate({"left":"-280px"}, 300);
+		$('#mnb_layer').fadeOut(300);
+		unScrollBlock();
+	}
+
+	function scrollBlock() {
+		sTop = document.body.scrollTop;
+
+		$('body').css({"position": "fixed", "top": "-"+sTop+"px", "left": "0", "right": "0", "bottom": "0"});
+	}
+
+	function unScrollBlock() {
+		$('body').css({"position": "static", "top": "0"});
+		$('body').scrollTop(sTop);
+	}
+	//]]>
+	</script>
+</body>
+</html>
+

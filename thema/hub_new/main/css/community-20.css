@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/*-------------------------------------------------------*/
+/* 공통
+/*-------------------------------------------------------*/
+.main-wrap { 
+	padding:30px 0px; 
+}
+.main-line { 
+	height:25px; 
+}
+@media all and (max-width:991px) {
+	.responsive .main-wrap { 
+		padding:10px 0px; 
+	}
+}
+@media all and (max-width:767px) {
+	.responsive .main-line { 
+		height:20px; 
+	}
+}
+
+/* 슬라이더 더보기 위치 조정 */
+.main-wrap .nav-top .owl-nav [class*='owl-'] {
+	top: -40px;
+}
+
+.sec-title {
+    margin: 12px 0px;
+    padding: 7px 10px;
+    line-height: 22px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fafafa;
+	font-weight:bold;
+}
+.sec-content {
+    padding: 0px 10px; 
+    /*margin-bottom:20px;*/
+}
+.sec-ion {
+	overflow:hidden; text-align:center; margin:9px 0 0; line-height:1;
+}
+.sec-ion ul { 
+	padding:0; margin:0; list-style:none;
+}
+.sec-ion li { 
+	float:left;  width:25%; padding:0 10px;
+}
+.sec-ion li i { 
+	font-size:50px; line-height:50px; display:block; margin-bottom:5px;
+}
+.sec-ion li span { 
+	letter-spacing:-1px; white-space:nowrap;
+}
+/**진흥원 SNS 위젯 스타일 추가**************************************************************************/
+.sec3-title {
+    margin: 12px 0px;
+    padding: 7px 10px;
+    line-height: 22px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fafafa;
+	font-weight:bold;
+}
+.sec3-content {
+    padding: 0px 10px; 
+    /*margin-bottom:20px;*/
+}
+.sec3-ion {
+	overflow:hidden; text-align:center; margin:9px 0 0; line-height:1;
+}
+.sec3-ion ul { 
+	/*padding:0; margin:0; list-style:none;*/
+}
+.sec3-ion li { 
+	width:50%; padding:3px 1px; float:left;
+}
+.sec3-ion li i { 
+	font-size:50px; line-height:50px; display:block; margin-bottom:5px;
+}
+.sec3-ion li img { 
+	font-size:50px; line-height:50px; display:block; margin-bottom:5px;
+}
+.sec3-ion li span { 
+	letter-spacing:-1px; white-space:nowrap;
+}
+/****************************************************************************/
+/**진흥원 SNS 위젯 스타일 추가 넓은 아이콘**************************************************************************/
+.sec2-ion {
+	overflow:hidden; text-align:center; margin:9px 0 0; line-height:1;
+}
+.sec2-ion ul { 
+	padding:0; margin:0; list-style:none;
+}
+.sec2-ion li { 
+	float:left;  width:33%; padding:0 10px;
+}
+.sec2-ion li i { 
+	font-size:50px; line-height:50px; display:block; margin-bottom:5px;
+}
+.sec2-ion li span { 
+	letter-spacing:-1px; white-space:nowrap;
+}
+/****************************************************************************/
+
+.sec-line {
+	display:none;
+}
+.sec-status { 
+	padding:0; margin:0; list-style:none; margin-right:-15px; overflow:hidden;
+}
+.sec-status li { 
+	float:left; width:50%; padding-right:15px;
+}
+@media all and (max-width:767px) {
+	.responsive .sec-line { display:block; margin:0 0 15px; border-top:1px solid #ddd; height:1px; }
+}
+@media all and (max-width:480px) {
+	.responsive .sec-status li { width:100%; }
+}

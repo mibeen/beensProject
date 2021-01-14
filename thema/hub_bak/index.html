@@ -1,0 +1,1867 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="title" content="1GNU" />
+<meta name="publisher" content="1GNU" />
+<meta name="author" content="1GNU" />
+<meta name="robots" content="index,follow" />
+<meta name="keywords" content="1GNU" />
+<meta name="description" content="1GNU" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:title" content="1GNU" />
+<meta property="og:site_name" content="1GNU" />
+<meta property="og:author" content="1GNU" />
+<meta property="og:type" content="" />
+<meta property="og:description" content="1GNU" />
+<meta property="og:url" content="/" />
+<link rel="canonical" href="/" />
+<title>1GNU</title>
+<link rel="stylesheet" href="/css/default.css?ver=161101">
+<link rel="stylesheet" href="/css/apms.css?ver=161101">
+<link rel="stylesheet" href="/plugin/apms/owlcarousel/owl.carousel.css?ver=161101">
+
+<link rel="stylesheet" href="/thema/myss1_navy/assets/bs3/css/bootstrap.min.css" type="text/css" class="thema-mode">
+<link rel="stylesheet" href="/thema/myss1_navy/colorset/Basic/colorset.css" type="text/css" class="thema-colorset">
+<link rel="stylesheet" href="/thema/myss1_navy/assets/css/ico.css" >
+<link rel="stylesheet" href="/thema/myss1_navy/widget/basic-post-list/widget.css?ver=161101">
+<link rel="stylesheet" href="/thema/myss1_navy/widget/nx-post-notice/widget.css?ver=161101">
+<link rel="stylesheet" href="/thema/myss1_navy/widget/basic-post-gallery/widget.css?ver=161101">
+<link rel="stylesheet" href="/thema/myss1_navy/widget/basic-outlogin/widget.css?ver=161101">
+<link rel="stylesheet" href="/thema/myss1_navy/widget/nx-rolling-banner/widget.css?ver=161101">
+<link rel="stylesheet" href="/thema/myss1_navy/widget/basic-sidebar/widget.css?ver=161101">
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css?ver=161101">
+<link rel="stylesheet" href="/css/level/basic.css?ver=161101">
+<!--[if lte IE 8]>
+<script src="http://gnu.safetown.co.kr/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "http://gnu.safetown.co.kr";
+var g5_bbs_url   = "http://gnu.safetown.co.kr/bbs";
+var g5_is_member = "1";
+var g5_is_admin  = "super";
+var g5_is_mobile = "";
+var g5_bo_table  = "";
+var g5_sca       = "";
+var g5_pim       = "";
+var g5_editor    = "";
+var g5_responsive    = "1";
+var g5_cookie_domain = "";
+var g5_admin_url = "http://gnu.safetown.co.kr/adm";
+var g5_purl = "http://gnu.safetown.co.kr/";
+</script>
+<script src="/js/jquery-1.11.3.min.js"></script>
+<script src="/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="/lang/korean/lang.js?ver=161101"></script>
+<script src="/js/common.js?ver=161101"></script>
+<script src="/js/wrest.js?ver=161101"></script>
+<script src="/js/apms.js?ver=161101"></script>
+<script src="/plugin/apms/js/jquery.mobile.swipe.min.js"></script>
+<script src="/plugin/apms/owlcarousel/owl.carousel.min.js"></script>
+<style>
+  body{background: url(/thema/hub/assets/imgs/main/_main_temp.jpg) 50% 0 no-repeat;}
+</style>
+</head>
+<body class="responsive is-pc">
+
+<!-- 팝업레이어 시작 { -->
+<style>
+    .popup-top{position: relative;}
+    .popup-top-wrap{position: relative;}
+    .popup-top .hd_pops_reject{position: absolute; right: 5%; bottom: 10px; background: #000; border: none; color: #FFF;}
+    .btn_cls_ban2 {
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 110px;
+        height: 72px;
+        text-indent: -9999em;
+        background: url(/img/btn_x.png) no-repeat;}
+    .hd_pops{background-position: center;}
+
+    @media screen and (max-width: 667px){
+        .popup-top{display: none;}
+        .hd_pops{top: 120px !important; left: 50% !important; width: 90% !important; margin-left: -45% !important; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 5px; background: #FFF;}
+        .hd_pops .hd_pops_con{width: 100% !important; height: auto !important;}
+    }
+</style>
+
+<!-- 윈도우 팝업 -->
+<div class="popup-window">
+    <script>
+        function popup_open(num, width, height, top, left){
+            window.open("/bbs/popup.php?popup_no=" + num ,"POPUPNAME_" + num, "width=" + width + ",height= " + height + ",toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no, left= " + left + ", top=" + top);
+        }
+
+        </script>
+</div>
+
+<!-- 상단 팝업 -->
+<div class="popup-top" style="background:#000000; text-align: center;">
+    </div>
+
+<!-- 레이어 팝업 -->
+<div id="hd_pop">
+    <h2>팝업레이어 알림</h2>
+
+
+<span class="sound_only">팝업레이어 알림이 없습니다.</span></div>
+
+<script>
+$(function() {
+    $(".hd_pops_reject").click(function() {
+        var id = $(this).attr('class').split(' ');
+        var ck_name = id[1];
+        var exp_time = parseInt(id[2]);
+        $("#"+id[1]).css("display", "none");
+        set_cookie(ck_name, 1, exp_time, g5_cookie_domain);
+    });
+    $('.hd_pops_close').click(function() {
+        //console.log('cl');
+        var idb = $(this).attr('class').split(' ');
+        $('#'+idb[1]).css('display','none');
+        $(this).closest('.hd_pops').css('display','none');
+    });
+    $("#hd").css("z-index", 1000);
+
+    /*$('.btn_cls_ban2').on('click', function(e){
+        $(this).closest('.popup-top').css('display','none');
+    })*/
+    });
+</script>
+<!-- } 팝업레이어 끝 --><style>
+		.at-container {max-width:1200px;}
+	.no-responsive .wrapper, .no-responsive .at-container-wide { min-width:1200px; }
+	.no-responsive .boxed.wrapper, .no-responsive .at-container { width:1200px; }
+	.at-menu .nav-height { height:44px; line-height:44px !important; }
+	.pc-menu, .pc-menu .nav-full-back, .pc-menu .nav-full-height { height:44px; }
+	.pc-menu .nav-top.nav-float .menu-a { padding:0px 25px; }
+	.pc-menu .nav-top.nav-float .sub-1div::before { left: 25px; }
+	.pc-menu .subm-w { width:170px; }
+	@media all and (min-width:1200px) {
+		.responsive .boxed.wrapper { max-width:1200px; }
+	}
+</style>
+
+<div id="thema_wrapper" class="wrapper  ko">
+
+
+	<!-- PC Header -->
+	<header class="nx_pc_header_wrap">
+		<div class="pc-header">
+			<div class="at-container">
+				<!-- PC Logo -->
+				<div class="header-logo">
+					<a href="http://gnu.safetown.co.kr">
+						<img src="http://gnu.safetown.co.kr/data/member/mlogo/mb_mlogo.png" alt="">					</a>
+				</div>
+				<!-- PC Search -->
+				<div class="header-search">
+					<form name="tsearch" method="get" onsubmit="return tsearch_submit(this);" role="form" class="form">
+					<input type="hidden" name="url"	value="http://gnu.safetown.co.kr/bbs/search.php">
+						<div>
+							<input type="text" name="stx" value="">
+							<span>
+								<button type="submit" class="btn btn-sm"><i class="fa fa-search fa-lg"></i></button>
+							</span>
+						</div>
+					</form>
+									</div>
+				<div class="nx_header_memb">
+
+
+
+
+
+																	<a href="http://gnu.safetown.co.kr/adm">관리</a>
+																		<a onclick="winlogout('http://gnu.safetown.co.kr/bbs/logout.php');">로그아웃</a>
+						<script>
+							function winlogout(url)
+							{
+								document.location.href = url;
+							}
+						</script>
+										</div>
+				<a href="javascript:;" onclick="sidebar_open('sidebar-search');" class="nx_m_top_sch"><i class="fa fa-search fa-lg"></i></a>
+				<a href="javascript:;" onclick="sidebar_open('sidebar-menu');" class="nx_m_menu"></a>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Mobile Header -->
+	<header class="nx_mobile_header_wrap">
+		<div class="m-header">
+			<div class="at-container">
+				<div class="header-wrap">
+					<div class="header-logo en">
+						<!-- Mobile Logo -->
+						<a href="http://gnu.safetown.co.kr">
+							<img src="http://gnu.safetown.co.kr/thema/myss1_navy/assets/img/logo.png" alt="">
+						</a>
+					</div>
+					<!-- <div class="header-icon">
+						<a href="javascript:;" onclick="sidebar_open('sidebar-user');">
+							<i class="fa fa-user"></i>
+						</a>
+					</div> -->
+					<!-- <div class="header-icon">
+						<a href="javascript:;" onclick="sidebar_open('sidebar-search');">
+							<i class="fa fa-search"></i>
+						</a>
+					</div> -->
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</header>
+
+	<div class="nx_header_spacer"></div>
+
+	<!-- Menu -->
+	<nav class="at-menu">
+		<!-- PC Menu -->
+		<div class="pc-menu">
+			<!-- Menu Button & Right Icon Menu -->
+			<div class="at-container">
+
+			</div>
+
+
+	<div class="nav-visible">
+		<div class="at-container">
+			<div class="nav-top nav-both nav-slide">
+				<ul class="menu-ul">
+									<li class="menu-li off">
+						<a class="menu-a nav-height" href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=center">
+							소개													</a>
+													<div class="sub-slide sub-1div">
+								<ul class="sub-1dul">
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=center" class="sub-1da">
+											센터 소개																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=biz" class="sub-1da">
+											사업 내용																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=contact" class="sub-1da">
+											오시는 길																					</a>
+									</li>
+																</ul>
+							</div>
+											</li>
+									<li class="menu-li off">
+						<a class="menu-a nav-height" href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=notice">
+							알림													</a>
+													<div class="sub-slide sub-1div">
+								<ul class="sub-1dul">
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=notice" class="sub-1da">
+											공지																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=calendar" class="sub-1da">
+											행사 일정																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=faq" class="sub-1da">
+											자주 묻는 질문																					</a>
+									</li>
+																</ul>
+							</div>
+											</li>
+									<li class="menu-li off">
+						<a class="menu-a nav-height" href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=area">
+							정보													</a>
+													<div class="sub-slide sub-1div">
+								<ul class="sub-1dul">
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=area" class="sub-1da">
+											우리동네학습공간																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=ebook" class="sub-1da">
+											E북 보기																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=lecturer" class="sub-1da">
+											강사소개																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=pnp" class="sub-1da">
+											시화전																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=scholarship" class="sub-1da">
+											학술정보																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=gallery" class="sub-1da">
+											갤러리																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=textbook" class="sub-1da">
+											보조교재																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=materials" class="sub-1da">
+											자료실																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=institution" class="sub-1da">
+											문해교육 기관																					</a>
+									</li>
+																</ul>
+							</div>
+											</li>
+									<li class="menu-li off">
+						<a class="menu-a nav-height" href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=learners">
+							모임													</a>
+													<div class="sub-slide sub-1div">
+								<ul class="sub-1dul">
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=learners" class="sub-1da">
+											학습자 모임																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=tutors" class="sub-1da">
+											강사 모임																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=managers" class="sub-1da">
+											시/군 관계자 모임																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=free" class="sub-1da">
+											자유 모임																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=everyone" class="sub-1da">
+											누구나 시화전																					</a>
+									</li>
+																</ul>
+							</div>
+											</li>
+									<li class="menu-li off">
+						<a class="menu-a nav-height" href="http://gnu.safetown.co.kr/gseek/nx_learn_list.php">
+							학습													</a>
+						<div class='sub-slide sub-1div' style='display: none; visibility: visible;'><ul class='sub-1dul'><li class='sub-1dli on'><a href='http://gnu.safetown.co.kr/gseek/nx_learn_list.php' class='sub-1da'>전체 보기</a></li><li class='sub-1dli off'><a href='http://gnu.safetown.co.kr/gseek/nx_learn_list.php?SC_CC_CODE=ch' class='sub-1da'>추천 학습</a></li><li class='sub-1dli off'><a href='http://gnu.safetown.co.kr/gseek/nx_learn_list.php?SC_CC_CODE=596ec296ebfc6' class='sub-1da'>초등 문해</a></li><li class='sub-1dli off'><a href='http://gnu.safetown.co.kr/gseek/nx_learn_list.php?SC_CC_CODE=596ec29ea42e1' class='sub-1da'>중학 문해</a></li><li class='sub-1dli off'><a href='http://gnu.safetown.co.kr/gseek/nx_learn_list.php?SC_CC_CODE=596ec2a5a7f9a' class='sub-1da'>문해 일반</a></li><li class='sub-1dli off'><a href='http://gnu.safetown.co.kr/gseek/nx_learn_list.php?SC_CC_CODE=596ec2b96e8db' class='sub-1da'>기타</a></li></ul></div>					</li>
+									<li class="menu-li off">
+						<a class="menu-a nav-height" href="http://gnu.safetown.co.kr/gseek/nx_my_list.php" target="_self">
+							마이페이지													</a>
+													<div class="sub-slide sub-1div">
+								<ul class="sub-1dul">
+
+
+									<li class="sub-1dli off">
+										<a href="http://gnu.safetown.co.kr/gseek/nx_my_list.php" class="sub-1da" target="_self">
+											나의학습																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="javascript:win_open2('http://xwww.gseek.4csoft.com/memb/myss.edit.info.pwcheck', '600');" class="sub-1da">
+											회원정보변경																					</a>
+									</li>
+
+
+									<li class="sub-1dli off">
+										<a href="javascript:win_open2('http://xwww.gseek.4csoft.com/memb/myss.edit.pw.pwcheck', '600');" class="sub-1da">
+											비밀번호변경																					</a>
+									</li>
+																</ul>
+							</div>
+											</li>
+								</ul>
+			</div><!-- .nav-top -->
+		</div>	<!-- .nav-container -->
+	</div><!-- .nav-visible -->
+
+			<div class="clearfix"></div>
+			<div class="nav-back"></div>
+		</div><!-- .pc-menu -->
+
+		<!-- PC All Menu -->
+		<div class="pc-menu-all">
+			<div id="menu-all" class="collapse">
+				<div class="at-container table-responsive">
+					<table class="table">
+					<tr>
+											<td class="off">
+							<a class="menu-a" href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=center">
+								소개															</a>
+															<div class="sub-1div">
+									<ul class="sub-1dul">
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=center" class="sub-1da sub-icon">
+												센터 소개																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=biz" class="sub-1da sub-icon">
+												사업 내용																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=contact" class="sub-1da sub-icon">
+												오시는 길																							</a>
+										</li>
+																		</ul>
+								</div>
+													</td>
+											<td class="off">
+							<a class="menu-a" href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=notice">
+								알림															</a>
+															<div class="sub-1div">
+									<ul class="sub-1dul">
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=notice" class="sub-1da">
+												공지																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=calendar" class="sub-1da">
+												행사 일정																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=faq" class="sub-1da sub-icon">
+												자주 묻는 질문																							</a>
+										</li>
+																		</ul>
+								</div>
+													</td>
+											<td class="off">
+							<a class="menu-a" href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=area">
+								정보															</a>
+															<div class="sub-1div">
+									<ul class="sub-1dul">
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=area" class="sub-1da">
+												우리동네학습공간																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=ebook" class="sub-1da">
+												E북 보기																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=lecturer" class="sub-1da">
+												강사소개																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=pnp" class="sub-1da sub-icon">
+												시화전																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=scholarship" class="sub-1da">
+												학술정보																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=gallery" class="sub-1da">
+												갤러리																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=textbook" class="sub-1da sub-icon">
+												보조교재																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=materials" class="sub-1da">
+												자료실																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=institution" class="sub-1da">
+												문해교육 기관																							</a>
+										</li>
+																		</ul>
+								</div>
+													</td>
+											<td class="off">
+							<a class="menu-a" href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=learners">
+								모임															</a>
+															<div class="sub-1div">
+									<ul class="sub-1dul">
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=learners" class="sub-1da">
+												학습자 모임																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=tutors" class="sub-1da">
+												강사 모임																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=managers" class="sub-1da">
+												시/군 관계자 모임																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=free" class="sub-1da">
+												자유 모임																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=everyone" class="sub-1da">
+												누구나 시화전																							</a>
+										</li>
+																		</ul>
+								</div>
+													</td>
+											<td class="off">
+							<a class="menu-a" href="http://gnu.safetown.co.kr/gseek/nx_learn_list.php">
+								학습															</a>
+							<div class='sub-slide sub-1div' style='display: none; visibility: visible;'><ul class='sub-1dul'><li class='sub-1dli on'><a href='http://gnu.safetown.co.kr/gseek/nx_learn_list.php' class='sub-1da'>전체 보기</a></li><li class='sub-1dli off'><a href='http://gnu.safetown.co.kr/gseek/nx_learn_list.php?SC_CC_CODE=ch' class='sub-1da'>추천 학습</a></li><li class='sub-1dli off'><a href='http://gnu.safetown.co.kr/gseek/nx_learn_list.php?SC_CC_CODE=596ec296ebfc6' class='sub-1da'>초등 문해</a></li><li class='sub-1dli off'><a href='http://gnu.safetown.co.kr/gseek/nx_learn_list.php?SC_CC_CODE=596ec29ea42e1' class='sub-1da'>중학 문해</a></li><li class='sub-1dli off'><a href='http://gnu.safetown.co.kr/gseek/nx_learn_list.php?SC_CC_CODE=596ec2a5a7f9a' class='sub-1da'>문해 일반</a></li><li class='sub-1dli off'><a href='http://gnu.safetown.co.kr/gseek/nx_learn_list.php?SC_CC_CODE=596ec2b96e8db' class='sub-1da'>기타</a></li></ul></div>						</td>
+											<td class="off">
+							<a class="menu-a" href="http://gnu.safetown.co.kr/gseek/nx_my_list.php" target="_self">
+								마이페이지															</a>
+															<div class="sub-1div">
+									<ul class="sub-1dul">
+
+
+										<li class="sub-1dli off">
+											<a href="http://gnu.safetown.co.kr/gseek/nx_my_list.php" class="sub-1da" target="_self">
+												나의학습																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="javascript:win_open2('http://xwww.gseek.4csoft.com/memb/myss.edit.info.pwcheck', '600');" class="sub-1da">
+												회원정보변경																							</a>
+										</li>
+
+
+										<li class="sub-1dli off">
+											<a href="javascript:win_open2('http://xwww.gseek.4csoft.com/memb/myss.edit.pw.pwcheck', '600');" class="sub-1da">
+												비밀번호변경																							</a>
+										</li>
+																		</ul>
+								</div>
+													</td>
+										</tr>
+					</table>
+					<div class="menu-all-btn">
+						<div class="btn-group">
+							<a class="btn btn-lightgray" href="http://gnu.safetown.co.kr"><i class="fa fa-home"></i></a>
+							<a href="javascript:;" class="btn btn-lightgray" data-toggle="collapse" data-target="#menu-all"><i class="fa fa-times"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- .pc-menu-all -->
+
+		<!-- Mobile Menu -->
+			</nav><!-- .at-menu -->
+
+	<div class="clearfix"></div>
+
+
+		<div class="at-body nx_main_bg">
+
+		<style>
+	.widget-index .at-main,
+	.widget-index .at-side { padding-bottom:0px; }
+	.widget-index .div-title-underbar { margin-bottom:15px; }
+	.widget-index .div-title-underbar span { padding-bottom:4px; }
+	/* .widget-index .div-title-underbar span b { font-weight:500; } */
+	.widget-index .widget-img img { display:block; max-width:100%; /* 배너 이미지 */ }
+	.widget-box { margin-bottom:15px; }
+</style>
+
+<div class="at-container widget-index clearfix">
+
+	<div class="h20"></div>
+
+	<div class="row at-row">
+		<!-- 메인 영역 -->
+		<div class="col-md-12 at-col at-main">
+
+			<div class="row"><div class=" col-lg-12  col-md-4  col-sm-4  col-xs-4  res_sm"><div class='nx_widget_box'>
+
+                    <!-- 메인 배너 시작 -->
+
+                    <div class="div-title-underbar clearfix">
+
+                        <span class="div-title font-22">
+                            <b>메인 배너</b>
+                        </span>
+                    </div>
+                    <div class="widget-box">
+                        <style>
+
+	#grohtvsilqwxmjnupfk .item { background-size:cover; background-position:center center; background-repeat:no-repeat; }
+	#grohtvsilqwxmjnupfk .img-wrap { padding-bottom:300px; }
+	#grohtvsilqwxmjnupfk .tab-indicators { position:absolute; left:0; bottom:0; width:100%; }
+	#grohtvsilqwxmjnupfk .nav a { background: rgba(255,255,255, 0.9); color:#000; border-radius: 0px; margin:0px; }
+	#grohtvsilqwxmjnupfk .nav a:hover, #grohtvsilqwxmjnupfk .nav a:focus,
+	#grohtvsilqwxmjnupfk .nav .active a { background: rgba(0,0,0, 0.6); color:#fff; }
+					@media (max-width:1199px) {
+			.responsive #grohtvsilqwxmjnupfk .img-wrap { padding-bottom:300px !important; }
+		}
+						@media (max-width:991px) {
+			.responsive #grohtvsilqwxmjnupfk .img-wrap { padding-bottom:300px !important; }
+		}
+						@media (max-width:767px) {
+			.responsive #grohtvsilqwxmjnupfk .img-wrap { padding-bottom:200px !important; }
+		}
+						@media (max-width:480px) {
+			.responsive #grohtvsilqwxmjnupfk .img-wrap { padding-bottom:200px !important; }
+		}
+			</style>
+<div id="grohtvsilqwxmjnupfk" class=" nx-carousel swipe-carousel carousel div-carousel slide" data-ride="carousel" data-interval="3000">
+	<div class="carousel-inner bg-black">
+					<div class="item active" style="background-image: url('http://amina.safetown.co.kr/data/apms/background/main-1.PNG');">
+				<a href="/bbs/board.php?bo_table=calendar">
+					<div class="img-wrap">
+						<div class="img-item">
+																				</div>
+					</div>
+				</a>
+			</div>
+					<div class="item" style="background-image: url('http://amina.safetown.co.kr/data/apms/background/main-2.PNG');">
+				<a href="/bbs/board.php?bo_table=notice&wr_id=1">
+					<div class="img-wrap">
+						<div class="img-item">
+																				</div>
+					</div>
+				</a>
+			</div>
+					<div class="item" style="background-image: url('http://gnu.safetown.co.kr/data/apms/background/pexels-photo-27231.jpg');">
+				<a href="javascript:;">
+					<div class="img-wrap">
+						<div class="img-item">
+																				</div>
+					</div>
+				</a>
+			</div>
+			</div>
+
+			<!-- Controls -->
+		<a class="left carousel-control" href="#grohtvsilqwxmjnupfk" role="button" data-slide="prev">
+							<i class="fa fa-chevron-left" aria-hidden="true"></i>
+						<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#grohtvsilqwxmjnupfk" role="button" data-slide="next">
+							<i class="fa fa-chevron-right" aria-hidden="true"></i>
+						<span class="sr-only">Next</span>
+		</a>
+
+	<!-- Indicators -->
+			<ol class="carousel-indicators" style="z-index:2;margin-bottom:0px;bottom:30px;">
+							<li data-target="#grohtvsilqwxmjnupfk" data-slide-to="0" class="active"></li>
+							<li data-target="#grohtvsilqwxmjnupfk" data-slide-to="1"></li>
+							<li data-target="#grohtvsilqwxmjnupfk" data-slide-to="2"></li>
+					</ol>
+	</div>
+	<div class="btn-wset text-center p10">
+		<a href="http://gnu.safetown.co.kr/bbs/widget.setup.php?wid=CMB-wt1&amp;wname=basic-title&amp;thema=myss1_navy&amp;opt=height%3D260px&amp;mopt=auto%3D0" class="win_memo">
+			<span class="text-muted font-12"><i class="fa fa-cog"></i> 위젯설정</span>
+		</a>
+	</div>
+
+                    </div>
+                    <!-- 메인 배너 끝 -->
+                    </div></div><div class="clearfix"></div></div><div class="row"><div class=" col-lg-4  col-md-0  col-sm-12  col-xs-4  res_sm"><div class='nx_widget_box'>
+
+                    <!-- 공지 두 번째 시작 -->
+
+                    <div class="div-title-underbar clearfix">
+
+                        <span class="div-title font-22">
+                            <b>공지 두 번째</b>
+                        </span>
+                    </div>
+                    <div class="widget-box">
+                        <div class="basic-post-list">
+
+<ul class="post-list">
+	<li>
+		<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=notice&amp;wr_id=19">
+			<p class="nx_post_title ellipsis">
+								test			</p>
+					</a>
+	</li>
+	<li>
+		<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=notice&amp;wr_id=9">
+			<p class="nx_post_title ellipsis">
+								공지사항 올려요			</p>
+					</a>
+	</li>
+	<li>
+		<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=notice&amp;wr_id=5">
+			<p class="nx_post_title ellipsis">
+								2017년 2차 장애인평생교육 강사 역량강화 연수 실시			</p>
+					</a>
+	</li>
+	<li>
+		<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=notice&amp;wr_id=4">
+			<p class="nx_post_title ellipsis">
+								2017년 평생교육 프로그램 지원 사업운영자 공모 실시			</p>
+					</a>
+	</li>
+</ul>
+</div>
+	<div class="btn-wset text-center p10">
+		<a href="http://gnu.safetown.co.kr/bbs/widget.setup.php?wid=widget-11&amp;wname=basic-post-list&amp;thema=myss1_navy&amp;opt=height%3D260px&amp;mopt=auto%3D0" class="win_memo">
+			<span class="text-muted"><i class="fa fa-cog"></i> 위젯설정</span>
+		</a>
+	</div>
+
+                    </div>
+                    <!-- 공지 두 번째 끝 -->
+                    </div></div><div class="clearfix"></div></div><div class="row"><div class=" col-lg-4  col-md-0  col-sm-0  col-xs-4  res_sm"><div class='nx_widget_box'>
+
+                    <!-- 공지사항 시작 -->
+
+                    <div class="div-title-underbar clearfix">
+                        <a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=learners" class="pull-right nx_btn2">더보기</a>
+                        <span class="div-title font-22">
+                            <b>공지사항</b>
+                        </span>
+                    </div>
+                    <div class="widget-box">
+                        <div class="basic-post-list">
+
+<ul class="post-list">
+	<li>
+		<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=materials&amp;wr_id=11">
+			<p class="nx_post_title ellipsis">
+								파일 여러개일때 테스트			</p>
+			<p class="nx_post_ct elss2">테스트</p>
+					</a>
+	</li>
+	<li>
+		<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=materials&amp;wr_id=10">
+			<p class="nx_post_title ellipsis">
+								ㅅㄷㄴㅅ			</p>
+			<p class="nx_post_ct elss2">ㄷㄴㅅ</p>
+					</a>
+	</li>
+	<li>
+		<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=materials&amp;wr_id=9">
+			<p class="nx_post_title ellipsis">
+								한글 테스트			</p>
+			<p class="nx_post_ct elss2">한글 테스트</p>
+					</a>
+	</li>
+</ul>
+</div>
+	<div class="btn-wset text-center p10">
+		<a href="http://gnu.safetown.co.kr/bbs/widget.setup.php?wid=widget-5&amp;wname=nx-post-notice&amp;thema=myss1_navy&amp;opt=height%3D260px&amp;mopt=auto%3D0" class="win_memo">
+			<span class="text-muted"><i class="fa fa-cog"></i> 위젯설정</span>
+		</a>
+	</div>
+
+                    </div>
+                    <!-- 공지사항 끝 -->
+                    </div></div><div class=" col-lg-4  col-md-0  col-sm-0  col-xs-4  res_sm"><div class='nx_widget_box'>
+
+                    <!-- 갤러리 시작 -->
+
+                    <div class="div-title-underbar clearfix">
+
+                        <span class="div-title font-22">
+                            <b>갤러리</b>
+                        </span>
+                    </div>
+                    <div class="widget-box">
+                        <style>
+	#sxmouhjtwgqivfpnlrk { margin-right:-15px; margin-bottom:-15px; }
+	#sxmouhjtwgqivfpnlrk .post-row { width:50%; }
+	#sxmouhjtwgqivfpnlrk .post-list { margin-right:15px; margin-bottom:15px; }
+	#sxmouhjtwgqivfpnlrk .post-subject { height:20px; }
+	#sxmouhjtwgqivfpnlrk .img-wrap { padding-bottom:65%; }
+		@media (max-width:1199px) {
+		.responsive #sxmouhjtwgqivfpnlrk { margin-right:-15px; margin-bottom:-15px; }
+		.responsive #sxmouhjtwgqivfpnlrk .post-row { width:50%; }
+		.responsive #sxmouhjtwgqivfpnlrk .post-list { margin-right:15px; margin-bottom:15px; }
+	}
+	@media (max-width:991px) {
+		.responsive #sxmouhjtwgqivfpnlrk { margin-right:-15px; margin-bottom:-15px; }
+		.responsive #sxmouhjtwgqivfpnlrk .post-row { width:50%; }
+		.responsive #sxmouhjtwgqivfpnlrk .post-list { margin-right:15px; margin-bottom:15px; }
+	}
+	@media (max-width:767px) {
+		.responsive #sxmouhjtwgqivfpnlrk { margin-right:-15px; margin-bottom:-15px; }
+		.responsive #sxmouhjtwgqivfpnlrk .post-row { width:50%; }
+		.responsive #sxmouhjtwgqivfpnlrk .post-list { margin-right:15px; margin-bottom:15px; }
+	}
+	@media (max-width:480px) {
+		.responsive #sxmouhjtwgqivfpnlrk { margin-right:-15px; margin-bottom:-15px; }
+		.responsive #sxmouhjtwgqivfpnlrk .post-row { width:50%; }
+		.responsive #sxmouhjtwgqivfpnlrk .post-list { margin-right:15px; margin-bottom:15px; }
+	}
+	</style>
+<div id="sxmouhjtwgqivfpnlrk" class="basic-post-gallery">
+		<div class="post-row">
+		<div class="post-list">
+			<div class="post-image">
+				<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=gallery&amp;wr_id=7" class="ellipsis">
+					<div class="img-wrap">
+																		<div class="img-item">
+							<img src="https://educolla.kr/data/editor/1706/20170619125323_eaa5ea8849af07ee809cf10729610d97_5tss.png" alt="">
+						</div>
+					</div>
+				</a>
+							</div>
+					</div>
+	</div>
+	<div class="post-row">
+		<div class="post-list">
+			<div class="post-image">
+				<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=gallery&amp;wr_id=6" class="ellipsis">
+					<div class="img-wrap">
+																		<div class="img-item">
+							<img src="http://amina.safetown.co.kr/data/file/gallery/1988186773_GskcV8e9_a6520ce1e5076d84f241938d0c644e3f7d7412b5.jpg" alt="">
+						</div>
+					</div>
+				</a>
+							</div>
+					</div>
+	</div>
+	<div class="post-row">
+		<div class="post-list">
+			<div class="post-image">
+				<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=gallery&amp;wr_id=5" class="ellipsis">
+					<div class="img-wrap">
+																		<div class="img-item">
+							<img src="http://amina.safetown.co.kr/data/file/gallery/1988186773_NtA6Us2a_07cfb73739a9b8d0bc88c3d259c8415675bc0795.jpg" alt="">
+						</div>
+					</div>
+				</a>
+							</div>
+					</div>
+	</div>
+	<div class="post-row">
+		<div class="post-list">
+			<div class="post-image">
+				<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=gallery&amp;wr_id=4" class="ellipsis">
+					<div class="img-wrap">
+																		<div class="img-item">
+							<img src="http://amina.safetown.co.kr/data/file/gallery/1988186773_Bk9Tgh7F_aa221f754848471f788d683e947cbb1a8bc907f3.jpg" alt="">
+						</div>
+					</div>
+				</a>
+							</div>
+					</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+	<div class="btn-wset text-center p10">
+		<a href="http://gnu.safetown.co.kr/bbs/widget.setup.php?wid=widget-9&amp;wname=basic-post-gallery&amp;thema=myss1_navy&amp;opt=height%3D260px&amp;mopt=auto%3D0" class="win_memo">
+			<span class="text-muted font-12"><i class="fa fa-cog"></i> 위젯설정</span>
+		</a>
+	</div>
+
+                    </div>
+                    <!-- 갤러리 끝 -->
+                    </div></div><div class=" col-lg-4  col-md-0  col-sm-0  col-xs-4  res_sm"><div class='nx_widget_box'>
+
+                    <!--  시작 -->
+
+                    <div class="widget-box">
+                        <div class="basic-outlogin">
+			<div class="nx_main_memb after">
+			<div class="top">
+												  <a href="http://xwww.gseek.4csoft.com/imgs/ico/sample_profile.png"  class="nx_pimg win_memo" target="_blank">
+				  <img src="http://xwww.gseek.4csoft.com/imgs/ico/sample_profile.png" onerror="this.onerror=null;this.src='';">
+				  </a><input type="hidden" value=""/>
+												<div class="nx_txt_wrap">
+					<p class="nx_p1">최고관리자님 환영합니다.</p>
+					<ul class="nx_link">
+												<li><a href="javascript:win_open2('http://xwww.gseek.4csoft.com/memb/myss.edit.info.pwcheck', '600');">회원정보수정</a></li>
+																	</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+                    </div>
+                    <!--  끝 -->
+                    </div></div><div class="clearfix"></div></div>
+			<div class="clearfix"></div>
+		</div>
+
+	</div>
+
+	<!-- 배너 시작 -->
+	<div class="nx_widget_box" style="margin-bottom:0;">
+		<div class="div-title-underbar clearfix">
+			<span class="div-title font-22">
+				<b>관련기관</b>
+			</span>
+		</div>
+		<div class="widget-box">
+			<style>
+	#voemihudfltrkjcqsngp .owl-container { margin-right:-30px;}
+	#voemihudfltrkjcqsngp .owl-next { right:30px; }
+	#voemihudfltrkjcqsngp .owl-hide { margin-right:120px; }
+	#voemihudfltrkjcqsngp .owl-hide .item { width:20%; }
+	#voemihudfltrkjcqsngp .item-list { margin-right:30px; }
+	#voemihudfltrkjcqsngp .post-subject { height:20px; }
+	#voemihudfltrkjcqsngp .img-wrap { padding-bottom:33.33%; }
+		@media (max-width:1199px) {
+		.responsive #voemihudfltrkjcqsngp .owl-container { margin-right:-30px;}
+		.responsive #voemihudfltrkjcqsngp .owl-next { right:30px; }
+		.responsive #voemihudfltrkjcqsngp .owl-hide { margin-right:90px; }
+		.responsive #voemihudfltrkjcqsngp .owl-hide .item { width:25%; }
+		.responsive #voemihudfltrkjcqsngp .item-list { margin-right:30px; }
+	}
+	@media (max-width:991px) {
+		.responsive #voemihudfltrkjcqsngp .owl-container { margin-right:-30px;}
+		.responsive #voemihudfltrkjcqsngp .owl-next { right:30px; }
+		.responsive #voemihudfltrkjcqsngp .owl-hide { margin-right:60px; }
+		.responsive #voemihudfltrkjcqsngp .owl-hide .item { width:33.33%; }
+		.responsive #voemihudfltrkjcqsngp .item-list { margin-right:30px; }
+	}
+	@media (max-width:767px) {
+		.responsive #voemihudfltrkjcqsngp .owl-container { margin-right:-30px;}
+		.responsive #voemihudfltrkjcqsngp .owl-next { right:30px; }
+		.responsive #voemihudfltrkjcqsngp .owl-hide { margin-right:60px; }
+		.responsive #voemihudfltrkjcqsngp .owl-hide .item { width:33.33%; }
+		.responsive #voemihudfltrkjcqsngp .item-list { margin-right:30px; }
+	}
+	@media (max-width:480px) {
+		.responsive #voemihudfltrkjcqsngp .owl-container { margin-right:-30px;}
+		.responsive #voemihudfltrkjcqsngp .owl-next { right:30px; }
+		.responsive #voemihudfltrkjcqsngp .owl-hide { margin-right:30px; }
+		.responsive #voemihudfltrkjcqsngp .owl-hide .item { width:50%; }
+		.responsive #voemihudfltrkjcqsngp .item-list { margin-right:30px; }
+	}
+	</style>
+<div id="voemihudfltrkjcqsngp" class="basic-post-slider">
+		<div class="owl-show">
+		<div class="owl-container">
+			<div class="owl-carousel">
+							<div class="item">
+					<div class="item-list">
+						<div class="post-image">
+							<a href="http://gg.go.kr" target="_blank">
+								<div class="img-wrap">
+																		 																		<div class="img-item">
+										<img src="http://amina.safetown.co.kr/data/file/roller1/1988186773_yqLbuD6a_1a8c8c5a7e7558cd39628b85cea20097f1c3fd11.PNG" alt="">
+									</div>
+								</div>
+							</a>
+													</div>
+											</div>
+				</div>
+							<div class="item">
+					<div class="item-list">
+						<div class="post-image">
+							<a href="http://gill.or.kr" target="_blank">
+								<div class="img-wrap">
+																		 																		<div class="img-item">
+										<img src="http://amina.safetown.co.kr/data/file/roller1/1988186773_EF7MsLiI_2ee91ffbd15c46218595d051704a06a105f1ab2f.PNG" alt="">
+									</div>
+								</div>
+							</a>
+													</div>
+											</div>
+				</div>
+							<div class="item">
+					<div class="item-list">
+						<div class="post-image">
+							<a href="https://www.gseek.kr" target="_blank">
+								<div class="img-wrap">
+																		 																		<div class="img-item">
+										<img src="http://amina.safetown.co.kr/data/file/roller1/1988186773_IxQgAeEH_f026c9c5e4882f243ff956c9b29cb21fe02560d2.PNG" alt="">
+									</div>
+								</div>
+							</a>
+													</div>
+											</div>
+				</div>
+							<div class="item">
+					<div class="item-list">
+						<div class="post-image">
+							<a href="http://www.nile.or.kr/" target="_blank">
+								<div class="img-wrap">
+																		 																		<div class="img-item">
+										<img src="http://amina.safetown.co.kr/data/file/roller1/1988186773_JRcQrsbE_d08840980ff79e356d33e024679ea40bbc420669.PNG" alt="">
+									</div>
+								</div>
+							</a>
+													</div>
+											</div>
+				</div>
+							<div class="item">
+					<div class="item-list">
+						<div class="post-image">
+							<a href="http://www.le.or.kr/" target="_blank">
+								<div class="img-wrap">
+																		 																		<div class="img-item">
+										<img src="http://amina.safetown.co.kr/data/file/roller1/1988186773_t7LTF2Gy_2fdfa97277b31748a15f36453c645cde8d3c4c85.PNG" alt="">
+									</div>
+								</div>
+							</a>
+													</div>
+											</div>
+				</div>
+						</div>
+		</div>
+	</div>
+	<div class="owl-hide">
+		<div class="item">
+			<div class="item-list">
+				<div class="post-image">
+					<div class="img-wrap">
+						<div class="img-item">&nbsp;</div>
+					</div>
+									</div>
+				<div class="post-content text-center">
+					<div class="post-subject">&nbsp;</div>
+					<div class="post-text post-ko txt-short ellipsis no-margin">&nbsp;</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="btn-wset text-center p10">
+		<a href="http://gnu.safetown.co.kr/bbs/widget.setup.php?wid=CMB-wm11&amp;wname=nx-rolling-banner&amp;thema=myss1_navy&amp;opt=center%3D1" class="win_memo">
+			<span class="text-muted font-12"><i class="fa fa-cog"></i> 위젯설정</span>
+		</a>
+	</div>
+<script>
+$(document).ready(function(){
+	$('#voemihudfltrkjcqsngp .owl-carousel').owlCarousel({
+							autoPlay:3000,
+								items:5,
+		itemsDesktop:[1199,4],
+		itemsDesktopSmall:[991,3],
+		itemsTablet:[767,3],
+		itemsMobile:[480,2],
+		pagination:false,
+
+		navigationText:['<i class="fa fa-chevron-left"></i>','<i class="fa fa-chevron-right"></i>'],
+		navigation:true,
+				loop:true,
+		afterInit : function() {
+			$('#voemihudfltrkjcqsngp .owl-hide').hide();
+		}
+	});
+});
+</script>		</div>
+	</div>
+	<!-- 배너 끝 -->
+
+	</div>
+			</div><!-- .at-body -->
+
+			<footer class="nx_footer_wrap">
+			<div class="nx_footer">
+				<div class="nx_logo">
+				<img src="http://gnu.safetown.co.kr/data/member/footer/footer_logo_img.png" alt="">				</div>
+				<div class="nx_f_content">
+					<ul class="nx_f_nav">
+						<li><a href="http://gnu.safetown.co.kr/bbs/page.php?hid=privacy">개인정보처리방침</a></li>
+						<li><a href="http://gnu.safetown.co.kr/bbs/page.php?hid=provision">이용정책 / 회원약관</a></li>
+						<li><a href="http://gnu.safetown.co.kr/bbs/page.php?hid=copyright">저작권 보호정책</a></li>
+						<li><a href="http://gnu.safetown.co.kr/bbs/page.php?hid=webaccess">웹접근성정책</a></li>
+					</ul>
+					<address class="nx_address"><style>
+#footer1, #footer2 { color: white; }
+</style>
+[16207] 경기도 수원시 장안구 경수대로 1150 13층 | 문의 031-547-6556 | E-mail jung6059@gill.or.kr <br />
+저작권 <a href="http://amina.safetown.co.kr/bbs/login.php" style="color:#fff">ⓒ</a> <a href="http://gill.or.kr" target="_blank" id="footer1">경기도평생교육진흥원</a> | Powered by <a href="https://gseek.kr" target="_blank" id="footer2">GSEEK CAMPUS</a></address>				</div>
+							</div>
+		</footer>
+
+			</div><!-- .wrapper -->
+
+<div class="at-go">
+	<div id="go-btn" class="go-btn">
+		<span class="go-top cursor"><i class="fa fa-chevron-up"></i></span>
+		<span class="go-bottom cursor"><i class="fa fa-chevron-down"></i></span>
+	</div>
+</div>
+
+<script>
+function win_open2(url, heights)
+{
+	//window.open("http://xwww.gseek.4csoft.com/memb/myss.join.info");
+
+	$('#iframe2').attr("src", url);
+	$('#iframe2').attr("style", "width:100%; height:"+heights+"px;");
+	$('#myModal-lg').attr("style", "width:100%;");
+	$("#myModal-lg").modal('show');
+}
+</script>
+<div id="myModal-lg" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+		<div class="modal-body">
+			<iframe id="iframe2" frameborder="0"  scrolling="yes"></iframe>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+		</div>
+	</div>
+  </div>
+</div>
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://gnu.safetown.co.kr/thema/myss1_navy/assets/js/respond.js"></script>
+<![endif]-->
+
+<!-- JavaScript -->
+<script>
+var sub_show = "slide";
+var sub_hide = "";
+var menu_startAt = "0";
+var menu_sub = "";
+var menu_subAt = "0";
+
+
+</script>
+<script src="http://gnu.safetown.co.kr/thema/myss1_navy/assets/bs3/js/bootstrap.min.js"></script>
+<script src="http://gnu.safetown.co.kr/thema/myss1_navy/assets/js/sly.min.js"></script>
+<script src="http://gnu.safetown.co.kr/thema/myss1_navy/assets/js/custom.js"></script>
+<script src="http://gnu.safetown.co.kr/gseek/jquery.cookie.js"></script>
+
+<script>
+var sidebar_url = "http://gnu.safetown.co.kr/thema/myss1_navy/widget/basic-sidebar";
+var sidebar_time = "30";
+</script>
+<script src="http://gnu.safetown.co.kr/thema/myss1_navy/widget/basic-sidebar/sidebar.js"></script>
+
+<!-- sidebar Box -->
+<aside id="sidebar-box" class="ko">
+
+	<!-- Head Line -->
+	<div class="sidebar-head bg-nx-color"></div>
+
+	<!-- sidebar Wing -->
+	<div class="sidebar-wing">
+		<!-- sidebar Wing Close -->
+		<div class="sidebar-wing-close sidebar-close en" title="닫기">
+			<i class="fa fa-times"></i>
+		</div>
+	</div>
+
+	<!-- sidebar Content -->
+	<div id="sidebar-content" class="sidebar-content">
+
+		<div class="h30"></div>
+
+		<!-- Common -->
+		<div class="sidebar-common">
+
+			<!-- Login -->
+			<div class="btn-group btn-group-justified" role="group">
+									<a href="#" onclick="sidebar_open('sidebar-user'); return false;" class="btn btn-nx-color btn-sm">내정보</a>
+											<a href="http://gnu.safetown.co.kr/adm" class="btn btn-nx-color btn-sm">관리자</a>
+															<a href="http://gnu.safetown.co.kr/bbs/logout.php" class="btn btn-nx-color btn-sm">로그아웃</a>
+							</div>
+			<script>
+			function fn_member(no)
+			{
+				$(".sidebar-wing-close").click();
+				if(no == 1)
+					win_open2('http://xopenapi.gseek.4csoft.com/auth/authorize.php?response_type=code&client_id=e22q5YFDvFeKr9pNtewPk47lAzRMIKK7&client_secret=VSgeWDMXlkenNDDXWlyFJftG8qXn5ZWL&state=&redirect_uri=http://gnu.safetown.co.kr/gseek/nx_respons_oauth.php', '600');
+				else if(no == 2)
+					win_open2('http://xwww.gseek.4csoft.com/memb/myss.join.info', '600');
+				else if(no == 3)
+					win_open2('http://xwww.gseek.4csoft.com/memb/myss.find.pw.input', '600');
+			}
+			</script>
+
+			<div class="h15"></div>
+
+		</div>
+
+		<!-- Menu -->
+		<div id="sidebar-menu" class="sidebar-item">
+
+<div class="sidebar-menu panel-group" id="sidebar_menu" role="tablist" aria-multiselectable="true">
+						<div class="panel">
+				<div class="ca-head" role="tab" id="sidebar_menu_c1">
+					<a href="#sidebar_menu_s1" data-toggle="collapse" data-parent="#sidebar_menu" aria-expanded="true" aria-controls="sidebar_menu_s1" class="is-sub">
+						<span class="ca-href pull-right" onclick="sidebar_href('http://gnu.safetown.co.kr/bbs/board.php?bo_table=center');">&nbsp;</span>
+						소개											</a>
+				</div>
+				<div id="sidebar_menu_s1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sidebar_menu_c1">
+					<ul class="ca-sub">
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=center">
+								센터 소개															</a>
+						</li>
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=biz">
+								사업 내용															</a>
+						</li>
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=contact">
+								오시는 길															</a>
+						</li>
+										</ul>
+				</div>
+			</div>
+								<div class="panel">
+				<div class="ca-head" role="tab" id="sidebar_menu_c2">
+					<a href="#sidebar_menu_s2" data-toggle="collapse" data-parent="#sidebar_menu" aria-expanded="true" aria-controls="sidebar_menu_s2" class="is-sub">
+						<span class="ca-href pull-right" onclick="sidebar_href('http://gnu.safetown.co.kr/bbs/board.php?bo_table=notice');">&nbsp;</span>
+						알림											</a>
+				</div>
+				<div id="sidebar_menu_s2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sidebar_menu_c2">
+					<ul class="ca-sub">
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=notice">
+								공지															</a>
+						</li>
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=calendar">
+								행사 일정															</a>
+						</li>
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=faq">
+								자주 묻는 질문															</a>
+						</li>
+										</ul>
+				</div>
+			</div>
+								<div class="panel">
+				<div class="ca-head" role="tab" id="sidebar_menu_c3">
+					<a href="#sidebar_menu_s3" data-toggle="collapse" data-parent="#sidebar_menu" aria-expanded="true" aria-controls="sidebar_menu_s3" class="is-sub">
+						<span class="ca-href pull-right" onclick="sidebar_href('http://gnu.safetown.co.kr/bbs/board.php?bo_table=area');">&nbsp;</span>
+						정보											</a>
+				</div>
+				<div id="sidebar_menu_s3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sidebar_menu_c3">
+					<ul class="ca-sub">
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=area">
+								우리동네학습공간															</a>
+						</li>
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=ebook">
+								E북 보기															</a>
+						</li>
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=lecturer">
+								강사소개															</a>
+						</li>
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=pnp">
+								시화전															</a>
+						</li>
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=scholarship">
+								학술정보															</a>
+						</li>
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=gallery">
+								갤러리															</a>
+						</li>
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=textbook">
+								보조교재															</a>
+						</li>
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=materials">
+								자료실															</a>
+						</li>
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=institution">
+								문해교육 기관															</a>
+						</li>
+										</ul>
+				</div>
+			</div>
+								<div class="panel">
+				<div class="ca-head" role="tab" id="sidebar_menu_c4">
+					<a href="#sidebar_menu_s4" data-toggle="collapse" data-parent="#sidebar_menu" aria-expanded="true" aria-controls="sidebar_menu_s4" class="is-sub">
+						<span class="ca-href pull-right" onclick="sidebar_href('http://gnu.safetown.co.kr/bbs/board.php?bo_table=learners');">&nbsp;</span>
+						모임											</a>
+				</div>
+				<div id="sidebar_menu_s4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sidebar_menu_c4">
+					<ul class="ca-sub">
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=learners">
+								학습자 모임															</a>
+						</li>
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=tutors">
+								강사 모임															</a>
+						</li>
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=managers">
+								시/군 관계자 모임															</a>
+						</li>
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=free">
+								자유 모임															</a>
+						</li>
+																	<li>
+							<a href="http://gnu.safetown.co.kr/bbs/board.php?bo_table=everyone">
+								누구나 시화전															</a>
+						</li>
+										</ul>
+				</div>
+			</div>
+								<div class="panel">
+				<div class="ca-head" role="tab">
+					<a href="http://gnu.safetown.co.kr/gseek/nx_learn_list.php" class="no-sub">
+						학습											</a>
+				</div>
+			</div>
+								<div class="panel">
+				<div class="ca-head" role="tab" id="sidebar_menu_c6">
+					<a href="#sidebar_menu_s6" data-toggle="collapse" data-parent="#sidebar_menu" aria-expanded="true" aria-controls="sidebar_menu_s6" class="is-sub">
+						<span class="ca-href pull-right" onclick="sidebar_href('http://gnu.safetown.co.kr/gseek/nx_my_list.php');">&nbsp;</span>
+						마이페이지											</a>
+				</div>
+				<div id="sidebar_menu_s6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sidebar_menu_c6">
+					<ul class="ca-sub">
+																	<li>
+							<a href="http://gnu.safetown.co.kr/gseek/nx_my_list.php" target="_self">
+								나의학습															</a>
+						</li>
+																	<li>
+							<a href="javascript:win_open2('http://xwww.gseek.4csoft.com/memb/myss.edit.info.pwcheck', '600');">
+								회원정보변경															</a>
+						</li>
+																	<li>
+							<a href="javascript:win_open2('http://xwww.gseek.4csoft.com/memb/myss.edit.pw.pwcheck', '600');">
+								비밀번호변경															</a>
+						</li>
+										</ul>
+				</div>
+			</div>
+			</div>		</div>
+
+		<!-- Search -->
+		<div id="sidebar-search" class="sidebar-item">
+
+<!-- Search -->
+<div class="div-title-underline-thin font-14">
+	<b>학습검색</b>
+</div>
+<div class="sidebar-search">
+	<form id="" name="" method="get" onsubmit="return sidebar_search(this);" role="form" class="form">
+		<div class="row">
+			<div class="col-xs-6">
+				<select name="url" class="form-control input-sm">
+					<option value="http://gnu.safetown.co.kr/bbs/search.php">게시물</option>
+										<option value="http://gnu.safetown.co.kr/bbs/tag.php">태그</option>
+				</select>
+			</div>
+			<div class="col-xs-6">
+				<select name="sop" id="sop" class="form-control input-sm">
+					<option value="or">또는</option>
+					<option value="and">그리고</option>
+				</select>
+			</div>
+		</div>
+		<div class="input-group input-group-sm" style="margin-top:8px;">
+			<input type="text" name="" class="form-control input-sm"  placeholder="검색어는 두글자 이상">
+			<span class="input-group-btn">
+				<button type="submit" class="btn btn-nx-color btn-sm"><i class="fa fa-search"></i></button>
+			</span>
+		</div>
+	</form>
+</div>
+
+<div class="div-title-underline-thin font-14">
+	<b>게시판 검색</b>
+</div>
+<div class="sidebar-search">
+	<form id="ctrlSearch" name="ctrlSearch" method="get" onsubmit="return sidebar_search(this);" role="form" class="form">
+		<div class="row">
+			<div class="col-xs-6">
+				<select name="url" class="form-control input-sm">
+					<option value="http://gnu.safetown.co.kr/bbs/search.php">게시물</option>
+										<option value="http://gnu.safetown.co.kr/bbs/tag.php">태그</option>
+				</select>
+			</div>
+			<div class="col-xs-6">
+				<select name="sop" id="sop" class="form-control input-sm">
+					<option value="or">또는</option>
+					<option value="and">그리고</option>
+				</select>
+			</div>
+		</div>
+		<div class="input-group input-group-sm" style="margin-top:8px;">
+			<input type="text" name="stx" class="form-control input-sm" value="" placeholder="검색어는 두글자 이상">
+			<span class="input-group-btn">
+				<button type="submit" class="btn btn-nx-color btn-sm"><i class="fa fa-search"></i></button>
+			</span>
+		</div>
+	</form>
+</div>
+		</div>
+
+		<!-- User -->
+		<div id="sidebar-user" class="sidebar-item">
+			<div class="sidebar-login">
+			<div class="profile">
+			<a href="http://gnu.safetown.co.kr/bbs/myphoto.php" target="_blank" class="win_memo" title="사진등록">
+				<div class="photo pull-left">
+					<i class="fa fa-user-plus"></i>				</div>
+			</a>
+			<h3>최고관리자</h3>
+			<div class="font-12 text-muted" style="letter-spacing:-1px;">
+				최고관리자			</div>
+			<div class="clearfix"></div>
+		</div>
+
+		<div class="progress progress-striped sidebar-tip cursor" style="height:10px; margin:10px 0px 0px;" data-original-title="레벨업까지 1,200점 남았습니다." data-toggle="tooltip" data-html="true">
+			<div class="progress-bar progress-bar-blue" style="width: 0%;"></div>
+		</div>
+
+		<div class="font-12" style="padding:5px 0px 8px;">
+			<span class="pull-right">
+				Exp 2,100 (0%)
+			</span>
+			레벨 3
+		</div>
+
+		<div class="btn-group btn-group-justified" role="group">
+							<a href="http://gnu.safetown.co.kr/adm" class="btn btn-navy btn-sm">관리자</a>
+									<a href="http://gnu.safetown.co.kr/bbs/logout.php" class="btn btn-navy btn-sm">나가기</a>
+		</div>
+
+		<div class="h15"></div>
+
+		<!-- Service -->
+		<div class="div-title-underline-thin en">
+			<b>MY MENU</b>
+		</div>
+
+		<ul class="sidebar-list list-links">
+			<li>
+				<a href="http://gnu.safetown.co.kr/bbs/point.php" target="_blank" class="win_point no-fa">
+					<span class="pull-right">2,200 점</span>
+					MP				</a>
+			</li>
+						<li>
+									<a href="http://gnu.safetown.co.kr/bbs/response.php" target="_blank" class="win_memo">
+									내글반응
+				</a>
+			</li>
+			<li>
+									<a href="http://gnu.safetown.co.kr/bbs/memo.php" target="_blank" class="win_memo">
+									쪽지함
+				</a>
+			</li>
+			<li>
+				<a href="http://gnu.safetown.co.kr/bbs/follow.php" target="_blank" class="win_memo">
+					팔로우
+				</a>
+			</li>
+			<li>
+				<a href="http://gnu.safetown.co.kr/bbs/scrap.php" target="_blank" class="win_scrap">
+					스크랩
+				</a>
+			</li>
+						<li>
+				<a href="http://gnu.safetown.co.kr/bbs/mypage.php">
+					마이페이지
+				</a>
+			</li>
+			<li>
+				<a href="http://gnu.safetown.co.kr/bbs/mypost.php" target="_blank" class="win_memo">
+					내글관리
+				</a>
+			</li>
+			<li>
+				<a href="http://gnu.safetown.co.kr/bbs/myphoto.php" target="_blank" class="win_memo">
+					사진등록
+				</a>
+			</li>
+			<li>
+				<a href="http://gnu.safetown.co.kr/bbs/member_confirm.php?url=register_form.php">
+					정보수정
+				</a>
+			</li>
+			<li>
+				<a href="http://gnu.safetown.co.kr/bbs/member_confirm.php?url=member_leave.php" class="leave-me">
+					탈퇴하기
+				</a>
+			</li>
+		</ul>
+
+	</div>		</div>
+
+		<!-- Response -->
+		<div id="sidebar-response" class="sidebar-item">
+			<div id="sidebar-response-list"></div>
+		</div>
+
+
+		<div class="h30"></div>
+	</div>
+
+</aside>
+
+<div id="sidebar-box-mask" class="sidebar-close"></div>
+
+<aside class="ko">
+	<script>
+		var sw_url = "http://gnu.safetown.co.kr/thema/myss1_navy";
+	</script>
+	<link rel="stylesheet" href="http://gnu.safetown.co.kr/thema/myss1_navy/assets/css/spectrum.css">
+	<link rel="stylesheet" href="http://gnu.safetown.co.kr/thema/myss1_navy/assets/css/switcher.css">
+	<script type="text/javascript" src="http://gnu.safetown.co.kr/thema/myss1_navy/assets/js/spectrum.js"></script>
+	<script type="text/javascript" src="http://gnu.safetown.co.kr/thema/myss1_navy/assets/js/switcher.js"></script>
+	<section id="style-switcher" class="font-12 ko-12">
+		<div class="cursor switcher-icon layout-setup" title="테마설정">
+			<i class="fa fa-desktop"></i>
+		</div>
+		<div class="cursor switcher-icon widget-setup" title="위젯설정">
+			<i class="fa fa-cogs"></i>
+		</div>
+		<div class="switcher-wrap">
+			<div class="switcher-title layout-setup cursor en">
+				<i class="fa fa-magic"></i>
+				Style Switcher
+			</div>
+			<div class="switcher-content">
+									<form id="themaSwitcher" name="themaSwitcher" action="http://gnu.safetown.co.kr/bbs/switcher.update.php" method="post" onsubmit="return switcher_submit(this);" class="form">
+					<input type="hidden" name="sw_type" value="11">
+					<input type="hidden" name="sw_code" value="">
+					<input type="hidden" name="sw_thema" value="myss1_navy">
+					<input type="hidden" name="url" value="/">
+								<input type="hidden" name="at_set[thema]" value="myss1_navy">
+
+				<div class="panel-group" id="switcherSet" role="tablist" aria-multiselectable="true">
+
+					<div class="panel">
+						<div class="panel-heading" role="tab" id="swHead1" aria-expanded="true" aria-controls="swSet1">
+							<a data-toggle="collapse" data-parent="#switcherSet" href="#swSet1">
+								<i class="fa fa-caret-right"></i> 사이트 설정
+							</a>
+						</div>
+						<div id="swSet1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="swHead1">
+							<div class="panel-body">
+								<div class="input-group input-group-sm input-line">
+									<span class="input-group-addon">컬러셋</span>
+									<select id="colorset-style" name="colorset" class="form-control input-sm">
+																					 <option value="Basic" selected>
+												Basic											</option>
+																			</select>
+								</div>
+								<div class="text-muted ko-11 input-bottom">
+									테마 내 /colorset 폴더
+								</div>
+
+								<div class="input-group input-group-sm input-bottom">
+									<span class="input-group-addon">스타일</span>
+									<select id="layout-style" name="at_set[layout]" class="form-control">
+										<option value="">와이드형</option>
+										<option value="boxed">박스형</option>
+									</select>
+								</div>
+
+								<div class="input-group input-group-sm input-bottom">
+									<span class="input-group-addon">반응형</span>
+									<select id="pc-style" name="at_set[pc]" class="form-control">
+										<option value="">반응형 PC</option>
+										<option value="1">비반응형 PC</option>
+									</select>
+								</div>
+
+								<div class="input-group input-group-sm input-bottom">
+									<span class="input-group-addon">총너비</span>
+									<input type="text" class="form-control input-sm" name="at_set[size]" value="" placeholder="1200">
+									<span class="input-group-addon">px</span>
+								</div>
+
+								<div class="text-muted ko-11 input-line">
+									배경은 박스형 레이아웃에서 출력
+								</div>
+
+								<div class="row row-10 input-bottom">
+									<div class="col-xs-8 col-10">
+										<input type="hidden" id="input-body-background" name="at_set[background]" value="">
+										<a role="button" class="switcher-win btn btn-black btn-sm btn-block" target="_balnk" href="http://gnu.safetown.co.kr/bbs/switcher.php?pv=myss1_navy&amp;type=html&amp;fid=input-body-background&amp;cid=body-background">
+											<i class="fa fa-picture-o"></i> 배경이미지
+										</a>
+									</div>
+									<div class="col-xs-4 col-10">
+										<input type="text" class="body-bgcolor" name="at_set[bgcolor]" value="">
+									</div>
+								</div>
+
+								<div class="input-group input-group-sm input-bottom">
+									<span class="input-group-addon">스타일</span>
+									<select id="back-style" name="at_set[bg]" class="form-control input-sm">
+										<option value="center" selected="selected">중앙맞춤</option>
+										<option value="top">상단맞춤</option>
+										<option value="bottom">하단맞춤</option>
+										<option value="fixed">상단고정</option>
+										<option value="pattern">패턴배경</option>
+									</select>
+								</div>
+
+								<label>
+									<input type="checkbox" id="font-style" name="at_set[font]" value="en">
+									영문폰트 적용
+								</label>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="panel">
+						<div class="panel-heading" role="tab" id="swHead2" aria-expanded="true" aria-controls="swSet2">
+							<a data-toggle="collapse" data-parent="#switcherSet" href="#swSet2">
+								<i class="fa fa-caret-right"></i> 메뉴바 설정
+							</a>
+						</div>
+						<div id="swSet2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="swHead2">
+							<div class="panel-body">
+
+								<div class="input-group input-group-sm input-bottom">
+									<span class="input-group-addon">메뉴타입</span>
+									<select id="nav-style" name="at_set[nav]" class="form-control">
+										<option value="both">배분</option>
+										<option value="float">좌측</option>
+									</select>
+								</div>
+
+								<div class="input-group input-group-sm input-bottom">
+									<span class="input-group-addon">서브보임</span>
+									<select name="at_set[subv]" class="form-control">
+										<option value="slide">슬라이더</option>
+										<option value="show">보이기</option>
+										<option value="fade">페이드</option>
+									</select>
+								</div>
+
+								<div class="input-group input-group-sm input-bottom">
+									<span class="input-group-addon">서브숨김</span>
+									<select name="at_set[subh]" class="form-control">
+										<option value="">숨기기</option>
+										<option value="fade">페이드</option>
+										<option value="slide">슬라이드</option>
+									</select>
+								</div>
+
+								<div class="input-group input-group-sm input-bottom">
+									<span class="input-group-addon">서브너비</span>
+									<input type="text" class="form-control input-sm" name="at_set[subw]" value="" placeholder="170">
+									<span class="input-group-addon">px</span>
+								</div>
+
+								<div class="input-group input-group-sm input-bottom">
+									<span class="input-group-addon">메뉴높이</span>
+									<input type="text" class="form-control input-sm" name="at_set[mh]" value="" placeholder="44">
+									<span class="input-group-addon">px</span>
+								</div>
+
+								<div class="input-group input-group-sm input-bottom">
+									<span class="input-group-addon">메뉴간격</span>
+									<input type="text" class="form-control input-sm" name="at_set[ms]" value="" placeholder="25">
+									<span class="input-group-addon">px</span>
+								</div>
+
+								<div class="input-group input-group-sm input-bottom">
+									<span class="input-group-addon">전체가로</span>
+									<input type="text" class="form-control input-sm" name="at_set[allm]" value="" placeholder="7">
+									<span class="input-group-addon">개</span>
+								</div>
+
+								<label>
+									<input type="checkbox" id="sticky-style" name="at_set[sticky]" value="1">
+									메뉴바 상단고정(sticky)
+								</label>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="panel">
+						<div class="panel-heading" role="tab" id="swHead3" aria-expanded="true" aria-controls="swSet3">
+							<a data-toggle="collapse" data-parent="#switcherSet" href="#swSet3">
+								<i class="fa fa-caret-right"></i> 인덱스 설정
+							</a>
+						</div>
+						<div id="swSet3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="swHead3">
+							<div class="panel-body">
+								<div class="input-group input-group-sm input-bottom">
+									<span class="input-group-addon">파일</span>
+									<select name="at_set[mfile]" class="form-control input-sm">
+																					<option value="basic-main" selected="selected">basic-main</option>
+																					<option value="basic-main-large">basic-main-large</option>
+																					<option value="basic-main-small">basic-main-small</option>
+																					<option value="basic-main_bak">basic-main_bak</option>
+																					<option value="main_slide">main_slide</option>
+																			</select>
+								</div>
+
+								<div class="text-muted ko-11">
+									테마 내 /main 폴더 파일
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="panel">
+						<div class="panel-heading" role="tab" id="swHead4" aria-expanded="true" aria-controls="swSet4">
+							<a data-toggle="collapse" data-parent="#switcherSet" href="#swSet4">
+								<i class="fa fa-caret-right"></i> 페이지 설정
+							</a>
+						</div>
+						<div id="swSet4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="swHead4">
+							<div class="panel-body">
+
+								<div class="input-group input-group-sm input-bottom">
+									<span class="input-group-addon">칼럼</span>
+									<select id="page-style" name="at_set[page]" class="form-control input-sm">
+										<option value="9">2단 - 라지</option>
+										<option value="8">2단 - 미디엄</option>
+										<option value="7">2단 - 스몰</option>
+										<option value="12">1단 - 박스형</option>
+										<option value="13">1단 - 와이드</option>
+									</select>
+								</div>
+
+								<label style="margin-top:8px;">
+									<i class="fa fa-caret-right"></i>
+									<b>사이드</b> <span class="text-muted ko-11">테마 내 /side 폴더 파일</span>
+								</label>
+
+								<div class="input-group input-group-sm input-bottom">
+									<span class="input-group-addon">파일</span>
+									<select name="at_set[sfile]" class="form-control input-sm">
+																					<option value="basic-side" selected="selected">basic-side</option>
+																			</select>
+								</div>
+
+								<label>
+									<input type="checkbox" id="side-style" name="at_set[side]" value="1">
+									좌측 사이드 사용
+								</label>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<button type="submit" class="btn btn-color btn-sm btn-block">
+					<i class="fa fa-check"></i> 저장하기				</button>
+								</form>
+			</div>
+			<script>
+				function switcher_submit(f) {
+										if (!confirm("커뮤니티 기본 PC테마의 설정으로 저장하시겠습니까?")) {
+						return false;
+					}
+										return true;
+				}
+				$(document).ready(function($) {
+					//Background Color Change
+					$(".body-bgcolor").spectrum({
+												allowEmpty: true,
+						clickoutFiresChange: true,
+						showButtons: false,
+						preferredFormat: "hex6",
+						showInput: true,
+						move: switcher_bgcolor
+					});
+				});
+			</script>
+		</div>
+	</section>
+</aside>
+
+
+<!-- RUN TIME : 0.31806111335754 -->
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+</body>
+</html>

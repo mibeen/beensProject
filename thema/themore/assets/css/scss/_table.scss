@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+/* 일반 내용 */
+
+.ts1 {
+  width: 100%;
+  border-top: 4px solid $color2;
+  border-bottom: 3px solid #e0e0e0;
+  > tbody > tr > th {
+    padding: 12px 0;
+    border-right: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+    background: #edf0f7;
+    text-align: center;
+    font-size: 15px;
+    color: #555;
+  }
+  > tbody > tr > td  {
+    padding: 12px 10px 12px 20px;
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    line-height: 1.5;
+    text-align: left;
+    font-size: 15px;
+    color: #555;
+    &:last-child {
+      border-right: none;
+    }
+  }
+  > thead > tr > .bR, > tbody > tr > .bR {
+    border-right: 1px solid #e0e0e0;
+  }
+}
+
+/* 글 입력 */
+.ts2 {
+  width: 100%;
+  > tbody > tr > th, > tbody > tr > td {
+    padding: 18px 8px 8px 0;
+    font-size: 14px;
+    line-height: 150%;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  > tbody > tr:last-child > th, > tbody > tr:last-child > td {
+    border-bottom: 1px solid #e0e0e0;
+  }
+  > tbody > .tr > th {
+    padding-top: 40px;
+    font-size: 16px;
+    color: #3462b4;
+  }
+  > tbody > tr > th {
+    text-align: left;
+    vertical-align: top;
+    font-weight: normal;
+    color: #000;
+    &.rfv {
+      color: #c00;
+    }
+  }
+  > tbody > tr > td {
+    max-width: 1px;
+    color: #666;
+    .expl {
+      padding: 8px 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .ts2.r_mh {
+    display: block;
+    > thead, > tbody, > tbody > tr, > tbody > tr > th, > tbody > tr > td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    > tbody > tr > th {
+      padding-top: 8px;
+      padding-bottom: 0;
+      color: #333;
+      font-weight: 700;
+      &.blank {
+        height: 0;
+        padding: 0;
+      }
+    }
+    > tbody > tr > td {
+      max-width: 100%;
+      padding-top: 8px;
+      border-top: none;
+      &.blank {
+        height: 8px;
+        padding: 0;
+      }
+    }
+    > tbody > tr:first-child > th:not(:first-child), > tbody > tr.fir > th:not(:first-child) {
+      border-top: 1px solid #e0e0e0 !important;
+    }
+    > tbody > tr:first-child > th:not(:first-child), > tbody > tr:first-child > td:not(:first-child), > tbody > tr.fir > th:not(:first-child), > tbody > tr.fir > td:not(:first-child) {
+      padding-top: 8px !important;
+    }
+    .wdt {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 519px) {
+  .ts1 {
+    > tbody > tr > td {
+      padding-left: 10px;
+    }
+  }
+
+  .ts2.r_mv {
+    display: block;
+    > thead, > tbody, > tbody > tr, > tbody > tr > th, > tbody > tr > td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    > tbody > tr > th {
+      padding-top: 8px;
+      padding-bottom: 0;
+      color: #333;
+      font-weight: 700;
+      &.blank {
+        height: 0;
+        padding: 0;
+      }
+    }
+    > tbody > tr > td {
+      max-width: 100%;
+      padding-top: 8px;
+      border-top: none;
+      &.blank {
+        height: 8px;
+        padding: 0;
+      }
+    }
+    > tbody > tr:first-child > th:not(:first-child), > tbody > tr.fir > th:not(:first-child) {
+      border-top: 1px solid #e0e0e0 !important;
+    }
+    > tbody > tr:first-child > th:not(:first-child), > tbody > tr:first-child > td:not(:first-child), > tbody > tr.fir > th:not(:first-child), > tbody > tr.fir > td:not(:first-child) {
+      padding-top: 8px !important;
+    }
+    .wdt {
+      display: none;
+    }
+  }
+}

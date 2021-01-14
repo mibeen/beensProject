@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+/* 행사 신청 폼 */
+
+.event_apply_top {
+  position: relative;
+  height: 50px;
+  padding: 0 60px 0 20px;
+  background: #556370;
+  .top_tit {
+    line-height: 50px;
+    font-size: 18px;
+    color: #fff;
+  }
+  .cls {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.event_apply {
+  padding: 20px;
+  .page_tit {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+    &.br_t {
+      border-top: 1px solid #dbdbdb;
+      padding-top: 20px;
+    }
+  }
+  .event_date {
+    margin-bottom: 5px;
+    line-height: 150%;
+    font-size: 14px;
+    color: #888;
+  }
+  .tit {
+    line-height: 130%;
+    font-size: 24px;
+    .name {
+      color: #222;
+      font-weight: 700;
+      vertical-align: middle;
+    }
+  }
+}
+
+.event_apply_btn1 {
+  @include button(120px, 30px, null, null, 2px);
+  @include hover($color1, $color1_sub, background, change);
+  margin: 0 3px;
+}
+
+.event_apply_btn2 {
+  @include button(120px, 30px, null, null, 2px);
+  @include hover($color3);
+  margin: 0 3px;
+}
+
+.event_apply_btn3 {
+  @include button(120px, 30px, null, null, 2px);
+  @include hover(#f98989);
+  margin: 0 3px;
+}
+
+.event_ts1 {
+  width: 100%;
+  &.br_t {
+    border-top: 1px solid #dbdbdb;
+    > tbody > tr:first-child > th, > tbody > tr:first-child > td {
+      padding-top: 20px;
+    }
+  }
+  &.br_b {
+    border-bottom: 1px solid #dbdbdb;
+    > tbody > tr:last-child > th, > tbody > tr:last-child > td {
+      padding-bottom: 20px;
+    }
+  }
+  > tbody > tr > {
+    th {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 10px 10px 10px 0;
+      font-size: 14px;
+      color: #000;
+    }
+    td {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 10px 10px;
+      font-size: 14px;
+      color: #666;
+    }
+  }
+  &.bg {
+    > tbody > tr > th {
+      padding: 5px 10px 5px 5px;
+      background: #eee;
+    }
+    > tbody > tr > td {
+      background: #eee;
+    }
+  }
+}
+
+.event_form_wrap {
+  margin-top: 10px; 
+  padding: 12px;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  background: #eee;
+}
+
+.event_form_btn1 {
+  @include button(100px, 40px, null);
+  @include hover($color1, $color1_sub, background, change);
+  vertical-align: top;
+}
+
+
+/* 행사 신청 완료 */
+
+.event_apply_fin {
+  width: 100%;
+  height: calc(100% - 50px);
+  > tbody > tr > td {
+    padding: 40px 20px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .tit {
+    margin-bottom: 25px;
+    line-height: 150%;
+    font-size: 18px;
+    color: #222;
+  }
+  .ct {
+    margin-bottom: 25px;
+    font-size: 15px;
+    color: #666;
+  }
+  .fin_btn {
+    display: inline-block;
+    width: 292px;
+    max-width: 90%;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 10px;
+    text-align: center;
+    background: $color1;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 2px;
+  }
+}
+
+.nx_expl {
+  margin: 5px 0;
+  line-height: 140%;
+  font-size: 13px;
+  color: #999;
+}
+
+
+/* 행사 만족도 조사 */
+
+.nx-poll-tit {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dbdbdb;
+  line-height: 130%;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+.nx-poll-item {
+  .tit {
+    line-height: 130%;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #666;
+  }
+}
+
+.nx-poll-item + .nx-poll-item {
+  margin-top: 20px;
+}
+
+
+/* 게이지형 그래프 */
+.nx-graph1 {
+  position: relative;
+  max-width: 300px;
+  .gage_wrap {
+    margin-right: 45px;
+    padding: 5px 0;
+    .gage {
+      height: 10px;
+      background: #ddd;
+      border-radius: 4px;
+      .fill {
+        width: 0;
+        height: 100%;
+        background: $color1;
+        border-radius: 4px;
+      }
+    }
+  }
+  .count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 20px;
+    text-align: right;
+    font-size: 13px;
+    font-weight: 300;
+  }
+}
+
+
+
+@media screen and (max-width: 519px) {
+  .event_ts1 {
+    display: block;
+     > tbody {
+      display: block;
+        > tr {
+          display: block;
+          > th {
+            display: block;
+            padding: 10px 10px 2px 0;
+            border-bottom: none;
+          }
+          > td {
+            display: block;
+            padding: 5px  0 5px 10px;
+          }
+        }
+     }
+    [class*=nx_ips] {
+      margin-bottom: 5px;    
+    }
+  }
+}
